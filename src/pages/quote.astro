@@ -15,7 +15,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
   <section>
     <div class="wrap narrow">
-      <form class="quote-form">
+      <form class="quote-form" id="quote-form">
         <label>
           Name
           <input type="text" name="name" required />
@@ -37,8 +37,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <option>Not sure</option>
           </select>
         </label>
+        <label class="hp" aria-hidden="true">
+          Company
+          <input type="text" name="company" tabindex="-1" autocomplete="off" />
+        </label>
         <button type="submit" class="btn amber">Request a Quote</button>
-        <p class="form-note">Form isn't wired to lead routing yet — this is a layout placeholder pending the Vercel function + routing rule from the site plan.</p>
+        <p class="form-status" data-state="idle"></p>
       </form>
     </div>
   </section>
@@ -59,5 +63,57 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     background: var(--surface); color: var(--text);
   }
   .quote-form button { margin-top: 0.4rem; }
-  .form-note { font-size: 0.78rem; color: var(--text-dim); font-style: italic; }
+  .quote-form button[disabled] { opacity: 0.6; cursor: not-allowed; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-status { font-size: 0.85rem; min-height: 1.2em; }
+  .form-status[data-state="success"] { color: var(--teal); font-weight: 600; }
+  .form-status[data-state="error"] { color: var(--amber-dark); font-weight: 600; }
 </style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#quote-form");
+  const status = form?.querySelector<HTMLParagraphElement>(".form-status");
+  const button = form?.querySelector<HTMLButtonElement>("button[type=submit]");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!status || !button) return;
+
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      city: String(formData.get("city") ?? ""),
+      service: String(formData.get("service") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      page: window.location.pathname,
+    };
+
+    button.disabled = true;
+    status.dataset.state = "idle";
+    status.textContent = "Sending…";
+
+    try {
+      const res = await fetch("/api/quote/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+
+      if (res.ok && result.ok) {
+        status.dataset.state = "success";
+        status.textContent = "Thanks — a local crew will follow up within 24–48 hours.";
+        form.reset();
+      } else {
+        status.dataset.state = "error";
+        status.textContent = result.error ?? "Something went wrong. Try calling us instead.";
+      }
+    } catch {
+      status.dataset.state = "error";
+      status.textContent = "Something went wrong. Try calling us instead.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>

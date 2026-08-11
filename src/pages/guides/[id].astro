@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides", ({ data }) => !data.draft);
+  return guides.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={`${entry.data.title} | Arizona Pigeon Proofing`} description={entry.data.description}>
+  <section class="page-hero">
+    <div class="wrap narrow">
+      <span class="eyebrow">Guide</span>
+      <h1>{entry.data.title}</h1>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow article">
+      <Content />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2rem; margin: 0.6rem 0 0; color: #fbfbf7; max-width: 30ch; }
+  .wrap.narrow { max-width: 680px; }
+  .article :global(h2) { font-size: 1.3rem; margin: 2rem 0 0.8rem; }
+  .article :global(p) { margin: 0.9rem 0; line-height: 1.7; color: var(--text); }
+  .article :global(em) { color: var(--text-dim); }
+</style>

@@ -1,0 +1,40 @@
+---
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+
+// GA4, Clarity, and CallRail all need real account IDs before they do anything —
+// each block below silently no-ops until its env var is set. See README for setup.
+const ga4Id = import.meta.env.PUBLIC_GA4_ID;
+const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
+const callrailCompanyId = import.meta.env.PUBLIC_CALLRAIL_COMPANY_ID;
+---
+
+{/* Vercel Web Analytics + Speed Insights — zero-config, no account needed beyond the Vercel project itself. */}
+<Analytics />
+<SpeedInsights />
+
+{ga4Id && (
+  <Fragment>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+    <script define:vars={{ ga4Id }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", ga4Id);
+    </script>
+  </Fragment>
+)}
+
+{clarityId && (
+  <script define:vars={{ clarityId }}>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", clarityId);
+  </script>
+)}
+
+{callrailCompanyId && (
+  <script async src={`//cdn.callrail.com/companies/${callrailCompanyId}/12/swap.js`}></script>
+)}

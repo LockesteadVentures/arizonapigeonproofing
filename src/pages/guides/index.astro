@@ -1,12 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
-const guides = [
-  { title: "Do Pigeons Damage Solar Panels? What Arizona Homeowners Should Know", slug: "do-pigeons-damage-solar-panels" },
-  { title: "How Often Should You Clean Solar Panels in the Arizona Desert?", slug: "solar-panel-cleaning-frequency-arizona" },
-  { title: "Bird Mesh vs. Spikes vs. Solar Skirts: Which Wins in AZ Heat?", slug: "bird-mesh-vs-spikes-vs-solar-skirts" },
-  { title: "HOA Rules on Bird Proofing and Solar Panels in Arizona Communities", slug: "hoa-rules-bird-proofing-solar-panels" },
-];
+const allGuides = await getCollection("guides", ({ data }) => !data.draft);
+const guides = allGuides.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
 
 <BaseLayout
@@ -17,14 +14,18 @@ const guides = [
     <div class="wrap">
       <span class="eyebrow">Resources</span>
       <h1>Guides for Arizona homeowners</h1>
-      <p class="lede">Content pipeline placeholder — these titles come from the keyword/content silo in the site plan §5, pending the Byword.ai pipeline.</p>
+      <p class="lede">Published via the Byword.ai pipeline, reviewed before anything goes live — see the site plan §5 for the full content silo.</p>
     </div>
   </section>
   <section>
     <div class="wrap narrow">
+      {guides.length === 0 && <p class="empty-note">No guides published yet — check back soon.</p>}
       <ul class="guide-list">
         {guides.map((g) => (
-          <li><a href={`/guides/${g.slug}/`}>{g.title}</a></li>
+          <li>
+            <a href={`/guides/${g.id}/`}>{g.data.title}</a>
+            <p>{g.data.description}</p>
+          </li>
         ))}
       </ul>
     </div>
@@ -38,7 +39,9 @@ const guides = [
   .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
   .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0; }
   .wrap.narrow { max-width: 760px; }
-  .guide-list { list-style: none; padding: 0; margin: 2rem 0; display: flex; flex-direction: column; gap: 0.9rem; }
-  .guide-list a { font-weight: 600; font-size: 1rem; }
+  .empty-note { color: var(--text-dim); font-style: italic; margin: 2rem 0; }
+  .guide-list { list-style: none; padding: 0; margin: 2rem 0; display: flex; flex-direction: column; gap: 1.4rem; }
+  .guide-list a { font-weight: 700; font-size: 1.05rem; }
   .guide-list a:hover { color: var(--teal); }
+  .guide-list p { margin: 0.3rem 0 0; color: var(--text-dim); font-size: 0.9rem; }
 </style>
