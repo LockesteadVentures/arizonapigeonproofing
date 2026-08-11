@@ -5,25 +5,17 @@ import { REGIONS, liveCitiesByRegion } from "../../data/locations.js";
 
 <BaseLayout
   title="Locations | Arizona Pigeon Proofing"
-  description="Solar panel pigeon proofing and cleaning locations across Arizona — Phoenix Metro, Tucson Metro, and expanding statewide."
+  description="Solar panel pigeon proofing and cleaning locations across Arizona — live in Tucson Metro today, expanding statewide."
 >
   <section class="hub-hero">
     <div class="wrap">
       <span class="eyebrow">Locations</span>
       <h1>Where we work in Arizona</h1>
-      <p class="lede">Live in Phoenix and Tucson today, expanding statewide as we bring on crews in new markets.</p>
+      <p class="lede">Live in Tucson Metro today, expanding to Phoenix and the rest of the state as we bring on crews in new markets.</p>
     </div>
   </section>
   <section>
     <div class="wrap narrow">
-      <div class="region-block">
-        <h2>{REGIONS.phoenix.name}</h2>
-        <div class="city-grid">
-          {liveCitiesByRegion("phoenix").map((c) => (
-            <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
-          ))}
-        </div>
-      </div>
       <div class="region-block">
         <h2>{REGIONS.tucson.name}</h2>
         <div class="city-grid">
@@ -31,6 +23,10 @@ import { REGIONS, liveCitiesByRegion } from "../../data/locations.js";
             <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
           ))}
         </div>
+      </div>
+      <div class="region-block">
+        <h2>{REGIONS.phoenix.name}</h2>
+        <p class="soon-note">Coming soon — pages are built, waiting on a confirmed local crew.</p>
       </div>
       <div class="region-block">
         <h2>{REGIONS.rest.name}</h2>

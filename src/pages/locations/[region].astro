@@ -1,13 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { REGIONS, liveCitiesByRegion } from "../../data/locations.js";
+import { REGIONS, LIVE_REGIONS, liveCitiesByRegion } from "../../data/locations.js";
 
 const regionKeyBySlug = Object.fromEntries(Object.entries(REGIONS).map(([key, r]) => [r.slug, key]));
 
+// Only regions with a confirmed vendor get a hub page — see locations.js for why.
 export function getStaticPaths() {
-  return Object.values(REGIONS)
-    .filter((r) => r.slug !== "rest-of-arizona")
-    .map((r) => ({ params: { region: r.slug } }));
+  return LIVE_REGIONS.map((key) => ({ params: { region: REGIONS[key].slug } }));
 }
 
 const { region: regionSlug } = Astro.params;

@@ -1,14 +1,13 @@
 ---
 import { REGIONS, liveCitiesByRegion } from "../data/locations.js";
 
-const phoenixCities = liveCitiesByRegion("phoenix").filter((c) => c.tier === 1).slice(0, 5);
 const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
 ---
 
 <div class="utility-bar">
   <div class="wrap">
-    <span class="areas">Serving Phoenix Metro &amp; Tucson Metro</span>
-    <span class="phone">📞 (602) 555-0148 — Free quotes, 7 days a week</span>
+    <span class="areas">Serving Tucson Metro, AZ &middot; Phoenix Metro coming soon</span>
+    <span class="phone">📞 (520) 555-0148 — Free quotes, 7 days a week</span>
   </div>
 </div>
 
@@ -52,15 +51,6 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
           <div class="mega locations" data-panel="locations">
             <div class="mega-regions">
               <div>
-                <h5>{REGIONS.phoenix.name}</h5>
-                <ul>
-                  {phoenixCities.map((c) => (
-                    <li><a href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a></li>
-                  ))}
-                </ul>
-                <a class="see-all" href={`/locations/${REGIONS.phoenix.slug}/`}>All Phoenix cities →</a>
-              </div>
-              <div>
                 <h5>{REGIONS.tucson.name}</h5>
                 <ul>
                   {tucsonCities.map((c) => (
@@ -68,6 +58,13 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
                   ))}
                 </ul>
                 <a class="see-all" href={`/locations/${REGIONS.tucson.slug}/`}>All Tucson cities →</a>
+              </div>
+              <div>
+                <h5>{REGIONS.phoenix.name}</h5>
+                <ul>
+                  <li class="mono" style="color:var(--text-dim); font-size:0.78rem;">Coming soon</li>
+                </ul>
+                <a class="see-all" href="/locations/">View all locations →</a>
               </div>
               <div>
                 <h5>{REGIONS.rest.name}</h5>
@@ -87,7 +84,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
       <div class="nav-cta">
         <span class="nav-phone">
           <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"></path></svg>
-          (602) 555-0148
+          (520) 555-0148
         </span>
         <a href="/quote/" class="btn amber">Get a Free Quote</a>
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">

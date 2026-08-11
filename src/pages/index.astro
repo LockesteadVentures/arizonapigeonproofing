@@ -2,8 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { liveCitiesByRegion } from "../data/locations.js";
 
-const phoenixCities = liveCitiesByRegion("phoenix").filter((c) => c.tier === 1);
 const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
+const phoenixCities = [
+  { slug: "phoenix", name: "Phoenix" },
+  { slug: "scottsdale", name: "Scottsdale" },
+  { slug: "mesa", name: "Mesa" },
+  { slug: "chandler", name: "Chandler" },
+  { slug: "gilbert", name: "Gilbert" },
+];
 const restCities = [
   { slug: "flagstaff", name: "Flagstaff" },
   { slug: "prescott", name: "Prescott" },
@@ -15,12 +21,12 @@ const restCities = [
 
 <BaseLayout
   title="Arizona Pigeon Proofing | Solar Panel Bird Proofing &amp; Cleaning"
-  description="Solar panel pigeon proofing and cleaning across Phoenix and Tucson, Arizona. Free quotes, local crews, 24–48 hour turnaround."
+  description="Solar panel pigeon proofing and cleaning in Tucson, Arizona. Free quotes, a local crew, 24–48 hour turnaround."
 >
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Arizona-owned &middot; Phoenix &amp; Tucson</span>
+        <span class="eyebrow">Arizona-owned &middot; Tucson Metro</span>
         <h1>Pigeons ruin panels.<br />We keep them <em>off</em> — and your output up.</h1>
         <p class="lede">
           Bird proofing and cleaning for solar arrays, built for Arizona roofs: monsoon dust,
@@ -28,10 +34,10 @@ const restCities = [
         </p>
         <div class="cta-row">
           <a href="/quote/" class="btn amber">Get a Free Quote</a>
-          <a href="tel:+16025550148" class="btn outline">Call (602) 555-0148</a>
+          <a href="tel:+15205550148" class="btn outline">Call (520) 555-0148</a>
         </div>
         <div class="stat-row">
-          <div class="stat"><b>2</b><span>Metro areas served</span></div>
+          <div class="stat"><b>Tucson</b><span>Metro live now</span></div>
           <div class="stat"><b>24–48h</b><span>Typical quote turnaround</span></div>
           <div class="stat"><b>100%</b><span>Locally fulfilled</span></div>
         </div>
@@ -111,24 +117,24 @@ const restCities = [
       <div class="section-head">
         <span class="eyebrow">Where we work</span>
         <h2>Serving Arizona, metro by metro.</h2>
-        <p>Starting in Phoenix and Tucson, expanding statewide as we bring on crews in new markets.</p>
+        <p>Live in Tucson Metro today, expanding to Phoenix and statewide as we bring on crews in new markets.</p>
       </div>
       <div class="region-tabs" role="tablist">
-        <button class="region-tab" role="tab" aria-selected="true" data-region="phx">Phoenix Metro</button>
-        <button class="region-tab" role="tab" aria-selected="false" data-region="tuc">Tucson Metro</button>
+        <button class="region-tab" role="tab" aria-selected="true" data-region="tuc">Tucson Metro</button>
+        <button class="region-tab" role="tab" aria-selected="false" data-region="phx">Phoenix Metro</button>
         <button class="region-tab" role="tab" aria-selected="false" data-region="rest">Rest of Arizona</button>
       </div>
-      <div class="region-panel active" data-region-panel="phx">
+      <div class="region-panel active" data-region-panel="tuc">
         <div class="city-pills">
-          {phoenixCities.map((c) => (
+          {tucsonCities.map((c) => (
             <a class="city-pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
           ))}
         </div>
       </div>
-      <div class="region-panel" data-region-panel="tuc">
+      <div class="region-panel" data-region-panel="phx">
         <div class="city-pills">
-          {tucsonCities.map((c) => (
-            <a class="city-pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          {phoenixCities.map((c) => (
+            <span class="city-pill soon">{c.name} (coming soon)</span>
           ))}
         </div>
       </div>
@@ -149,8 +155,8 @@ const restCities = [
         <h2>What Arizona homeowners say.</h2>
       </div>
       <div class="trust-strip">
-        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Didn't realize the pigeons under the panels were costing us output until they were gone. Output's back up within a week."</p><div class="who">— Homeowner, Gilbert</div></div>
-        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Booked the cleaning right before monsoon season. Panels looked brand new, crew was in and out same day."</p><div class="who">— Homeowner, Scottsdale</div></div>
+        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Didn't realize the pigeons under the panels were costing us output until they were gone. Output's back up within a week."</p><div class="who">— Homeowner, Tucson</div></div>
+        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Booked the cleaning right before monsoon season. Panels looked brand new, crew was in and out same day."</p><div class="who">— Homeowner, Marana</div></div>
         <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"HOA required a specific mesh spec — they handled the paperwork, not just the install."</p><div class="who">— Homeowner, Oro Valley</div></div>
       </div>
     </div>

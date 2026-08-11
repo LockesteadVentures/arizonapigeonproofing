@@ -1,35 +1,35 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
-
-const regions = [REGIONS.phoenix, REGIONS.tucson];
 ---
 
 <BaseLayout
-  title="Pigeon Proofing for Solar Panels in Arizona | Arizona Pigeon Proofing"
-  description="Bird mesh and pigeon deterrent installation for solar arrays across Phoenix and Tucson, Arizona."
+  title="Pigeon Proofing for Solar Panels in Tucson, AZ | Arizona Pigeon Proofing"
+  description="Bird mesh and pigeon deterrent installation for solar arrays across Tucson, Arizona."
 >
   <section class="hub-hero">
     <div class="wrap">
       <span class="eyebrow">Service</span>
       <h1>Pigeon Proofing for Solar Panels</h1>
-      <p class="lede">Stainless mesh, fitted to your array, installed by local Arizona crews. Pick your city below for local pricing and details.</p>
+      <p class="lede">Stainless mesh, fitted to your array, installed by a local Tucson crew. Pick your city below for local pricing and details.</p>
       <a href="/quote/" class="btn amber">Get a Free Quote</a>
     </div>
   </section>
 
   <section>
     <div class="wrap narrow">
-      {regions.map((region) => (
-        <div class="region-block">
-          <h2>{region.name}</h2>
-          <div class="city-grid">
-            {liveCitiesByRegion(region === REGIONS.phoenix ? "phoenix" : "tucson").map((c) => (
-              <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
-            ))}
-          </div>
+      <div class="region-block">
+        <h2>{REGIONS.tucson.name}</h2>
+        <div class="city-grid">
+          {liveCitiesByRegion("tucson").map((c) => (
+            <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          ))}
         </div>
-      ))}
+      </div>
+      <div class="region-block">
+        <h2>{REGIONS.phoenix.name}</h2>
+        <p class="soon-note">Coming soon — pages are built, waiting on a confirmed local crew.</p>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -47,6 +47,7 @@ const regions = [REGIONS.phoenix, REGIONS.tucson];
   .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
   .city-card { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; font-size: 0.92rem; }
   .city-card:hover { border-color: var(--teal); color: var(--teal); }
+  .soon-note { color: var(--text-dim); font-style: italic; }
 
   @media (max-width: 700px) {
     .city-grid { grid-template-columns: 1fr 1fr; }
