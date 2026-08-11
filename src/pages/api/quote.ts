@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { CITIES, REGIONS, VENDOR_BY_REGION } from "../../data/locations.js";
+import { REGIONS, VENDOR_BY_REGION } from "../../data/locations.js";
 
 // This route must run on-demand (Vercel function), not at build time.
 export const prerender = false;
@@ -7,38 +7,31 @@ export const prerender = false;
 interface QuotePayload {
   name?: string;
   phone?: string;
-  city?: string;
+  metro?: string; // dropdown value — a REGIONS key, drives routing
+  city?: string; // free-text detail (city/neighborhood) for the vendor, not used for routing
   service?: string;
   page?: string;
   // honeypot — real users never fill this in; bots often do
   company?: string;
 }
 
-function findCity(rawCity: string) {
-  const needle = rawCity.trim().toLowerCase();
-  return CITIES.find(
-    (c) => c.slug === needle || c.name.toLowerCase() === needle || c.name.toLowerCase().includes(needle)
-  );
-}
+function recipientFor(metroKey: string): { email: string | undefined; note: string } {
+  const region = REGIONS[metroKey as keyof typeof REGIONS];
 
-function recipientFor(rawCity: string): { email: string | undefined; note: string } {
-  const city = findCity(rawCity);
-
-  if (!city) {
-    return { email: import.meta.env.LEAD_EMAIL_FALLBACK, note: `Unrecognized city: "${rawCity}"` };
+  if (!region) {
+    return { email: import.meta.env.LEAD_EMAIL_FALLBACK, note: `Unrecognized metro value: "${metroKey}"` };
   }
 
-  const region = REGIONS[city.region as keyof typeof REGIONS];
-  if (!region?.fulfilled) {
+  if (!region.fulfilled) {
     return {
       email: import.meta.env.LEAD_EMAIL_FALLBACK,
-      note: `${city.name} is in ${region?.name ?? city.region}, which has no confirmed vendor yet — needs manual follow-up.`,
+      note: `${region.name} has no confirmed vendor yet — needs manual follow-up.`,
     };
   }
 
-  const vendor = VENDOR_BY_REGION[city.region as keyof typeof VENDOR_BY_REGION];
-  const email = import.meta.env[`LEAD_EMAIL_${city.region.toUpperCase()}`] ?? import.meta.env.LEAD_EMAIL_FALLBACK;
-  return { email, note: vendor ? `Routed to ${vendor.label}` : `Routed for ${city.name}` };
+  const vendor = VENDOR_BY_REGION[metroKey as keyof typeof VENDOR_BY_REGION];
+  const email = import.meta.env[`LEAD_EMAIL_${metroKey.toUpperCase()}`] ?? import.meta.env.LEAD_EMAIL_FALLBACK;
+  return { email, note: vendor ? `Routed to ${vendor.label}` : `Routed for ${region.name}` };
 }
 
 export const POST: APIRoute = async ({ request }) => {
@@ -54,14 +47,14 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   }
 
-  const { name, phone, city, service } = data;
-  if (!name?.trim() || !phone?.trim() || !city?.trim()) {
-    return new Response(JSON.stringify({ ok: false, error: "Name, phone, and city are required." }), {
+  const { name, phone, metro, city, service } = data;
+  if (!name?.trim() || !phone?.trim() || !metro?.trim()) {
+    return new Response(JSON.stringify({ ok: false, error: "Name, phone, and metro area are required." }), {
       status: 400,
     });
   }
 
-  const { email: recipient, note } = recipientFor(city);
+  const { email: recipient, note } = recipientFor(metro);
   const apiKey = import.meta.env.RESEND_API_KEY;
   const fromEmail = import.meta.env.RESEND_FROM_EMAIL;
 
@@ -76,11 +69,13 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  const subject = `New quote request — ${city} (${service ?? "not specified"})`;
+  const regionName = REGIONS[metro as keyof typeof REGIONS]?.name ?? metro;
+  const subject = `New quote request — ${regionName} (${service ?? "not specified"})`;
   const body = [
     `Name: ${name}`,
     `Phone: ${phone}`,
-    `City: ${city}`,
+    `Metro area: ${regionName}`,
+    `City/neighborhood: ${city?.trim() || "not specified"}`,
     `Service: ${service ?? "not specified"}`,
     `Source page: ${data.page ?? "unknown"}`,
     "",

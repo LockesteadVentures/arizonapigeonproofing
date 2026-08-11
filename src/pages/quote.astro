@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { REGIONS } from "../data/locations.js";
 ---
 
 <BaseLayout
@@ -25,8 +26,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <input type="tel" name="phone" required />
         </label>
         <label>
-          City
-          <input type="text" name="city" required />
+          Metro area
+          <select name="metro" required>
+            <option value="" disabled selected>Select your area…</option>
+            <option value="tucson">{REGIONS.tucson.name}</option>
+            <option value="phoenix">{REGIONS.phoenix.name} (coming soon)</option>
+            <option value="rest">{REGIONS.rest.name}</option>
+          </select>
+        </label>
+        <label>
+          City / neighborhood
+          <input type="text" name="city" placeholder="e.g. Oro Valley, near Tangerine Rd" required />
         </label>
         <label>
           What do you need?
@@ -83,6 +93,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     const payload = {
       name: String(formData.get("name") ?? ""),
       phone: String(formData.get("phone") ?? ""),
+      metro: String(formData.get("metro") ?? ""),
       city: String(formData.get("city") ?? ""),
       service: String(formData.get("service") ?? ""),
       company: String(formData.get("company") ?? ""),
