@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { REGIONS, liveCitiesByRegion } from "../../data/locations.js";
+
+const regionKeyBySlug = Object.fromEntries(Object.entries(REGIONS).map(([key, r]) => [r.slug, key]));
+
+export function getStaticPaths() {
+  return Object.values(REGIONS)
+    .filter((r) => r.slug !== "rest-of-arizona")
+    .map((r) => ({ params: { region: r.slug } }));
+}
+
+const { region: regionSlug } = Astro.params;
+const regionKey = regionKeyBySlug[regionSlug];
+const region = REGIONS[regionKey];
+const cities = liveCitiesByRegion(regionKey);
+---
+
+<BaseLayout
+  title={`${region.name} | Arizona Pigeon Proofing`}
+  description={`Solar panel pigeon proofing and cleaning across ${region.name}, Arizona.`}
+>
+  <section class="hub-hero">
+    <div class="wrap">
+      <span class="eyebrow">Location Hub</span>
+      <h1>{region.name}</h1>
+      <p class="lede">Pigeon proofing and solar panel cleaning, city by city, across {region.name}.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow">
+      <div class="city-grid">
+        {cities.map((c) => (
+          <div class="city-block">
+            <h3>{c.name}</h3>
+            <div class="pill-row">
+              <a class="pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>Pigeon Proofing</a>
+              <a class="pill" href={`/solar-panel-cleaning/${c.slug}/`}>Solar Cleaning</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hub-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .hub-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .hub-hero .eyebrow { color: #7fd1d6; }
+  .hub-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .hub-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0 0 1.6rem; }
+
+  .wrap.narrow { max-width: 760px; }
+  .city-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .city-block { padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); }
+  .city-block h3 { font-size: 1.05rem; margin-bottom: 0.7rem; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .pill { padding: 0.35rem 0.8rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.82rem; }
+  .pill:hover { border-color: var(--teal); color: var(--teal); }
+
+  @media (max-width: 700px) {
+    .city-grid { grid-template-columns: 1fr; }
+  }
+</style>

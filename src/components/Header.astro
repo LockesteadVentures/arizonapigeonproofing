@@ -1,0 +1,185 @@
+---
+import { REGIONS, liveCitiesByRegion } from "../data/locations.js";
+
+const phoenixCities = liveCitiesByRegion("phoenix").filter((c) => c.tier === 1).slice(0, 5);
+const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
+---
+
+<div class="utility-bar">
+  <div class="wrap">
+    <span class="areas">Serving Phoenix Metro &amp; Tucson Metro</span>
+    <span class="phone">📞 (602) 555-0148 — Free quotes, 7 days a week</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <nav class="main">
+      <a href="/" class="logo">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--teal)"></rect>
+          <path d="M9 20c2-6 4-9 7-9s5 3 7 9" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"></path>
+          <circle cx="16" cy="10" r="2.4" fill="#fff"></circle>
+        </svg>
+        Arizona <span class="state">Pigeon Proofing</span>
+      </a>
+
+      <div class="nav-links">
+        <div class="nav-item">
+          <button aria-expanded="false" data-mega="services">
+            Services
+            <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6"></path></svg>
+          </button>
+          <div class="mega services" data-panel="services">
+            <div class="mega-grid">
+              <a class="mega-card" href="/pigeon-proofing-solar-panels/">
+                <span class="t">Pigeon Proofing</span>
+                <span class="d">Bird mesh &amp; deterrent installation for solar arrays</span>
+              </a>
+              <a class="mega-card" href="/solar-panel-cleaning/">
+                <span class="t">Solar Panel Cleaning</span>
+                <span class="d">Dust, pollen &amp; monsoon debris removal</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button aria-expanded="false" data-mega="locations">
+            Locations
+            <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6"></path></svg>
+          </button>
+          <div class="mega locations" data-panel="locations">
+            <div class="mega-regions">
+              <div>
+                <h5>{REGIONS.phoenix.name}</h5>
+                <ul>
+                  {phoenixCities.map((c) => (
+                    <li><a href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a></li>
+                  ))}
+                </ul>
+                <a class="see-all" href={`/locations/${REGIONS.phoenix.slug}/`}>All Phoenix cities →</a>
+              </div>
+              <div>
+                <h5>{REGIONS.tucson.name}</h5>
+                <ul>
+                  {tucsonCities.map((c) => (
+                    <li><a href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a></li>
+                  ))}
+                </ul>
+                <a class="see-all" href={`/locations/${REGIONS.tucson.slug}/`}>All Tucson cities →</a>
+              </div>
+              <div>
+                <h5>{REGIONS.rest.name}</h5>
+                <ul>
+                  <li class="mono" style="color:var(--text-dim); font-size:0.78rem;">Coming soon</li>
+                </ul>
+                <a class="see-all" href="/locations/">View all locations →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="plain" href="/guides/">Resources</a>
+        <a class="plain" href="/about/">About</a>
+      </div>
+
+      <div class="nav-cta">
+        <span class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"></path></svg>
+          (602) 555-0148
+        </span>
+        <a href="/quote/" class="btn amber">Get a Free Quote</a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .utility-bar { background: var(--surface-2); border-bottom: 1px solid var(--border); font-size: 0.82rem; }
+  .utility-bar .wrap { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 1.5rem; gap: 1rem; flex-wrap: wrap; }
+  .utility-bar .areas { color: var(--text-dim); }
+  .utility-bar .phone { font-weight: 700; color: var(--teal); }
+
+  header.site { position: sticky; top: 0; z-index: 40; background: var(--bg); border-bottom: 1px solid var(--border); backdrop-filter: blur(6px); }
+  nav.main { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 0.9rem 0; }
+  .logo { display: flex; align-items: center; gap: 0.55rem; font-family: Charter, Georgia, serif; font-weight: 700; font-size: 1.28rem; letter-spacing: -0.01em; white-space: nowrap; }
+  .logo .mark { width: 30px; height: 30px; flex-shrink: 0; }
+  .logo .state { color: var(--teal); }
+
+  .nav-links { display: flex; align-items: center; gap: 0.2rem; flex: 1; justify-content: center; }
+  .nav-item { position: relative; }
+  .nav-item > button { display: flex; align-items: center; gap: 0.3rem; background: none; border: none; padding: 0.6rem 0.8rem; font-size: 0.94rem; color: var(--text); border-radius: 8px; }
+  .nav-item > button:hover, .nav-item > button[aria-expanded="true"] { background: var(--surface-2); }
+  .nav-item > button svg { width: 11px; height: 11px; transition: transform .15s ease; }
+  .nav-item > button[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .nav-item > a.plain { padding: 0.6rem 0.8rem; font-size: 0.94rem; border-radius: 8px; }
+  .nav-item > a.plain:hover { background: var(--surface-2); }
+
+  .mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: 1.2rem; display: none; z-index: 50; }
+  .mega.open { display: block; }
+  .mega.services { width: 460px; }
+  .mega.locations { width: 620px; }
+  .mega-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .mega-card { display: block; padding: 0.8rem 0.9rem; border-radius: 8px; border: 1px solid transparent; }
+  .mega-card:hover { background: var(--teal-soft); border-color: var(--border); }
+  .mega-card .t { font-weight: 700; font-size: 0.92rem; display: block; margin-bottom: 0.15rem; font-family: -apple-system, sans-serif; }
+  .mega-card .d { font-size: 0.8rem; color: var(--text-dim); }
+  .mega-regions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .mega-regions h5 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.5rem; font-family: ui-monospace, monospace; font-weight: 700; }
+  .mega-regions ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+  .mega-regions a { font-size: 0.86rem; padding: 0.15rem 0; display: inline-block; }
+  .mega-regions a:hover { color: var(--teal); }
+  .mega-regions .see-all { margin-top: 0.6rem; font-size: 0.8rem; font-weight: 700; color: var(--teal); }
+
+  .nav-cta { display: flex; align-items: center; gap: 0.9rem; }
+  .nav-phone { display: flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 0.94rem; white-space: nowrap; }
+  .nav-phone svg { width: 15px; height: 15px; color: var(--teal); }
+
+  .hamburger { display: none; background: none; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; }
+  .hamburger svg { width: 20px; height: 20px; }
+
+  @media (max-width: 920px) {
+    .nav-links, .nav-phone { display: none; }
+    .hamburger { display: flex; }
+  }
+</style>
+
+<script>
+  const items = document.querySelectorAll(".nav-item > button[data-mega]");
+  function closeAll(except?: Element) {
+    items.forEach((btn) => {
+      if (btn === except) return;
+      btn.setAttribute("aria-expanded", "false");
+      const panel = btn.parentElement?.querySelector(".mega");
+      panel?.classList.remove("open");
+    });
+  }
+  items.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = btn.getAttribute("aria-expanded") === "true";
+      closeAll(btn);
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      const panel = btn.parentElement?.querySelector(".mega");
+      panel?.classList.toggle("open", !open);
+    });
+  });
+  document.addEventListener("click", () => closeAll());
+
+  const hamburger = document.querySelector<HTMLButtonElement>(".hamburger");
+  hamburger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", expanded ? "false" : "true");
+    const navLinks = document.querySelector<HTMLElement>(".nav-links");
+    if (navLinks) {
+      navLinks.style.cssText = expanded
+        ? ""
+        : "display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:var(--bg); border-bottom:1px solid var(--border); padding:1rem 1.5rem; align-items:flex-start;";
+    }
+  });
+</script>

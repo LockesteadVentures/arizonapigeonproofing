@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Get a Free Quote | Arizona Pigeon Proofing"
+  description="Get a free quote for solar panel pigeon proofing or cleaning in Arizona. Local crews respond within 24–48 hours."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Free Quote</span>
+      <h1>Get a free quote</h1>
+      <p class="lede">Tell us your city and what you're seeing — a local crew gets back to you within 24–48 hours.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow">
+      <form class="quote-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" required />
+        </label>
+        <label>
+          City
+          <input type="text" name="city" required />
+        </label>
+        <label>
+          What do you need?
+          <select name="service">
+            <option>Pigeon proofing</option>
+            <option>Solar panel cleaning</option>
+            <option>Both</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+        <button type="submit" class="btn amber">Request a Quote</button>
+        <p class="form-note">Form isn't wired to lead routing yet — this is a layout placeholder pending the Vercel function + routing rule from the site plan.</p>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0; }
+  .wrap.narrow { max-width: 480px; }
+
+  .quote-form { display: flex; flex-direction: column; gap: 1.1rem; padding: 2rem 0; }
+  .quote-form label { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; font-weight: 600; }
+  .quote-form input, .quote-form select {
+    font: inherit; padding: 0.65rem 0.8rem; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text);
+  }
+  .quote-form button { margin-top: 0.4rem; }
+  .form-note { font-size: 0.78rem; color: var(--text-dim); font-style: italic; }
+</style>

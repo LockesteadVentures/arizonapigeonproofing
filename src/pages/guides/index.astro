@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const guides = [
+  { title: "Do Pigeons Damage Solar Panels? What Arizona Homeowners Should Know", slug: "do-pigeons-damage-solar-panels" },
+  { title: "How Often Should You Clean Solar Panels in the Arizona Desert?", slug: "solar-panel-cleaning-frequency-arizona" },
+  { title: "Bird Mesh vs. Spikes vs. Solar Skirts: Which Wins in AZ Heat?", slug: "bird-mesh-vs-spikes-vs-solar-skirts" },
+  { title: "HOA Rules on Bird Proofing and Solar Panels in Arizona Communities", slug: "hoa-rules-bird-proofing-solar-panels" },
+];
+---
+
+<BaseLayout
+  title="Guides &amp; Resources | Arizona Pigeon Proofing"
+  description="Guides on solar panel bird proofing and cleaning for Arizona homeowners."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Resources</span>
+      <h1>Guides for Arizona homeowners</h1>
+      <p class="lede">Content pipeline placeholder — these titles come from the keyword/content silo in the site plan §5, pending the Byword.ai pipeline.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow">
+      <ul class="guide-list">
+        {guides.map((g) => (
+          <li><a href={`/guides/${g.slug}/`}>{g.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0; }
+  .wrap.narrow { max-width: 760px; }
+  .guide-list { list-style: none; padding: 0; margin: 2rem 0; display: flex; flex-direction: column; gap: 0.9rem; }
+  .guide-list a { font-weight: 600; font-size: 1rem; }
+  .guide-list a:hover { color: var(--teal); }
+</style>

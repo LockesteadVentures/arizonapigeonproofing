@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { liveCitiesByRegion } from "../data/locations.js";
+
+const phoenixCities = liveCitiesByRegion("phoenix").filter((c) => c.tier === 1);
+const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
+const restCities = [
+  { slug: "flagstaff", name: "Flagstaff" },
+  { slug: "prescott", name: "Prescott" },
+  { slug: "yuma", name: "Yuma" },
+  { slug: "sierra-vista", name: "Sierra Vista" },
+  { slug: "lake-havasu-city", name: "Lake Havasu City" },
+];
+---
+
+<BaseLayout
+  title="Arizona Pigeon Proofing | Solar Panel Bird Proofing &amp; Cleaning"
+  description="Solar panel pigeon proofing and cleaning across Phoenix and Tucson, Arizona. Free quotes, local crews, 24–48 hour turnaround."
+>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Arizona-owned &middot; Phoenix &amp; Tucson</span>
+        <h1>Pigeons ruin panels.<br />We keep them <em>off</em> — and your output up.</h1>
+        <p class="lede">
+          Bird proofing and cleaning for solar arrays, built for Arizona roofs: monsoon dust,
+          nesting pigeons, and the heat that makes both worse.
+        </p>
+        <div class="cta-row">
+          <a href="/quote/" class="btn amber">Get a Free Quote</a>
+          <a href="tel:+16025550148" class="btn outline">Call (602) 555-0148</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><b>2</b><span>Metro areas served</span></div>
+          <div class="stat"><b>24–48h</b><span>Typical quote turnaround</span></div>
+          <div class="stat"><b>100%</b><span>Locally fulfilled</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="panel-grid">
+          <div class="cell glow"></div><div class="cell"></div><div class="cell glow"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell glow"></div><div class="cell"></div><div class="cell glow"></div>
+          <div class="cell glow"></div><div class="cell"></div><div class="cell"></div><div class="cell glow"></div>
+          <div class="cell"></div><div class="cell glow"></div><div class="cell glow"></div><div class="cell"></div>
+        </div>
+        <div class="badge-shield">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 4l16 6v11c0 10-6.8 17.6-16 21-9.2-3.4-16-11-16-21V10l16-6z" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="2"></path>
+            <path d="M14 25c3-8 6-12 10-12s7 4 10 12" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" fill="none"></path>
+            <line x1="13" y1="14" x2="35" y2="30" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Two problems, one call.</h2>
+        <p>Most Arizona roofs need both eventually — nesting pigeons and dust-caked panels both quietly cut into system output.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 17c2-7 5-11 8-11s6 4 8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"></path><circle cx="12" cy="6" r="1.6" fill="currentColor"></circle></svg>
+          </div>
+          <h3>Pigeon Proofing</h3>
+          <p>Stainless bird mesh and deterrent installation, fitted to your panel array — not a generic net draped over the roof.</p>
+          <ul>
+            <li>Custom-fit mesh, not off-the-shelf panels</li>
+            <li>Removes existing nests before sealing</li>
+            <li>HOA-compliant install on request</li>
+          </ul>
+          <a class="link" href="/pigeon-proofing-solar-panels/">See pigeon proofing details →</a>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          </div>
+          <h3>Solar Panel Cleaning</h3>
+          <p>Deionized-water washes timed around monsoon season and pollen, so dust doesn't sit on cells and cut output.</p>
+          <ul>
+            <li>Spot-free deionized water, no streaking</li>
+            <li>Pre/post-monsoon scheduling</li>
+            <li>Bundle with proofing, save on the visit</li>
+          </ul>
+          <a class="link" href="/solar-panel-cleaning/">See cleaning details →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Quote to clean roof, three steps.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h4>Tell us what's going on</h4><p>Phone or form — panel type, roof access, and whether you're hearing birds or just losing output.</p></div>
+        <div class="step"><div class="n">02</div><h4>We quote and schedule</h4><p>A local crew quotes your specific array, not a flat per-panel rate that ignores your roof.</p></div>
+        <div class="step"><div class="n">03</div><h4>Proofed, cleaned, done</h4><p>Most jobs finish same-day. You get before/after photos either way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="locations-band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where we work</span>
+        <h2>Serving Arizona, metro by metro.</h2>
+        <p>Starting in Phoenix and Tucson, expanding statewide as we bring on crews in new markets.</p>
+      </div>
+      <div class="region-tabs" role="tablist">
+        <button class="region-tab" role="tab" aria-selected="true" data-region="phx">Phoenix Metro</button>
+        <button class="region-tab" role="tab" aria-selected="false" data-region="tuc">Tucson Metro</button>
+        <button class="region-tab" role="tab" aria-selected="false" data-region="rest">Rest of Arizona</button>
+      </div>
+      <div class="region-panel active" data-region-panel="phx">
+        <div class="city-pills">
+          {phoenixCities.map((c) => (
+            <a class="city-pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          ))}
+        </div>
+      </div>
+      <div class="region-panel" data-region-panel="tuc">
+        <div class="city-pills">
+          {tucsonCities.map((c) => (
+            <a class="city-pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          ))}
+        </div>
+      </div>
+      <div class="region-panel" data-region-panel="rest">
+        <div class="city-pills">
+          {restCities.map((c) => (
+            <span class="city-pill soon">{c.name} (coming soon)</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Local proof</span>
+        <h2>What Arizona homeowners say.</h2>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Didn't realize the pigeons under the panels were costing us output until they were gone. Output's back up within a week."</p><div class="who">— Homeowner, Gilbert</div></div>
+        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Booked the cleaning right before monsoon season. Panels looked brand new, crew was in and out same day."</p><div class="who">— Homeowner, Scottsdale</div></div>
+        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"HOA required a specific mesh spec — they handled the paperwork, not just the install."</p><div class="who">— Homeowner, Oro Valley</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band" id="quote">
+        <div>
+          <h2>Get a free quote in under a minute.</h2>
+          <p>Tell us your city and what you're seeing — we'll get a local crew back to you within 24–48 hours.</p>
+        </div>
+        <a href="/quote/" class="btn amber">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; overflow: hidden; position: relative; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; padding: 4.5rem 1.5rem 5rem; }
+  .hero .eyebrow { color: #7fd1d6; }
+  .hero h1 { font-size: 2.7rem; line-height: 1.08; margin: 0.6rem 0 1rem; color: #fbfbf7; }
+  .hero h1 em { font-style: normal; color: #eea24c; }
+  .hero p.lede { font-size: 1.08rem; color: #c9d4d0; max-width: 46ch; margin: 0 0 1.8rem; }
+  .hero .cta-row { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+  .hero .btn.outline { border-color: rgba(255, 255, 255, 0.28); color: #f2f5f1; }
+  .hero .btn.outline:hover { background: rgba(255, 255, 255, 0.08); }
+  .hero .stat-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .hero .stat b { display: block; font-family: Charter, Georgia, serif; font-size: 1.5rem; color: #fbfbf7; }
+  .hero .stat span { font-size: 0.78rem; color: #9fb0ac; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .hero-art { position: relative; aspect-ratio: 1 / 0.95; }
+  .panel-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); gap: 6px; transform: perspective(900px) rotateX(12deg) rotateY(-8deg); border-radius: 14px; overflow: hidden; }
+  .panel-grid .cell { background: linear-gradient(145deg, #1e3b4c, #122534); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 4px; position: relative; }
+  .panel-grid .cell::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255, 255, 255, 0.1) 0%, transparent 35%); }
+  .panel-grid .cell.glow { background: linear-gradient(145deg, #2b5769, #173548); box-shadow: 0 0 24px rgba(95, 182, 191, 0.35) inset; }
+  .badge-shield { position: absolute; right: -6px; bottom: -10px; width: 112px; height: 112px; background: var(--surface); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); border: 4px solid var(--bg); }
+  .badge-shield svg { width: 56px; height: 56px; }
+
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .service-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 1rem; }
+  .service-card .icon { width: 48px; height: 48px; border-radius: 10px; background: var(--teal-soft); display: flex; align-items: center; justify-content: center; }
+  .service-card .icon svg { width: 26px; height: 26px; color: var(--teal); }
+  .service-card h3 { font-size: 1.35rem; }
+  .service-card p { color: var(--text-dim); margin: 0; font-size: 0.95rem; }
+  .service-card ul { list-style: none; padding: 0; margin: 0.2rem 0 0; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.9rem; }
+  .service-card .link { margin-top: 0.4rem; font-weight: 700; color: var(--teal); font-size: 0.92rem; }
+
+  .steps-section { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .step { padding: 1.6rem; border-radius: 12px; background: var(--surface); }
+  .step .n { font-family: ui-monospace, monospace; font-size: 0.78rem; font-weight: 700; color: var(--teal); }
+  .step h4 { margin: 0.5rem 0 0.4rem; font-size: 1.05rem; }
+  .step p { margin: 0; font-size: 0.9rem; color: var(--text-dim); }
+
+  .locations-band { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .region-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
+  .region-tab { padding: 0.5rem 1rem; border-radius: 99px; border: 1px solid var(--border); background: var(--surface); font-size: 0.85rem; font-weight: 600; }
+  .region-tab[aria-selected="true"] { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .city-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .city-pill { padding: 0.5rem 1rem; border-radius: 99px; background: var(--surface); border: 1px solid var(--border); font-size: 0.85rem; }
+  .city-pill:hover { border-color: var(--teal); color: var(--teal); }
+  .city-pill.soon { color: var(--text-dim); font-style: italic; }
+  .region-panel { display: none; }
+  .region-panel.active { display: block; }
+
+  .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  .trust-card { padding: 1.6rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
+  .trust-card .quote { font-size: 0.95rem; margin: 0 0 0.9rem; }
+  .trust-card .who { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; }
+  .stars { color: var(--amber); letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.85rem; }
+
+  .cta-band { background: linear-gradient(135deg, #173247, #1f6d78); color: #f2f5f1; border-radius: 18px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+  .cta-band h2 { color: #fbfbf7; font-size: 1.7rem; max-width: 30ch; }
+  .cta-band p { color: #cbe0dd; margin: 0.5rem 0 0; }
+
+  @media (max-width: 920px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 3rem; }
+    .hero-art { max-width: 340px; margin: 0 auto; }
+    .services-grid, .steps, .trust-strip { grid-template-columns: 1fr; }
+    .cta-band { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>(".region-tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.setAttribute("aria-selected", "false"));
+      tab.setAttribute("aria-selected", "true");
+      document.querySelectorAll(".region-panel").forEach((p) => p.classList.remove("active"));
+      document.querySelector(`[data-region-panel="${tab.dataset.region}"]`)?.classList.add("active");
+    });
+  });
+</script>

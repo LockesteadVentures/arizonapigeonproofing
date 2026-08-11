@@ -1,0 +1,28 @@
+---
+import CityServicePage from "../../components/CityServicePage.astro";
+import { LIVE_CITIES, REGIONS, SERVICES, nearbyCities } from "../../data/locations.js";
+import { SERVICE_CONTENT } from "../../data/serviceContent.js";
+
+export function getStaticPaths() {
+  return LIVE_CITIES.map((city) => ({
+    params: { city: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+const service = SERVICES["solar-panel-cleaning"];
+const otherService = SERVICES["pigeon-proofing-solar-panels"];
+const content = SERVICE_CONTENT["solar-panel-cleaning"];
+const region = REGIONS[city.region];
+const nearby = nearbyCities(city.slug);
+---
+
+<CityServicePage
+  city={city}
+  region={region}
+  service={service}
+  otherService={otherService}
+  content={content}
+  nearby={nearby}
+/>

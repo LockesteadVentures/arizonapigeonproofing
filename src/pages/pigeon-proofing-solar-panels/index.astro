@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
+
+const regions = [REGIONS.phoenix, REGIONS.tucson];
+---
+
+<BaseLayout
+  title="Pigeon Proofing for Solar Panels in Arizona | Arizona Pigeon Proofing"
+  description="Bird mesh and pigeon deterrent installation for solar arrays across Phoenix and Tucson, Arizona."
+>
+  <section class="hub-hero">
+    <div class="wrap">
+      <span class="eyebrow">Service</span>
+      <h1>Pigeon Proofing for Solar Panels</h1>
+      <p class="lede">Stainless mesh, fitted to your array, installed by local Arizona crews. Pick your city below for local pricing and details.</p>
+      <a href="/quote/" class="btn amber">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      {regions.map((region) => (
+        <div class="region-block">
+          <h2>{region.name}</h2>
+          <div class="city-grid">
+            {liveCitiesByRegion(region === REGIONS.phoenix ? "phoenix" : "tucson").map((c) => (
+              <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hub-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .hub-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .hub-hero .eyebrow { color: #7fd1d6; }
+  .hub-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .hub-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0 0 1.6rem; }
+
+  .wrap.narrow { max-width: 760px; }
+  .region-block { margin-bottom: 2.5rem; }
+  .region-block h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+  .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
+  .city-card { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; font-size: 0.92rem; }
+  .city-card:hover { border-color: var(--teal); color: var(--teal); }
+
+  @media (max-width: 700px) {
+    .city-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
