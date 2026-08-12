@@ -4,13 +4,6 @@ import { REGIONS, liveCitiesByRegion } from "../data/locations.js";
 const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
 ---
 
-<div class="utility-bar">
-  <div class="wrap">
-    <span class="areas">Serving Tucson Metro, AZ &middot; Phoenix Metro coming soon</span>
-    <span class="phone">📞 (520) 555-0148 — Free quotes, 7 days a week</span>
-  </div>
-</div>
-
 <header class="site">
   <div class="wrap">
     <nav class="main">
@@ -96,11 +89,6 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
 </header>
 
 <style>
-  .utility-bar { background: var(--surface-2); border-bottom: 1px solid var(--border); font-size: 0.82rem; }
-  .utility-bar .wrap { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 1.5rem; gap: 1rem; flex-wrap: wrap; }
-  .utility-bar .areas { color: var(--text-dim); }
-  .utility-bar .phone { font-weight: 700; color: var(--teal); }
-
   header.site { position: sticky; top: 0; z-index: 40; background: var(--bg); border-bottom: 1px solid var(--border); backdrop-filter: blur(6px); }
   nav.main { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 0.9rem 0; }
   .logo { display: flex; align-items: center; gap: 0.55rem; font-family: Charter, Georgia, serif; font-weight: 700; font-size: 1.28rem; letter-spacing: -0.01em; white-space: nowrap; }
