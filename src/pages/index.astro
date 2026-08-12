@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { liveCitiesByRegion } from "../data/locations.js";
 
-const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
+const tucsonCities = liveCitiesByRegion("tucson");
 const phoenixCities = [
   { slug: "phoenix", name: "Phoenix" },
   { slug: "scottsdale", name: "Scottsdale" },

@@ -70,6 +70,14 @@ export const CITIES = [
   { slug: "green-valley", name: "Green Valley", region: "tucson", tier: 2 },
   { slug: "vail", name: "Vail", region: "tucson", tier: 2 },
   { slug: "catalina-foothills", name: "Catalina Foothills", region: "tucson", tier: 2 },
+  { slug: "south-tucson", name: "South Tucson", region: "tucson", tier: 2 },
+  { slug: "casas-adobes", name: "Casas Adobes", region: "tucson", tier: 2 },
+  { slug: "flowing-wells", name: "Flowing Wells", region: "tucson", tier: 2 },
+  { slug: "tanque-verde", name: "Tanque Verde", region: "tucson", tier: 2 },
+  { slug: "rita-ranch", name: "Rita Ranch", region: "tucson", tier: 2 },
+  { slug: "corona-de-tucson", name: "Corona de Tucson", region: "tucson", tier: 2 },
+  { slug: "saddlebrooke", name: "SaddleBrooke", region: "tucson", tier: 2 },
+  { slug: "picture-rocks", name: "Picture Rocks", region: "tucson", tier: 2 },
 
   // --- Rest of Arizona, Tier 3 (held back — no fulfillment partner yet, see site plan §11) ---
   { slug: "flagstaff", name: "Flagstaff", region: "rest", tier: 3 },
