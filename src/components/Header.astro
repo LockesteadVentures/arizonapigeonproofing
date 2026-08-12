@@ -86,7 +86,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
           <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"></path></svg>
           (520) 555-0148
         </span>
-        <a href="/quote/" class="btn amber">Get a Free Quote</a>
+        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"nav_header"}'>Get a Free Quote</a>
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
         </button>
@@ -163,6 +163,14 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
       btn.setAttribute("aria-expanded", open ? "false" : "true");
       const panel = btn.parentElement?.querySelector(".mega");
       panel?.classList.toggle("open", !open);
+      if (!open) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "nav_menu_open",
+          menu: btn.getAttribute("data-mega"),
+          page_path: window.location.pathname,
+        });
+      }
     });
   });
   document.addEventListener("click", () => closeAll());

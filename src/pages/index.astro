@@ -22,6 +22,7 @@ const restCities = [
 <BaseLayout
   title="Arizona Pigeon Proofing | Solar Panel Bird Proofing &amp; Cleaning"
   description="Solar panel pigeon proofing and cleaning in Tucson, Arizona. Free quotes, a local crew, 24–48 hour turnaround."
+  pageData={{ content_group: "home" }}
 >
   <section class="hero">
     <div class="wrap">
@@ -33,7 +34,7 @@ const restCities = [
           nesting pigeons, and the heat that makes both worse.
         </p>
         <div class="cta-row">
-          <a href="/quote/" class="btn amber">Get a Free Quote</a>
+          <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"home_hero"}'>Get a Free Quote</a>
           <a href="tel:+15205550148" class="btn outline">Call (520) 555-0148</a>
         </div>
         <div class="stat-row">
@@ -169,7 +170,7 @@ const restCities = [
           <h2>Get a free quote in under a minute.</h2>
           <p>Tell us your city and what you're seeing — we'll get a local crew back to you within 24–48 hours.</p>
         </div>
-        <a href="/quote/" class="btn amber">Get a Free Quote</a>
+        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"home_footer_cta"}'>Get a Free Quote</a>
       </div>
     </div>
   </section>
@@ -250,6 +251,8 @@ const restCities = [
       tab.setAttribute("aria-selected", "true");
       document.querySelectorAll(".region-panel").forEach((p) => p.classList.remove("active"));
       document.querySelector(`[data-region-panel="${tab.dataset.region}"]`)?.classList.add("active");
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "region_tab_select", region: tab.dataset.region, page_path: window.location.pathname });
     });
   });
 </script>

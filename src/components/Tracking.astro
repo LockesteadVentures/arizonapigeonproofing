@@ -2,39 +2,84 @@
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 
-// GA4, Clarity, and CallRail all need real account IDs before they do anything —
-// each block below silently no-ops until its env var is set. See README for setup.
-const ga4Id = import.meta.env.PUBLIC_GA4_ID;
-const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
-const callrailCompanyId = import.meta.env.PUBLIC_CALLRAIL_COMPANY_ID;
+// GTM is the single tag/pixel manager now -- GA4, Clarity, CallRail, Meta Pixel,
+// etc. all get configured as Tags inside the GTM container itself, not here.
+// This component's job is just: (1) load the container, (2) seed the dataLayer
+// with page-level context BEFORE the container loads so pageview-triggered tags
+// can read it immediately, and (3) provide the site-wide event instrumentation
+// (clicks-to-call, tracked CTAs) that pushes into that same dataLayer.
+interface Props {
+  title: string;
+  pageData?: Record<string, unknown>;
+}
+
+const { title, pageData = {} } = Astro.props;
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+
+const initialDataLayer = [
+  {
+    event: "page_context",
+    page_path: Astro.url.pathname,
+    page_title: title,
+    ...pageData,
+  },
+];
 ---
 
-{/* Vercel Web Analytics + Speed Insights — zero-config, no account needed beyond the Vercel project itself. */}
+{/* Vercel Web Analytics + Speed Insights -- platform-native, not routed through GTM. */}
 <Analytics />
 <SpeedInsights />
 
-{ga4Id && (
-  <Fragment>
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
-    <script define:vars={{ ga4Id }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", ga4Id);
-    </script>
-  </Fragment>
-)}
+<script is:inline define:vars={{ initialDataLayer }}>
+  window.dataLayer = initialDataLayer;
+</script>
 
-{clarityId && (
-  <script define:vars={{ clarityId }}>
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", clarityId);
+{gtmId && (
+  <script is:inline define:vars={{ gtmId }}>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", gtmId);
   </script>
 )}
 
-{callrailCompanyId && (
-  <script async src={`//cdn.callrail.com/companies/${callrailCompanyId}/12/swap.js`}></script>
-)}
+{/*
+  Site-wide event instrumentation, delegated from document so it covers every
+  page without per-element listeners:
+  - any tel: link click -> click_to_call
+  - any element with data-gtm-event="..." [data-gtm-params='{"k":"v"}'] -> that event
+  Business-specific events (form_start, generate_lead, form_error, region
+  selection) are pushed directly from the components that own that logic --
+  see quote.astro and index.astro.
+*/}
+<script is:inline>
+  document.addEventListener("click", function (e) {
+    window.dataLayer = window.dataLayer || [];
+
+    var telLink = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (telLink) {
+      window.dataLayer.push({
+        event: "click_to_call",
+        phone_number: telLink.getAttribute("href").replace("tel:", ""),
+        page_path: window.location.pathname,
+      });
+    }
+
+    var tracked = e.target.closest && e.target.closest("[data-gtm-event]");
+    if (tracked) {
+      var params = {};
+      try {
+        params = JSON.parse(tracked.getAttribute("data-gtm-params") || "{}");
+      } catch (err) {}
+      window.dataLayer.push(
+        Object.assign({ event: tracked.getAttribute("data-gtm-event"), page_path: window.location.pathname }, params)
+      );
+    }
+  });
+</script>

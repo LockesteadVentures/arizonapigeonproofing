@@ -2,14 +2,18 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Tracking from "../components/Tracking.astro";
+import GtmNoscript from "../components/GtmNoscript.astro";
 import "../styles/global.css";
 
 interface Props {
   title: string;
   description: string;
+  // Page-level context seeded into the dataLayer before GTM loads -- e.g.
+  // { content_group: "city_service_page", metro: "tucson", service: "...", city: "..." }
+  pageData?: Record<string, unknown>;
 }
 
-const { title, description } = Astro.props;
+const { title, description, pageData = {} } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const organizationSchema = {
@@ -47,9 +51,10 @@ const organizationSchema = {
 
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
-    <Tracking />
+    <Tracking title={title} pageData={pageData} />
   </head>
   <body>
+    <GtmNoscript />
     {import.meta.env.DEV && (
       <div class="mockup-badge">DEV BUILD — placeholder copy, pending Byword.ai content pass</div>
     )}

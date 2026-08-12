@@ -6,6 +6,7 @@ import { REGIONS } from "../data/locations.js";
 <BaseLayout
   title="Get a Free Quote | Arizona Pigeon Proofing"
   description="Get a free quote for solar panel pigeon proofing or cleaning in Arizona. Local crews respond within 24–48 hours."
+  pageData={{ content_group: "quote" }}
 >
   <section class="page-hero">
     <div class="wrap">
@@ -85,17 +86,38 @@ import { REGIONS } from "../data/locations.js";
   const status = form?.querySelector<HTMLParagraphElement>(".form-status");
   const button = form?.querySelector<HTMLButtonElement>("button[type=submit]");
 
+  function pushEvent(event: string, params: Record<string, unknown> = {}) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event, page_path: window.location.pathname, ...params });
+  }
+
+  let startedForm = false;
+  form?.addEventListener(
+    "focusin",
+    () => {
+      if (startedForm) return;
+      startedForm = true;
+      pushEvent("form_start", { form_name: "quote_request" });
+    },
+    { once: true }
+  );
+
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!status || !button) return;
 
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "");
+    const phone = String(formData.get("phone") ?? "");
+    const metro = String(formData.get("metro") ?? "");
+    const city = String(formData.get("city") ?? "");
+    const service = String(formData.get("service") ?? "");
     const payload = {
-      name: String(formData.get("name") ?? ""),
-      phone: String(formData.get("phone") ?? ""),
-      metro: String(formData.get("metro") ?? ""),
-      city: String(formData.get("city") ?? ""),
-      service: String(formData.get("service") ?? ""),
+      name,
+      phone,
+      metro,
+      city,
+      service,
       company: String(formData.get("company") ?? ""),
       page: window.location.pathname,
     };
@@ -115,14 +137,22 @@ import { REGIONS } from "../data/locations.js";
       if (res.ok && result.ok) {
         status.dataset.state = "success";
         status.textContent = "Thanks — a local crew will follow up within 24–48 hours.";
+        // Raw lead info is intentional here -- GA4 is the source of truth for
+        // lead data per business decision, not a default. Anyone adding a new
+        // GTM tag later can now read name/phone off the dataLayer too, so
+        // treat that as a live consideration when connecting new tags.
+        pushEvent("generate_lead", { form_name: "quote_request", name, phone, metro, city, service });
         form.reset();
+        startedForm = false;
       } else {
         status.dataset.state = "error";
         status.textContent = result.error ?? "Something went wrong. Try calling us instead.";
+        pushEvent("form_error", { form_name: "quote_request", reason: result.error ?? "unknown" });
       }
     } catch {
       status.dataset.state = "error";
       status.textContent = "Something went wrong. Try calling us instead.";
+      pushEvent("form_error", { form_name: "quote_request", reason: "network_error" });
     } finally {
       button.disabled = false;
     }

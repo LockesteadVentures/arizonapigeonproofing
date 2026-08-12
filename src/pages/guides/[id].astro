@@ -20,7 +20,11 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout title={`${entry.data.title} | Arizona Pigeon Proofing`} description={entry.data.description}>
+<BaseLayout
+  title={`${entry.data.title} | Arizona Pigeon Proofing`}
+  description={entry.data.description}
+  pageData={{ content_group: "guide_article", guide_id: entry.id }}
+>
   <section class="page-hero">
     <div class="wrap narrow">
       <span class="eyebrow">Guide</span>
