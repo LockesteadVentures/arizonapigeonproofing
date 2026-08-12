@@ -9,6 +9,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: entry.data.publishDate.toISOString(),
+  publisher: { "@type": "Organization", name: "Arizona Pigeon Proofing" },
+};
 ---
 
 <BaseLayout title={`${entry.data.title} | Arizona Pigeon Proofing`} description={entry.data.description}>
@@ -23,6 +32,7 @@ const { Content } = await render(entry);
       <Content />
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 </BaseLayout>
 
 <style>

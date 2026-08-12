@@ -50,7 +50,7 @@ export const SERVICE_CONTENT = {
     faqs: [
       {
         q: () => "How much output do dirty panels actually lose?",
-        a: "Typically 5–20% depending on how long since the last cleaning and how much dust/pollen has settled — enough to notice on your utility bill.",
+        a: "NREL research on solar soiling puts typical annual losses around 4–15%, with short-term spikes well beyond that after a heavy dust storm — enough to notice on your utility bill.",
       },
       {
         q: (city) => `How often should panels be cleaned in ${city.name}?`,
