@@ -51,7 +51,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
           <div class="mega locations" data-panel="locations">
             <div class="mega-regions">
               <div>
-                <h5>{REGIONS.tucson.name}</h5>
+                <p class="region-label">{REGIONS.tucson.name}</p>
                 <ul>
                   {tucsonCities.map((c) => (
                     <li><a href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a></li>
@@ -60,14 +60,14 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
                 <a class="see-all" href={`/locations/${REGIONS.tucson.slug}/`}>All Tucson cities →</a>
               </div>
               <div>
-                <h5>{REGIONS.phoenix.name}</h5>
+                <p class="region-label">{REGIONS.phoenix.name}</p>
                 <ul>
                   <li class="mono" style="color:var(--text-dim); font-size:0.78rem;">Coming soon</li>
                 </ul>
                 <a class="see-all" href="/locations/">View all locations →</a>
               </div>
               <div>
-                <h5>{REGIONS.rest.name}</h5>
+                <p class="region-label">{REGIONS.rest.name}</p>
                 <ul>
                   <li class="mono" style="color:var(--text-dim); font-size:0.78rem;">Coming soon</li>
                 </ul>
@@ -126,7 +126,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
   .mega-card .t { font-weight: 700; font-size: 0.92rem; display: block; margin-bottom: 0.15rem; font-family: -apple-system, sans-serif; }
   .mega-card .d { font-size: 0.8rem; color: var(--text-dim); }
   .mega-regions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .mega-regions h5 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.5rem; font-family: ui-monospace, monospace; font-weight: 700; }
+  .mega-regions .region-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.5rem; font-family: ui-monospace, monospace; font-weight: 700; }
   .mega-regions ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; }
   .mega-regions a { font-size: 0.86rem; padding: 0.15rem 0; display: inline-block; }
   .mega-regions a:hover { color: var(--teal); }

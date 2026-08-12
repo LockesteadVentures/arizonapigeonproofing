@@ -17,14 +17,14 @@ import { REGIONS } from "../data/locations.js";
         <p class="tag">Solar panel bird proofing and cleaning, fulfilled by local Arizona crews.</p>
       </div>
       <div>
-        <h5>Services</h5>
+        <h2>Services</h2>
         <ul>
           <li><a href="/pigeon-proofing-solar-panels/">Pigeon Proofing</a></li>
           <li><a href="/solar-panel-cleaning/">Solar Panel Cleaning</a></li>
         </ul>
       </div>
       <div>
-        <h5>Locations</h5>
+        <h2>Locations</h2>
         <ul>
           <li><a href={`/locations/${REGIONS.tucson.slug}/`}>{REGIONS.tucson.name}</a></li>
           <li><a href="/locations/">{REGIONS.phoenix.name} (coming soon)</a></li>
@@ -32,7 +32,7 @@ import { REGIONS } from "../data/locations.js";
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h2>Company</h2>
         <ul>
           <li><a href="/guides/">Resources</a></li>
           <li><a href="/about/">About</a></li>
@@ -54,7 +54,7 @@ import { REGIONS } from "../data/locations.js";
   footer .logo .state { color: var(--teal); }
   footer .tag { color: var(--text-dim); font-size: 0.85rem; max-width: 32ch; margin: 0; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; }
-  .footer-grid h5 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.8rem; font-family: ui-monospace, monospace; }
+  .footer-grid h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.8rem; font-family: ui-monospace, monospace; font-weight: 700; }
   .footer-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
   .footer-grid a:hover { color: var(--teal); }
   .footer-bottom { border-top: 1px solid var(--border); margin-top: 2.5rem; padding-top: 1.5rem; display: flex; justify-content: space-between; color: var(--text-dim); font-size: 0.8rem; flex-wrap: wrap; gap: 0.5rem; }

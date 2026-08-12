@@ -31,7 +31,7 @@ const cities = liveCitiesByRegion(regionKey);
       <div class="city-grid">
         {cities.map((c) => (
           <div class="city-block">
-            <h3>{c.name}</h3>
+            <h2>{c.name}</h2>
             <div class="pill-row">
               <a class="pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>Pigeon Proofing</a>
               <a class="pill" href={`/solar-panel-cleaning/${c.slug}/`}>Solar Cleaning</a>
@@ -53,7 +53,7 @@ const cities = liveCitiesByRegion(regionKey);
   .wrap.narrow { max-width: 760px; }
   .city-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .city-block { padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); }
-  .city-block h3 { font-size: 1.05rem; margin-bottom: 0.7rem; }
+  .city-block h2 { font-size: 1.05rem; margin-bottom: 0.7rem; }
   .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .pill { padding: 0.35rem 0.8rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.82rem; }
   .pill:hover { border-color: var(--teal); color: var(--teal); }

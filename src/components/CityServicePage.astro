@@ -55,7 +55,7 @@ const faqJsonLd = {
           <div class="process-step">
             <div class="n">{String(i + 1).padStart(2, "0")}</div>
             <div>
-              <h4>{step.title}</h4>
+              <h3>{step.title}</h3>
               <p>{step.body}</p>
             </div>
           </div>
@@ -139,7 +139,7 @@ const faqJsonLd = {
   .process-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1.5rem; }
   .process-step { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; }
   .process-step .n { font-family: ui-monospace, monospace; font-weight: 700; color: var(--teal); }
-  .process-step h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .process-step h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
   .process-step p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
 
   .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; box-shadow: var(--shadow); }
