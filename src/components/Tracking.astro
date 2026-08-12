@@ -30,24 +30,27 @@ const initialDataLayer = [
 <Analytics />
 <SpeedInsights />
 
+{/*
+  IMPORTANT: never reassign window.dataLayer wholesale here. Partytown's
+  forward mechanism patches the .push method on the existing array (or
+  creates it) as soon as its bootstrap script runs; `window.dataLayer = [...]`
+  would silently destroy that patched method and break forwarding into the
+  worker. Always initialize-if-absent, then .push.
+*/}
 <script is:inline define:vars={{ initialDataLayer }}>
-  window.dataLayer = initialDataLayer;
+  window.dataLayer = window.dataLayer || [];
+  initialDataLayer.forEach(function (item) {
+    window.dataLayer.push(item);
+  });
 </script>
 
-{gtmId && (
-  <script is:inline define:vars={{ gtmId }}>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", gtmId);
-  </script>
-)}
+{/*
+  Loaded via Partytown (type="text/partytown") -- runs GTM and everything
+  it loads (GA4, Google Ads, etc.) in a web worker instead of the main
+  thread. astro.config.mjs's forward: ['dataLayer.push'] is what lets our
+  main-thread event pushes below still reach it.
+*/}
+{gtmId && <script type="text/partytown" src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}></script>}
 
 {/*
   Site-wide event instrumentation, delegated from document so it covers every
