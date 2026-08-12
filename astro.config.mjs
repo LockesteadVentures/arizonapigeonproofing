@@ -6,9 +6,10 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   // Canonical domain — used to build absolute URLs for canonical tags, the
-  // sitemap, and OG/Twitter meta. Update if the final domain differs;
-  // arizonapigeonproofing.com is not registered yet as of this writing.
-  site: 'https://arizonapigeonproofing.com',
+  // sitemap, and OG/Twitter meta. Must be 'www' to match Vercel's domain
+  // config: the apex (non-www) 308-redirects to www there, and a redirected
+  // sitemap URL reads as unfetchable in Search Console.
+  site: 'https://www.arizonapigeonproofing.com',
   trailingSlash: 'always',
   // 'static' by default — output: 'server' would make every page an on-demand
   // function. We only need that for the two API routes, which opt in per-file

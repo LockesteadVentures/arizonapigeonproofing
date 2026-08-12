@@ -31,4 +31,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://arizonapigeonproofing.com/sitemap-index.xml
+Sitemap: https://www.arizonapigeonproofing.com/sitemap-index.xml
