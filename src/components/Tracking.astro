@@ -45,12 +45,29 @@ const initialDataLayer = [
 </script>
 
 {/*
-  Loaded via Partytown (type="text/partytown") -- runs GTM and everything
-  it loads (GA4, Google Ads, etc.) in a web worker instead of the main
-  thread. astro.config.mjs's forward: ['dataLayer.push'] is what lets our
-  main-thread event pushes below still reach it.
+  GTM loads through Partytown (web worker) for normal visitors -- the
+  performance win. But GTM Preview/Tag Assistant's debug handshake needs a
+  direct postMessage connection to the real gtm.js instance, which a worker
+  sandbox blocks entirely (long-standing, documented incompatibility:
+  github.com/QwikDev/partytown/issues/72). So: detect Tag Assistant's own
+  debug signals (URL param, referrer, or cookie -- per Simo Ahava's
+  documented list) and load gtm.js normally, on the main thread, whenever
+  any of them are present. Everyone else still gets the worker.
 */}
-{gtmId && <script type="text/partytown" src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}></script>}
+{gtmId && (
+  <script is:inline define:vars={{ gtmId }}>
+    var isGtmDebug =
+      /[?&]gtm_debug=/.test(window.location.search) ||
+      document.referrer.indexOf("tagassistant.google.com") !== -1 ||
+      document.cookie.indexOf("__TAG_ASSISTANT") !== -1;
+    var gtmScript = document.createElement("script");
+    gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + gtmId;
+    if (!isGtmDebug) {
+      gtmScript.type = "text/partytown";
+    }
+    document.head.appendChild(gtmScript);
+  </script>
+)}
 
 {/*
   Site-wide event instrumentation, delegated from document so it covers every
