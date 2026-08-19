@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { REGIONS, SERVICES } from "../data/locations.js";
+import { CITY_CONTEXT } from "../data/cityContext.js";
 
 interface Props {
   city: { slug: string; name: string; region: string; tier: number };
@@ -12,11 +13,16 @@ interface Props {
 }
 
 const { city, region, service, otherService, content, nearby } = Astro.props;
+const cityContext = CITY_CONTEXT[city.slug];
+
+// The generic 3 service FAQs plus one genuinely city-specific question --
+// see cityContext.js for why each city's is different, not templated.
+const allFaqs = cityContext ? [...content.faqs, cityContext.localFaq] : content.faqs;
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: content.faqs.map((f: any) => ({
+  mainEntity: allFaqs.map((f: any) => ({
     "@type": "Question",
     name: typeof f.q === "function" ? f.q(city) : f.q,
     acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -45,6 +51,21 @@ const faqJsonLd = {
     <div class="wrap narrow">
       <h2>Why this matters in {city.name}</h2>
       <p>{content.problemFraming(city, region)}</p>
+      {cityContext && (
+        <>
+          <p>{cityContext.character}</p>
+          {cityContext.communities.length > 0 && (
+            <p class="communities-note">
+              <strong>Communities we serve in {city.name}:</strong> {cityContext.communities.join(", ")}
+            </p>
+          )}
+          <p class="jurisdiction-note">
+            {cityContext.jurisdiction.type === "incorporated"
+              ? `${city.name} is incorporated, so permits and inspections go through ${cityContext.jurisdiction.authority} rather than the county.`
+              : `${city.name} is unincorporated, so permits and inspections go through ${cityContext.jurisdiction.authority} rather than a local town government.`}
+          </p>
+        </>
+      )}
     </div>
   </section>
 
@@ -69,7 +90,7 @@ const faqJsonLd = {
     <div class="wrap narrow">
       <h2>Frequently asked — {city.name}</h2>
       <div class="faq-list">
-        {content.faqs.map((f: any) => (
+        {allFaqs.map((f: any) => (
           <details class="faq-item">
             <summary>{typeof f.q === "function" ? f.q(city) : f.q}</summary>
             <p>{f.a}</p>
@@ -125,6 +146,10 @@ const faqJsonLd = {
 
   .wrap.narrow { max-width: 760px; }
   section.alt { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .communities-note { font-size: 0.92rem; }
+  .communities-note strong { font-weight: 700; }
+  .jurisdiction-note { font-size: 0.85rem; color: var(--text-dim); font-style: italic; }
 
   .process-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1.5rem; }
   .process-step { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; }
