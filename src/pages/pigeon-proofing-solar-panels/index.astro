@@ -1,6 +1,22 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import LocalStatsBlock from "../../components/LocalStatsBlock.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
+
+const stats = [
+  {
+    value: "40,000",
+    label: "TEP residential customers with rooftop solar as of 2022, up from ~21,000 in 2018 — about 9.8% of TEP's 400,000+ home accounts.",
+    source: "Arizona Daily Star / TEP reporting",
+    sourceUrl: "https://tucson.com/news/local/business/tucson-electric-solar-renewable-arizona/article_99783c90-42ee-11ee-a54c-5f3b28d08304.html",
+  },
+  {
+    value: "Jun 15 – Sep 30",
+    label: "Arizona's official monsoon season, fixed by the National Weather Service — worth clearing nests before it starts, not after.",
+    source: "National Weather Service",
+    sourceUrl: "https://www.weather.gov/",
+  },
+];
 ---
 
 <BaseLayout
@@ -14,6 +30,12 @@ import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
       <h1>Pigeon Proofing for Solar Panels</h1>
       <p class="lede">Stainless mesh, fitted to your array, installed by a local Tucson crew. Pick your city below for local details and a free quote.</p>
       <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"service_hub","service":"pigeon-proofing-solar-panels"}'>Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap narrow">
+      <LocalStatsBlock heading="Solar in Tucson, by the numbers" stats={stats} />
     </div>
   </section>
 
@@ -31,6 +53,10 @@ import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
         <h2>{REGIONS.phoenix.name}</h2>
         <p class="soon-note">Coming soon — pages are built, waiting on a confirmed local crew.</p>
       </div>
+      <p class="guide-link">
+        Wondering whether your HOA needs to sign off first?
+        <a href="/guides/hoa-rules-bird-proofing-solar-panels/">Read the full guide →</a>
+      </p>
     </div>
   </section>
 </BaseLayout>
@@ -42,6 +68,8 @@ import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
   .hub-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
   .hub-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0 0 1.6rem; }
 
+  section.alt { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
   .wrap.narrow { max-width: 760px; }
   .region-block { margin-bottom: 2.5rem; }
   .region-block h2 { font-size: 1.3rem; margin-bottom: 1rem; }
@@ -49,6 +77,8 @@ import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
   .city-card { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; font-size: 0.92rem; }
   .city-card:hover { border-color: var(--teal); color: var(--teal); }
   .soon-note { color: var(--text-dim); font-style: italic; }
+  .guide-link { font-size: 0.92rem; color: var(--text-dim); }
+  .guide-link a { font-weight: 700; color: var(--teal); }
 
   @media (max-width: 700px) {
     .city-grid { grid-template-columns: 1fr 1fr; }

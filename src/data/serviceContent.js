@@ -38,8 +38,8 @@ export const SERVICE_CONTENT = {
       `Dust and pollen build up fast on ${city.name} rooftops — enough to measurably cut panel output within a few months of the last cleaning.`,
     problemFraming: (city, region) =>
       region.slug === "tucson-metro"
-        ? `${city.name}'s dust storms and the surrounding desert terrain mean panels here often need a post-haboob cleaning on top of the usual seasonal schedule.`
-        : `Between haboob season and monsoon runoff leaving mineral spots, ${city.name} panels usually need cleaning twice a year to stay near rated output.`,
+        ? `Tucson's surrounding terrain doesn't set up the dramatic haboobs Phoenix gets, but the region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself, enough to justify cleaning ${city.name} panels on each side of the season.`
+        : `Phoenix's open desert terrain means real haboobs, not just dust — between that and monsoon runoff leaving mineral spots, ${city.name} panels usually need cleaning twice a year to stay near rated output.`,
     process: [
       { title: "Output check", body: "Where possible, we note your current output so you can see the before/after difference." },
       { title: "Deionized wash", body: "Panels are washed with spot-free deionized water — no mineral streaking from Arizona's hard water." },
