@@ -67,17 +67,6 @@ const faqJsonLd = {
 
   <section>
     <div class="wrap narrow">
-      <div class="pricing-card">
-        <h2>{content.pricing.label}</h2>
-        <p class="range">{content.pricing.range}</p>
-        <p class="note">Every {city.name} roof and array is different — this is a starting range, not a quote. Free quotes are specific to your panels.</p>
-        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_pricing","metro":"${city.region}","service":"${service.slug}"}`}>Get your {city.name} quote</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap narrow">
       <h2>Frequently asked — {city.name}</h2>
       <div class="faq-list">
         {content.faqs.map((f: any) => (
@@ -90,7 +79,7 @@ const faqJsonLd = {
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap narrow">
       <div class="cross-links">
         <div>
@@ -142,10 +131,6 @@ const faqJsonLd = {
   .process-step .n { font-family: ui-monospace, monospace; font-weight: 700; color: var(--teal); }
   .process-step h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
   .process-step p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
-
-  .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; box-shadow: var(--shadow); }
-  .pricing-card .range { font-family: Charter, Georgia, serif; font-size: 1.6rem; color: var(--teal); margin: 0.4rem 0 0.8rem; }
-  .pricing-card .note { color: var(--text-dim); font-size: 0.88rem; margin-bottom: 1.2rem; }
 
   .faq-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.4rem; }
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; }

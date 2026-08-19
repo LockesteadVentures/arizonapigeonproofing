@@ -17,7 +17,6 @@ export const SERVICE_CONTENT = {
       { title: "Nest removal", body: "Any existing nesting material is cleared out and the area is sanitized before sealing." },
       { title: "Mesh install", body: "Stainless steel mesh is fitted to your panel's exact mounting height and roof pitch — no gaps for birds to re-enter." },
     ],
-    pricing: { label: "Typical range", range: "$400–$1,200 depending on array size and roof access" },
     faqs: [
       {
         q: (city) => `Do I need HOA approval for bird mesh in ${city.name}?`,
@@ -46,7 +45,6 @@ export const SERVICE_CONTENT = {
       { title: "Deionized wash", body: "Panels are washed with spot-free deionized water — no mineral streaking from Arizona's hard water." },
       { title: "Final inspection", body: "We check for micro-cracks or wiring issues while we're up there, and flag anything worth knowing about." },
     ],
-    pricing: { label: "Typical range", range: "$150–$400 per visit depending on panel count" },
     faqs: [
       {
         q: () => "How much output do dirty panels actually lose?",
