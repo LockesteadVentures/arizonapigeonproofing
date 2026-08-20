@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/guides/do-pigeons-damage-solar-panels", "destination": "/guides/pigeons-and-solar-panels/", "permanent": true },
+    { "source": "/guides/do-pigeons-damage-solar-panels/", "destination": "/guides/pigeons-and-solar-panels/", "permanent": true },
+    { "source": "/guides/hoa-rules-bird-proofing-solar-panels", "destination": "/guides/hoa-solar-panel-rules-arizona/", "permanent": true },
+    { "source": "/guides/hoa-rules-bird-proofing-solar-panels/", "destination": "/guides/hoa-solar-panel-rules-arizona/", "permanent": true },
+    { "source": "/guides/solar-panel-cleaning-frequency-arizona", "destination": "/guides/solar-panel-cleaning-arizona/", "permanent": true },
+    { "source": "/guides/solar-panel-cleaning-frequency-arizona/", "destination": "/guides/solar-panel-cleaning-arizona/", "permanent": true }
+  ]
+}

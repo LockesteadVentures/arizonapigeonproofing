@@ -12,14 +12,11 @@ export default defineConfig({
   // sitemap URL reads as unfetchable in Search Console.
   site: 'https://www.arizonapigeonproofing.com',
   trailingSlash: 'always',
-  // The 3 original placeholder guides are retired in favor of the hub-and-spoke
-  // content pack (Aug 2026) -- redirect their indexed URLs to the closest new
-  // equivalent instead of letting them 404.
-  redirects: {
-    '/guides/do-pigeons-damage-solar-panels/': '/guides/pigeons-and-solar-panels/',
-    '/guides/hoa-rules-bird-proofing-solar-panels/': '/guides/hoa-solar-panel-rules-arizona/',
-    '/guides/solar-panel-cleaning-frequency-arizona/': '/guides/solar-panel-cleaning-arizona/',
-  },
+  // 3 retired placeholder guides redirect via vercel.json instead of this config's
+  // `redirects` -- with trailingSlash: 'always', Astro/Vercel adapter emits a
+  // route regex that only matches the no-trailing-slash form, which the site
+  // itself never requests (everything gets normalized to a trailing slash first),
+  // so the redirect silently 404s. See vercel.json.
   // 'static' by default — output: 'server' would make every page an on-demand
   // function. We only need that for the two API routes, which opt in per-file
   // via `export const prerender = false`. Everything else stays static/fast.
