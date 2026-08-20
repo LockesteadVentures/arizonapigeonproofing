@@ -3,15 +3,6 @@ title: "Pigeons and Solar Panels: The Complete Arizona Guide"
 description: "Pigeons and solar panels are a bad match in Arizona — nesting, droppings, and wiring damage are common. Here's why it happens, what it costs, and how to stop it."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Do pigeons actually damage solar panels, or is it just a mess?"
-    answer: "Both. The droppings and nesting material block sunlight and reduce efficiency, but the bigger risk is physical: corrosion on mounting hardware and, in some cases, wiring damage that isn't covered under a standard solar warranty."
-  - question: "Will bird mesh void my solar panel warranty?"
-    answer: "Not when it's installed correctly. Warranty issues typically come from improper installation, like screws driven through panel frames, not from the mesh itself. See our full breakdown for what to check before hiring anyone."
-  - question: "Can I just clean the droppings off myself instead of pigeon-proofing?"
-    answer: "You can clean existing droppings, but without sealing the gap, pigeons will likely come back and nest again. Cleaning addresses the symptom; mesh addresses the cause. Dried droppings also carry health risks, so take precautions if you do it yourself."
-  - question: "Is this only a problem in Tucson, or all of Arizona?"
-    answer: "It's a statewide issue anywhere pigeons and solar arrays overlap, but our crews currently serve Tucson Metro, including Oro Valley, Marana, Sahuarita, Green Valley, and surrounding communities. Phoenix Metro coverage is coming soon."
 ---
 
 Pigeons nest under solar panels because the gap between the panel and the roof deck is shaded, dry, and shielded from predators and Arizona's heat — basically a rent-free condo with a roof over it. Left alone, that nesting leads to droppings that reduce panel efficiency, corrode wiring and mounts, and create a real health hazard, plus the noise and mess of birds cooing under your roof at 5 a.m. The fix isn't spikes or plastic owls — it's sealing the gap itself with mesh, done right the first time.

@@ -3,15 +3,6 @@ title: "Health Risks of Pigeon Droppings and Nests Near Your Home"
 description: "Pigeon droppings health risk explained: histoplasmosis, allergy irritation, and nest mites. What's real, what's overblown, and when to call a pro."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Can you get histoplasmosis just from being near pigeon droppings?"
-    answer: "Casual proximity, such as walking by or having a few droppings on a windowsill, is low risk for most healthy people. The real exposure risk comes from disturbing dried, accumulated droppings so the dust becomes airborne and gets inhaled."
-  - question: "Are pigeon droppings dangerous to touch?"
-    answer: "Touching dried droppings isn't the main pathway for histoplasmosis; inhaling disturbed dust is. Still, wash your hands after any contact and avoid touching your face, and don't dry-sweep or brush off large accumulations."
-  - question: "Do all pigeon nests have mites?"
-    answer: "Not every nest, but active or recently abandoned pigeon nests commonly host mites and other parasites. It's common enough that professional removal treats it as a standard precaution."
-  - question: "Is this something to worry about for a small amount of droppings on my patio?"
-    answer: "Generally no. Small, everyday amounts on hard surfaces are a cleaning issue, not a health emergency. The concern scales up with the size and age of the accumulation, particularly a built-up nest."
 ---
 
 Pigeon droppings carry a real but often overstated health risk. The main concern is histoplasmosis, a fungal infection that can grow in soil enriched by accumulated droppings and become airborne as dust when disturbed. For most healthy people the risk from casual exposure is low, but dried droppings, active nests, and their mite populations are still worth handling carefully, and older adults or anyone with a weakened immune system should be more cautious. This is general health information, not medical advice.

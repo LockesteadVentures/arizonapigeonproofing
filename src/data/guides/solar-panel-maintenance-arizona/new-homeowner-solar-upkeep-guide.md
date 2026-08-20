@@ -3,15 +3,6 @@ title: "New to Solar? What Arizona Homeowners Should Know About Upkeep"
 description: "Considering solar in Arizona? Learn what upkeep to expect after installation — heat, dust, pollen, monsoon, and pigeons — before you sign a contract."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Is solar really not \"set it and forget it\" in Arizona?"
-    answer: "Not entirely. Output declines gradually if nobody cleans off dust and pollen film, and pigeons can turn the space under panels into a nest site if nothing stops them. A little planned upkeep keeps a system performing the way it did on day one."
-  - question: "Should I ask about bird-proofing before my panels are even installed?"
-    answer: "Yes, if you can. It's simpler to build bird-proofing into the install than to retrofit mesh and remove an established nest later. At minimum, ask what clearance your mounting design leaves underneath the array."
-  - question: "How do I know if my HOA allows add-ons like bird mesh?"
-    answer: "Call the HOA board or management company before you install. Requirements vary by community and change over time, so confirm current rules yourself rather than relying on a neighbor's account."
-  - question: "How often will I actually need to clean panels once installed?"
-    answer: "Most Tucson-area homeowners land around once or twice a year, timed around the dustiest stretches and ahead of monsoon season. Some clean reactively based on a monitoring app instead. Either beats never cleaning at all."
 ---
 
 Solar panels in Arizona aren't fully "set it and forget it." Once panels go up, Tucson heat, dust, pollen, monsoon storms, and pigeons all affect output over time, and a system that gets zero attention after installation typically produces less than one that gets occasional, modest upkeep. None of this should scare you off going solar — it just means the smartest time to think about maintenance is before installation, not after your first underwhelming utility bill.

@@ -3,15 +3,6 @@ title: "Solar Panel Cleaning in Arizona: The Complete Guide"
 description: "Dust, pollen, and monsoon grime quietly cut Arizona solar output. This guide covers why it happens, cleaning methods, real cost, and how often panels need it."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "How much does dust actually reduce solar output in Arizona?"
-    answer: "It varies by how long dust has been allowed to build up and how heavy local pollen and dust exposure is, but the loss is real and often bigger than homeowners assume. See the dedicated page on dust and pollen output loss for a full breakdown."
-  - question: "Will rain clean my panels for me?"
-    answer: "Not reliably. NREL's research found rain alone does not adequately clear pollen and fine particulate from panel surfaces, and in Arizona, monsoon rain often adds grit rather than removing it."
-  - question: "Is it safe to clean my own solar panels?"
-    answer: "It can be done, but Arizona's hard water, roof heat, and panel fragility all raise the risk compared to cleaning a car or a window. Some situations are reasonable for a DIY approach and others are not."
-  - question: "How often should I get my panels professionally cleaned?"
-    answer: "Most Tucson Metro homeowners do well with once or twice a year, timed around monsoon season and pollen season, with seasonal residents needing a slightly different schedule."
 ---
 
 Arizona's combination of dust, wind-blown pollen, and monsoon runoff builds a film on solar panels that cuts their output well before it's visible to the naked eye. Most Tucson-area homeowners need a professional cleaning one to three times a year, more often if the array sits near dirt roads, agricultural fields, or under trees. Rinsing with a garden hose or waiting for rain doesn't solve it — rain alone doesn't reliably clear pollen and fine dust off panel glass, according to research from the National Renewable Energy Laboratory (NREL).

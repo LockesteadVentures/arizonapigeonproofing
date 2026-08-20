@@ -1,17 +1,8 @@
 ---
 title: "The Complete Solar Panel Maintenance Checklist for Arizona Homes"
-description: "The full solar panel maintenance checklist for Arizona homes — cleaning timing, monitoring checks, pigeon inspection, storm damage, and more. Save it, print it, use it."
+description: "The full solar panel maintenance checklist for Arizona homes — cleaning timing, monitoring checks, pigeon inspection, and storm damage. Save or print it."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "How often should I run through a solar panel maintenance checklist in Arizona?"
-    answer: "Twice a year at minimum — once before monsoon season in late spring, once after it in early fall — plus a quick check after any major storm. Monitoring app checks should happen monthly."
-  - question: "What maintenance can I do myself versus what needs a professional?"
-    answer: "Visual checks are homeowner-level: monitoring app review, looking for droppings or nesting, scanning for storm damage, and watching for shade from growing trees. Cleaning, bird-proofing, and anything electrical (inverter faults, wiring, connectors) should go to a professional — cleaning and bird-proofing to a company like ours, electrical issues to a licensed electrician or your solar installer."
-  - question: "What's the single most commonly skipped item on this checklist?"
-    answer: "The post-monsoon cleaning. Homeowners often clean before monsoon season and assume the rain handles the rest. It doesn't — NREL's research shows rain alone doesn't reliably clear dust and pollen, and it can even streak buildup into a harder film."
-  - question: "Do I need a professional inspection every year even if nothing seems wrong?"
-    answer: "Yes, if you want to catch small issues before they become expensive ones. A loosening mesh seam or a hairline crack rarely shows up in your monitoring app until it's already cost you output for weeks."
 ---
 
 A complete Arizona solar panel maintenance checklist covers six things: seasonal cleaning timed around monsoon season, monthly checks of your monitoring app's production numbers, a visual inspection for pigeons and nesting debris, a post-storm damage check, awareness of what's electrical versus what's not, and an annual professional inspection. Run through it twice a year at minimum — spring and fall — and after every major monsoon storm. Below is the full checklist, section by section, with what to look for and why it matters in the Tucson desert specifically.

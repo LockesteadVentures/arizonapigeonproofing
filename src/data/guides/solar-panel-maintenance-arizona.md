@@ -3,15 +3,6 @@ title: "The Arizona Homeowner's Guide to Solar Panel Maintenance"
 description: "Solar panel maintenance in Arizona means managing heat, dust, monsoon grime, and pigeons together. Here's the full picture and where to start."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "What does solar panel maintenance actually include in Arizona?"
-    answer: "Two main categories: cleaning (removing dust, pollen, and monsoon residue from the panel surface) and bird proofing (sealing the gap under panels against pigeon nesting). Beyond that, periodic checks of mounts, wiring, and seals catch ordinary wear before it becomes a bigger repair."
-  - question: "How do I know if my problem is pigeons, dust, or something else?"
-    answer: "Cooing, scratching, feathers, or droppings streaked down the roofline point to pigeons. A slow, even decline in production with no noise or mess usually points to dust, pollen, or monsoon film."
-  - question: "Can one company handle both cleaning and bird proofing?"
-    answer: "Yes, and it's usually more efficient than hiring separately, since both are roof-access jobs performed on the same array."
-  - question: "How often should Arizona solar panels be maintained?"
-    answer: "Most Tucson Metro homeowners land on cleaning once or twice a year, timed around pollen season and monsoon season, plus a periodic check for nesting activity or physical wear."
 ---
 
 Solar panel maintenance in the Arizona desert comes down to five things working against your output at once: extreme heat, wind-blown dust and pollen, monsoon runoff, pigeons nesting underneath the array, and ordinary wear on mounts, wiring, and seals over time. None of these show up as a single obvious problem — they show up as a slow, easy-to-miss drop in production that most homeowners only notice when a utility bill looks off or a neighbor mentions their own panels got cleaned. This guide walks through everything that affects panel performance and upkeep in Tucson Metro, then points you to the specific resource that matches what's actually going on with your roof.

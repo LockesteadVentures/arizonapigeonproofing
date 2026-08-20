@@ -3,15 +3,6 @@ title: "Why Do Pigeons Nest Under Solar Panels?"
 description: "Pigeons nest under solar panels because the gap is shaded, warm, and predator-safe. Here's why Arizona roofs are especially at risk, and how to stop it."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Do pigeons damage solar panels by nesting under them?"
-    answer: "Indirectly, yes. The panels themselves usually survive, but droppings are acidic and can degrade roofing material and wiring nearby, nesting debris can restrict the airflow that keeps panels running efficiently, and the added weight and moisture from nests can accelerate wear on roof surfaces underneath."
-  - question: "How do I know if pigeons are already living under my panels?"
-    answer: "Look for cooing at dawn, feathers or twigs caught at the panel edges, and droppings streaking down from the gap. Our signs of pigeons under solar panels guide covers this in more detail."
-  - question: "Can I just block the gap myself with a tarp or netting?"
-    answer: "You can try, but draped netting and DIY barriers tend to sag, gap, or blow loose in monsoon wind, which gives pigeons an opening right back in. A custom-fit mesh install seals the actual perimeter of the array instead of just covering it."
-  - question: "Is it legal to remove a pigeon nest from under my panels?"
-    answer: "Once eggs or chicks are present, removal is generally restricted until the nesting cycle finishes, which is a strong reason to seal the gap before birds move in rather than after."
 ---
 
 Pigeons nest under solar panels because the raised array creates a shaded, wind-blocked gap that stays cooler than the surrounding roof in summer and warmer at night — with a solid "ceiling" overhead that keeps hawks and owls out. In Arizona, that gap also doubles as shelter from monsoon downpours and triple-digit sun, which is exactly what a nesting pigeon is looking for. Once a pair finds it, they'll return to the same spot to raise multiple broods a year unless the space is sealed off.

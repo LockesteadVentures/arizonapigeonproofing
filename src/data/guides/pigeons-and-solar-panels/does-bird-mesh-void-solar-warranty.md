@@ -3,15 +3,6 @@ title: "Does Bird Mesh Void Your Solar Panel Warranty?"
 description: "Does bird mesh void solar warranty coverage? No, when it's rail-mounted and never touches the panels. Here's the install distinction that matters."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does any bird mesh installation void a solar warranty?"
-    answer: "No, not inherently. The warranty issue comes from how the mesh is attached, not from the presence of mesh. Rail-mounted mesh leaves the panel itself untouched."
-  - question: "Will my installer's workmanship warranty be affected if a third party installs mesh later?"
-    answer: "It can be, if the mesh install involves working on or around the racking in a way that voids the installer's own workmanship terms. Check your original install contract, and ask any pigeon-proofing crew whether they carry their own liability coverage for work performed on an existing array."
-  - question: "Can I remove rail-mounted mesh without damaging anything if I sell the house or upgrade panels?"
-    answer: "Yes. Because it clamps to the rails rather than the panels, mesh removal doesn't leave holes, adhesive residue, or frame damage behind."
-  - question: "Is this the same for HOA-governed communities?"
-    answer: "HOA architectural rules vary by community and can change over time, so this isn't a blanket answer. Confirm current requirements with your HOA board or management company before installation. This is general guidance, not legal advice."
 ---
 
 No. Bird mesh that's properly fitted and clamped to the mounting rails around your array — not attached to the panels themselves — does not void your manufacturer or installer warranty. It doesn't penetrate the panel frame, doesn't rest weight on the glass, and doesn't alter the equipment the warranty covers. The risk only shows up with DIY methods that drill into panels, zip-tie mesh directly to the frame edges, or let netting sag and press against the panel surface.

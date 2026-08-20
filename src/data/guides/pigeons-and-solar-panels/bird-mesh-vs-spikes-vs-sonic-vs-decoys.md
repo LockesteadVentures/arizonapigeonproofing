@@ -3,13 +3,6 @@ title: "Bird Mesh vs. Spikes vs. Sonic vs. Decoys for Solar Panels"
 description: "An honest solar panel bird deterrent comparison: stainless mesh, spikes, sonic devices, and decoys, rated on effectiveness, Arizona durability, and cost."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Do I need mesh if I've never seen pigeons under my panels?"
-    answer: "If your panels sit on standard rack mounting with a gap underneath and you're anywhere in Tucson Metro, the risk is ongoing. Mesh fitted before nesting starts is easier than removing an established nest later."
-  - question: "Can I combine methods, like spikes plus a decoy?"
-    answer: "You can, but stacking weak deterrents doesn't add up to a strong one. None seal the physical gap, so a motivated pigeon will still get under the panel. Mesh is the only method here that removes the opportunity entirely."
-  - question: "Does mesh installation affect how my panels are cleaned or maintained?"
-    answer: "No. Properly fitted mesh sits at the rail edge and doesn't interfere with cleaning or maintenance access."
 ---
 
 For pigeons nesting under solar panels, stainless steel bird mesh fitted and clipped to the mounting rails is the only method that reliably solves it long-term. Spikes and decoys do little against birds that just want the shaded, sheltered gap beneath your array, and sonic devices tend to lose effectiveness within weeks. Mesh costs more upfront and works best with a professional install, but it's the only option built for this exact gap.

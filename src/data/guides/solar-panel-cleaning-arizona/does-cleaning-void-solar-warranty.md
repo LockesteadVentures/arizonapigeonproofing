@@ -3,15 +3,6 @@ title: "Does Cleaning Solar Panels Void the Manufacturer Warranty?"
 description: "Cleaning solar panels doesn't void your warranty by itself — the wrong method can. See what manufacturers actually flag and how to clean safely."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does a one-time DIY cleaning automatically void my warranty?"
-    answer: "Not automatically. A single gentle wash with the wrong tool might not cause damage at all. The risk is cumulative and method-dependent — the more abrasive or high-pressure the approach, the higher the odds of the kind of damage manufacturers exclude."
-  - question: "Will my installer or manufacturer inspect for cleaning damage before honoring a claim?"
-    answer: "It varies, but if a panel comes in for a warranty claim with a cracked cell, scratched coating, or corrosion inside the junction box, that's the kind of physical evidence that can lead to a denial regardless of what caused the original defect claim."
-  - question: "Is professional cleaning required to keep the warranty valid?"
-    answer: "No manufacturer requires you to hire a professional. What matters is the method, not who's holding the equipment. Professional DI-water cleaning just removes the guesswork."
-  - question: "How often should Tucson homeowners clean their panels?"
-    answer: "Most Tucson homes benefit from cleaning a couple times a year, timed around monsoon dust and spring pollen. Check your manufacturer's guidance and Arizona Pigeon Proofing's service details for scheduling recommendations."
 ---
 
 Cleaning your solar panels does not void the manufacturer warranty. What can void it is *how* you clean them: abrasive scrubbing tools, high-pressure washing that forces water past seals into the junction box, harsh chemicals, or walking directly on the glass to reach a panel. Manufacturers warranty the equipment against defects, not against damage you cause during maintenance — so the method matters more than the act.

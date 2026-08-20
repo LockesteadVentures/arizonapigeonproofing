@@ -25,11 +25,30 @@ const articleSchema = {
   publisher: { "@type": "Organization", name: "Arizona Pigeon Proofing" },
 };
 
-const faqSchema = entry.data.faqs?.length
+// FAQPage schema is parsed straight out of the "## FAQ" markdown section
+// instead of a separate frontmatter field, so it's structurally impossible
+// for the schema text to drift from what's actually rendered on the page --
+// Google requires the two to match, and a hand-maintained duplicate did not.
+function stripInlineMarkdown(text: string) {
+  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*(.+?)\*\*/g, "$1");
+}
+
+function extractFaqs(markdownBody: string | undefined) {
+  if (!markdownBody) return [];
+  const section = markdownBody.match(/\n## FAQ\n([\s\S]*?)(?=\n## |$)/);
+  if (!section) return [];
+  return [...section[1].matchAll(/\*\*(.+?)\*\*\n(.+?)(?=\n\n|$)/gs)].map((m) => ({
+    question: stripInlineMarkdown(m[1].trim()),
+    answer: stripInlineMarkdown(m[2].trim()),
+  }));
+}
+
+const faqs = extractFaqs(entry.body);
+const faqSchema = faqs.length
   ? {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: entry.data.faqs.map((f) => ({
+      mainEntity: faqs.map((f) => ({
         "@type": "Question",
         name: f.question,
         acceptedAnswer: { "@type": "Answer", text: f.answer },

@@ -3,15 +3,6 @@ title: "How to Choose a Solar Panel Maintenance Company in Arizona"
 description: "Learn how to choose a solar panel maintenance company in Arizona — what to ask about cleaning methods, bird-proofing, pricing, and reviews before you hire."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Is pressure washing ever okay for solar panels?"
-    answer: "Generally no. The risk of cracking glass, damaging seals, or degrading the anti-reflective coating outweighs any speed advantage. Low-pressure, deionized-water cleaning is the safer standard."
-  - question: "Do I need bird-proofing and cleaning from the same company?"
-    answer: "Not strictly, but it's often simpler. If pigeons are nesting under your panels, the debris they leave behind means you'll likely need both services anyway, and coordinating one visit instead of two saves scheduling headaches."
-  - question: "How much should a solar panel maintenance quote cost me in time?"
-    answer: "A company with a real process should be able to quote your specific array within 24 to 48 hours of your first call, based on panel count and roof access."
-  - question: "What's the difference between deionized water and tap water for cleaning panels?"
-    answer: "Deionized water has minerals removed, so it evaporates without leaving spots or mineral film. Tap water can leave a hazy residue behind as it dries."
 ---
 
 Look for a company with real Arizona experience, one that uses deionized-water cleaning instead of pressure washing, quotes a flat per-panel rate for your actual array, and can verify its reviews. Bonus points if it handles both cleaning and bird-proofing, since pigeons and dust are usually the same underlying maintenance problem. Get the quote in writing and expect a 24-48 hour turnaround — anything vaguer than that is a signal to keep looking.

@@ -3,15 +3,6 @@ title: "Signs Your Solar Panels Need Cleaning (Tucson Checklist)"
 description: "Not sure when to clean solar panels? Signs include visible film, dropping output, monsoon dust, and bird droppings. Check this Tucson checklist."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "How often should solar panels be cleaned in Arizona?"
-    answer: "Most Tucson-area systems benefit from cleaning roughly once a season, with extra attention after a monsoon dust storm. Your actual interval depends on your roof angle, nearby trees, and how much monsoon dust you get in a given year."
-  - question: "Can I just check my panels visually to know if they need cleaning?"
-    answer: "Not reliably. Visual inspection catches obvious grime and streaking, but fine dust and pollen film can cut output noticeably before it's visible from the ground. Comparing your monitoring app's production to the same period last year is a better signal."
-  - question: "Does rain clean solar panels enough on its own?"
-    answer: "No. NREL research has found that rain alone doesn't adequately clear pollen and fine dust from solar panels, and it can sometimes streak dust rather than remove it."
-  - question: "Do bird droppings really affect solar panel output that much?"
-    answer: "Yes, more than their size suggests. Droppings block light unevenly, which can create hot spots and drag down output for the whole string of panels, not just the covered cell."
 ---
 
 You need to clean your solar panels when you see a visible dust or pollen film, your monitoring app shows production down from the same period last year, it's been about a full season since the last wash, a monsoon storm just blew through, or you spot bird droppings and debris on the glass. Any one of these on its own is worth a look. Two or more together means don't wait.

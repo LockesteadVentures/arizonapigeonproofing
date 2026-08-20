@@ -12,6 +12,12 @@ export default defineConfig({
   // sitemap URL reads as unfetchable in Search Console.
   site: 'https://www.arizonapigeonproofing.com',
   trailingSlash: 'always',
+  // Guides are the only markdown content on the site. Smartypants converts
+  // straight quotes/apostrophes to curly ones in the rendered body, but the
+  // FAQPage schema is built from the raw frontmatter string -- leaving it on
+  // silently breaks Google's "schema must match visible text" requirement for
+  // any FAQ containing a quote mark. Off keeps the two byte-identical.
+  markdown: { smartypants: false },
   // 3 retired placeholder guides redirect via vercel.json instead of this config's
   // `redirects` -- with trailingSlash: 'always', Astro/Vercel adapter emits a
   // route regex that only matches the no-trailing-slash form, which the site

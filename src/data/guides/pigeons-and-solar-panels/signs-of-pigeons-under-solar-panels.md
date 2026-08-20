@@ -3,15 +3,6 @@ title: "Signs of Pigeons Under Solar Panels: A Tucson Checklist"
 description: "Six signs of pigeons under solar panels Tucson homeowners can check for today, from dawn cooing to ammonia smell, plus what to do once you spot them."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "How fast do pigeons build a nest under solar panels?"
-    answer: "A pair can have a workable nest in a few days once they've chosen a spot, though they'll often keep adding material for weeks. That's why catching the early signs, cooing and scouting behavior, matters more than waiting for droppings to pile up."
-  - question: "Can I just hose off the droppings and call it fixed?"
-    answer: "Cleaning the mess helps with smell and appearance, but it doesn't address the birds themselves or the gap they're using to get under the array. If the entry point stays open, pigeons typically return to the same spot."
-  - question: "Is it normal to see just one or two droppings and nothing else?"
-    answer: "Yes. Birds land and pass through roof edges all the time without nesting. A single dropping or two isn't cause for concern on its own; a repeating patch in the same spot, paired with sound or smell, is the real signal."
-  - question: "Do these signs mean I definitely have an infestation, not just one bird?"
-    answer: "Not necessarily. A lone pigeon can produce a surprising amount of noise and mess. The number of nests matters more for how big a job it is, which is something a crew can assess accurately once they're up on the roof."
 ---
 
 The clearest signs of pigeons under solar panels are cooing sounds at dawn and dusk, droppings collecting on the ground or roofline below the array, feathers and twigs caught at the panel edges, scratching noises from the roof, and a musty or ammonia-like smell near the vents. Reduced panel output can follow, but it shows up weeks after the birds have already moved in, so don't wait for your electric bill to tell you what your ears and nose already know.

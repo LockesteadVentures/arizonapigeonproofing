@@ -3,15 +3,6 @@ title: "Do Pigeon Droppings Reduce Solar Panel Efficiency?"
 description: "Yes — pigeon droppings block sunlight and can cause hot spots on solar panels. Learn how much pigeon droppings solar panel output loss really costs you."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Can pigeon droppings actually damage a solar panel, or just reduce output?"
-    answer: "Both are possible. In the short term, the main effect is blocked light and the uneven heating that comes with it. Over the long term, acidic droppings left on the glass can also degrade the surface coating, which is a separate concern from the immediate output loss."
-  - question: "How much output can I really lose from pigeon droppings?"
-    answer: "It depends on how many cells are covered, how concentrated the buildup is, and how long it's been there — there's no single number that applies to every roof. A few small droppings on one panel is a minor loss. A roosting spot that's been active for months, covering multiple cells across several panels, is a bigger deal."
-  - question: "Will monsoon rain eventually wash the droppings off on its own?"
-    answer: "Not reliably. Dried droppings bond to the glass, and even the NREL research on much lighter dust and pollen buildup found rain alone doesn't dependably clear it. Don't count on the weather to solve this."
-  - question: "Is cleaning enough, or do I need pigeon proofing too?"
-    answer: "Cleaning removes the current problem. Pigeon proofing keeps it from coming back. If pigeons already like your roof, cleaning without proofing usually just buys you a few months."
 ---
 
 Yes. Pigeon droppings block sunlight from reaching the cells directly beneath them, and because the mess lands in thick, uneven splotches rather than a thin film, the loss is concentrated on individual cells instead of spread evenly across the panel. That concentration is what makes droppings a different — and often worse — problem than ordinary dust, and it can create hot spots inside the panel, not just a dip in output.

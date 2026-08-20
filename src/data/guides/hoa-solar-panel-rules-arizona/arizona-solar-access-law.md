@@ -3,15 +3,6 @@ title: "Arizona's Solar-Access Law and What It Means for HOAs"
 description: "Arizona HOA solar law basics: HOAs generally can't ban solar panels but can set placement rules. Learn what's actually protected before you install."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Can an Arizona HOA legally ban solar panels?"
-    answer: "Generally no. Arizona's solar-access law is built to prevent outright bans, though the details of how that's enforced can vary and change, so confirm current specifics if it becomes a real dispute."
-  - question: "Can my HOA still tell me where to put my panels?"
-    answer: "Typically yes, within limits. HOAs can generally impose reasonable placement and aesthetic conditions as long as those conditions don't significantly raise your cost or cut your system's output."
-  - question: "What counts as an unreasonable HOA condition?"
-    answer: "There's no fixed checklist -- it depends on the specific request, roof, and covenants. A condition that meaningfully increases installation cost or noticeably reduces energy production is the kind of thing the law is generally aimed at preventing, but confirm with legal counsel if your HOA is disputing your layout."
-  - question: "Does this law also cover bird-proofing mesh installed with the panels?"
-    answer: "The core solar-access protections are about the panels themselves. Deterrent hardware like bird mesh is usually handled through your HOA's regular architectural review process rather than solar-specific statute."
 ---
 
 Arizona has a state solar-access law that generally stops HOAs from banning solar panels outright. In broad strokes: your HOA can still ask you to follow reasonable placement and appearance rules, but it can't use those rules to functionally block you from going solar or force changes that meaningfully cut into your system's output. That's the shape of it — the exact wording and how it gets applied to your specific roof is a separate question, and one worth getting right before you're in a dispute.

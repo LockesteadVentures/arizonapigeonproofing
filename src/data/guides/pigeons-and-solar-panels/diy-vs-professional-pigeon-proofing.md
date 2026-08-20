@@ -3,13 +3,6 @@ title: "DIY vs. Professional Pigeon Proofing: An Honest Look"
 description: "Thinking about DIY solar panel bird proofing? Here's an honest breakdown of the real risks, real savings, and how to tell which one fits your roof."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Will DIY pigeon proofing void my solar warranty?"
-    answer: "It can, depending on how you mount it. Fasteners or clips that penetrate the panel frame or aren't approved by the manufacturer are the usual culprit. Check your panel warranty terms before drilling anything, and when in doubt, use non-invasive clip systems or have a pro confirm what's safe."
-  - question: "How do I know if pigeons are already living under my panels, not just visiting?"
-    answer: "Listen at dawn for cooing and scratching sounds under the array, along with a buildup of droppings and nesting material visible from the ground with binoculars. Both point to an established nest rather than casual roosting."
-  - question: "Is DIY mesh actually cheaper once you account for redos?"
-    answer: "Sometimes, if the first install is done right. It's rarely cheaper if pigeons get back in and you're buying materials twice, especially once you factor in the time and roof-access risk of doing the job again."
 ---
 
 DIY solar panel bird proofing can work if your array is small, easy to reach, and doesn't already have a pigeon colony living under it. It gets risky fast once you're dealing with steep or high roofs, wiring you shouldn't touch, or panels that already have birds nesting under them. The honest answer isn't "always hire someone" or "just do it yourself" — it's knowing which situation you're actually in before you climb up there.

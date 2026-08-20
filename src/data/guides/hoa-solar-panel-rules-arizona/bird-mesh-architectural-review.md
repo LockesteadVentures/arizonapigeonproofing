@@ -3,13 +3,6 @@ title: "Does Bird Mesh Need Architectural Review in Tucson HOAs?"
 description: "Most Tucson HOAs allow bird mesh on solar panels, but architectural review submittal is still common practice. See the general pattern and what to confirm."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does every HOA require a form for bird mesh installation?"
-    answer: "Not every one, but many do, simply because their architectural guidelines apply to any exterior attachment regardless of size. Check your specific community's rules before scheduling work."
-  - question: "Can an installer help with the HOA paperwork?"
-    answer: "A crew that installs custom-fit stainless mesh (not generic netting) can usually provide a spec sheet describing the material and mounting method, which is often what boards want to see for a submittal."
-  - question: "Will bird mesh be visible from the street once installed?"
-    answer: "Properly fitted mesh sits close to the panel edge and is generally hard to spot from ground level or a neighbor's yard, which is a big part of why most boards don't treat it as a major exterior change."
 ---
 
 In most Tucson-area HOAs we've encountered, bird mesh installed around solar panels does not raise the kind of objection that a visible structure change would, because the mesh sits tight against the panel edge and is barely noticeable from the ground or street. That said, many communities still expect a routine architectural review submittal before work begins, even for something this minor. Treat that submittal as a formality worth doing right, not a hurdle to skip.

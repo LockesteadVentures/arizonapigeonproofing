@@ -1,17 +1,8 @@
 ---
 title: "What Actually Decreases Solar Panel Efficiency in the Desert"
-description: "Why is my solar production dropping in Arizona? Heat, dust, pigeons, monsoon grime, aging cells, and inverter faults all cut output. Here's how to tell which one is yours."
+description: "Why is my solar production dropping in Arizona? Heat, dust, pigeons, monsoon grime, aging cells, and inverter faults all cut output — here's how to tell which."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Why is my solar production dropping in Arizona if I haven't changed anything?"
-    answer: "The most common causes are dust and pollen film, pigeon droppings and nesting debris, monsoon storms redepositing grit, ordinary panel aging, heat itself reducing cell efficiency, or an inverter issue. Most of these build up gradually, so a drop can show up even though nothing about your system changed on your end."
-  - question: "Does heat alone reduce solar panel output, even on clean panels?"
-    answer: "Yes. Panels are rated at 77°F and lose efficiency as they run hotter, which is unavoidable physics rather than a maintenance issue. A Tucson roof in summer routinely pushes panels well above that rating, so some seasonal dip in the hottest months is normal even on a spotless, bird-free array."
-  - question: "How do I tell dust buildup apart from a pigeon problem?"
-    answer: "Dust settles as an even haze across the whole panel and causes a gradual, uniform decline. Pigeon droppings land in concentrated clumps, often paired with cooing, scratching, feathers in the gutters, or streaking down the roofline. If you're seeing both signs, you likely have both problems."
-  - question: "Could the issue be my inverter instead of the panels?"
-    answer: "It's possible, especially if the drop was sudden rather than gradual, or your monitoring app shows a fault code. Inverter issues aren't something cleaning or pigeon-proofing will fix, so that's worth a direct call to your installer or the inverter manufacturer."
 ---
 
 Solar production drops in Arizona for one of six reasons: the heat itself (panels lose efficiency as they get hotter, and Tucson roofs run hot), a film of dust and pollen sitting on the glass, pigeons roosting and leaving droppings and nesting debris, monsoon storms depositing grit instead of washing it away, ordinary panel aging over the years, or an inverter that's underperforming or has failed outright. Most homeowners assume it's one obvious thing. Usually it's two of these stacked on top of each other, and figuring out which two is what actually gets your output back.

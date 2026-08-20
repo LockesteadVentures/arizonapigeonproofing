@@ -3,15 +3,6 @@ title: "Tucson HOA Solar Rules by Community: What to Expect"
 description: "Tucson HOA solar rules by community: patterns for Oro Valley, SaddleBrooke, Green Valley, and Catalina Foothills, plus how to confirm your exact rules."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does every Tucson-area HOA have the same solar rules?"
-    answer: "No. Rules vary by individual HOA, even within the same town or master-planned community. Age-restricted communities tend to run more standardized review; large communities with sub-associations may require multiple layers of approval; fragmented retirement areas like Green Valley have dozens of separate associations with their own standards."
-  - question: "Can my HOA legally deny solar panels outright?"
-    answer: "Arizona's solar access law limits an HOA's ability to prohibit solar entirely, though the HOA can still regulate placement and aesthetics within limits. See our guide to the Arizona solar access law for how that works."
-  - question: "What should I bring to my HOA's architectural review committee?"
-    answer: "Typically a site plan or roof diagram, product spec sheet for the panels and mounting hardware, and sometimes photos or renderings showing street-view impact. Our HOA approval spec sheet covers what to gather before you submit."
-  - question: "How do I find out my specific HOA's rules?"
-    answer: "Contact your HOA board or management company directly and ask for current architectural review guidelines covering solar. Rules change over time, so don't rely on a neighbor's experience from a few years ago."
 ---
 
 HOA solar rules in the Tucson area follow patterns based on community type, not a single countywide standard. Age-restricted and retirement communities tend to run tighter architectural review with more paperwork; general residential HOAs are often faster but still require a submittal. None of the specifics below are current bylaws for any named HOA — every community sets and updates its own rules, so confirm requirements with your specific board or management company before you order equipment.

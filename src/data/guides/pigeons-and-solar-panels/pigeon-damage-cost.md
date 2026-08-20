@@ -3,15 +3,6 @@ title: "How Much Does Pigeon Damage Cost Solar Panel Owners?"
 description: "Pigeon damage solar panel cost ranges from minor output loss to costly wiring, roof, and warranty problems. See what actually breaks and why it adds up."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does pigeon damage void my solar panel warranty?"
-    answer: "It can. Most manufacturer warranties exclude damage from pests, neglect, or lack of maintenance. Check your specific warranty terms, since coverage language varies by manufacturer."
-  - question: "How do I know if pigeons have already damaged my wiring?"
-    answer: "You usually can't tell from the ground. Signs worth investigating include a sudden drop in production, visible nesting material at panel edges, or persistent bird activity under the array for more than a few weeks."
-  - question: "Is pigeon damage covered by homeowners insurance?"
-    answer: "Sometimes, sometimes not. Insurers can treat a known, unaddressed infestation differently than a sudden loss. Confirm with your carrier rather than assuming either way."
-  - question: "What's the fastest way to stop the damage from getting worse?"
-    answer: "Get the array inspected and proofed before the next nesting cycle. Removing existing nests and sealing the gap is a one-time job, not an ongoing cost."
 ---
 
 Pigeon damage to solar panels rarely arrives as one big bill. It shows up as a handful of smaller costs that stack up the longer birds are allowed to nest underneath your array: lost output from blocked cells, wiring that gets chewed or corroded until it becomes a fire risk, nesting debris that traps moisture against your roof, and — in the worst cases — an insurance claim or panel warranty that gets denied because the damage was preventable. There's no single number that applies to every Tucson roof. But the categories below are consistent, and every one of them gets more expensive the longer a nesting problem sits.

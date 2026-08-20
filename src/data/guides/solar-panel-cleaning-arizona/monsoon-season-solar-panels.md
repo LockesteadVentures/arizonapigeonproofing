@@ -3,13 +3,6 @@ title: "Monsoon Season and Your Solar Panels: What to Expect"
 description: "Monsoon solar panels Arizona homeowners should know: haboobs coat panels before rain falls, then rain turns that dust to mud. Here's the timing fix."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does rain clean solar panels during monsoon season?"
-    answer: "Not reliably. Light-to-moderate rain on dust-coated panels tends to streak the dust into a mud film rather than rinsing it away. NREL's research on panel soiling confirms rain alone isn't an adequate cleaning method for dust and pollen buildup."
-  - question: "How often should solar panels be cleaned during Arizona's monsoon?"
-    answer: "Most Tucson homeowners do best with two cleanings tied to the season: once before monsoon season starts, to begin with a clean surface, and once after it ends, to remove the mud-streaking that built up over the wet months."
-  - question: "Can monsoon wind damage solar panels directly?"
-    answer: "Wind itself rarely damages panels, but wind-driven debris such as branches, gravel, or loose roofing material can create shadowed hot spots or work into mounting hardware. A quick visual check after major storms is worth the five minutes."
 ---
 
 Monsoon season doesn't clean your solar panels — it dirties them twice. First a haboob dumps a layer of fine grit on the glass, then the rain that follows turns that grit into a streaked film that clings harder than the dry dust did. If you assumed the rain would rinse things off, expect lower output through late summer instead, not higher.

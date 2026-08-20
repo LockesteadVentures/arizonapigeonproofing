@@ -3,13 +3,6 @@ title: "Best Time of Year to Pigeon-Proof Solar Panels in Arizona"
 description: "When to bird proof solar panels in Arizona: aim for late winter through early spring, before nesting season and before monsoon heat complicates the job."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Is winter too cold to bird-proof solar panels in Tucson?"
-    answer: "No. Tucson winters are mild by any standard, and daytime temperatures are comfortable for roof work. Winter through early spring is one of the best stretches of the year for this job."
-  - question: "Can bird-proofing happen during monsoon season if that's the only time that works?"
-    answer: "It can, but expect more scheduling flexibility to be needed. Storm cells can delay or reschedule a visit for safety reasons, and installers may need to work around active weather rather than a full clear day."
-  - question: "What if pigeons are already nesting under my panels right now?"
-    answer: "Don't wait for a \"better\" season. An active nest should be addressed as soon as possible, since the longer it sits, the more mess and potential panel damage accumulates. Nest removal and mesh installation can happen together in one visit regardless of time of year."
 ---
 
 The best window to bird-proof solar panels in Arizona is late winter through early spring — roughly February through April — before pigeons start nesting in earnest and before summer heat and monsoon storms make roof work harder. Getting mesh installed before nesting season means you're sealing empty space instead of removing an established nest first, which is faster, cleaner, and cheaper. If you missed that window, fall (after monsoon season winds down) is the next-best option.

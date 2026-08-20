@@ -1,17 +1,8 @@
 ---
 title: "Solar Panel Cleaning Schedule for Snowbirds in Tucson"
-description: "Own a seasonal home in Green Valley, SaddleBrooke, or Oro Valley? Here's the solar panel cleaning schedule seasonal homeowners need so panels stay clean while you're away."
+description: "Own a seasonal home in Green Valley, SaddleBrooke, or Oro Valley? Here's the solar panel cleaning schedule to keep panels clean while you're away."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "How often should a seasonal home's solar panels be cleaned?"
-    answer: "Twice a year works well for most snowbird homeowners: once right before arriving for the season, and once right before leaving for summer. That covers both the arrival production drop and the unmonitored monsoon buildup."
-  - question: "Why can't I just wait until I'm back in town to schedule cleaning?"
-    answer: "Because the panels have likely already been losing output for weeks or months by the time you notice, and nobody's checking a monitoring app while the house sits empty. Scheduling ahead of arrival means the system is already producing well when you get there."
-  - question: "Is a pre-departure cleaning really necessary if the panels look fine when I leave?"
-    answer: "Yes. Dust and pollen film builds through monsoon season regardless of how clean panels look in spring, and rain doesn't reliably wash it off. A pre-departure visit also gives a technician a chance to flag anything else worth addressing before the home sits empty."
-  - question: "Can cleaning be scheduled around my specific travel dates each year?"
-    answer: "Yes. Tell us your typical arrival and departure windows and we can set up cleaning to land right before each one, so it becomes a standing part of your seasonal routine instead of something you have to remember to arrange."
 ---
 
 Snowbirds and seasonal homeowners should schedule solar panel cleaning twice a year, timed to their travel calendar rather than the calendar on the wall: once shortly before arriving for the season, and once shortly before leaving for summer. That two-visit rhythm covers the two risks unique to part-time occupancy — months of production loss nobody's around to notice, and a monsoon season spent baking dust and pollen onto glass with no one home to catch it.

@@ -3,15 +3,6 @@ title: "Deionized Water vs. Pressure Washing vs. Hose Cleaning"
 description: "Deionized water solar panel cleaning leaves no mineral spots, unlike pressure washing or a hose and squeegee. See why Tucson's hard water changes the math."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does deionized water need soap to clean panels?"
-    answer: "Usually not for routine washes. Most of the visible film on Tucson panels is dust and mineral spotting, and DI water alone handles both — the mechanical brush loosens dust, and the mineral-free water rinses without leaving new spots behind."
-  - question: "Can I make my own deionized water at home?"
-    answer: "Small DI resin cartridges exist for home use, but the output volume and flow rate needed to properly wash a full array make this impractical for most homeowners compared to a professional rig built for the job."
-  - question: "Is pressure washing ever okay for solar panels?"
-    answer: "It's not something we recommend for the panel surface itself, given the seal and junction-box risk. If a roof or nearby hardscape needs pressure washing, keep it well clear of the array."
-  - question: "Why do my panels get spots even after rain?"
-    answer: "Rain in Tucson still carries dissolved minerals and dust from the air, and it doesn't rinse evenly across a tilted panel. NREL has noted that rainfall alone isn't a reliable way to keep panels clean, which is part of why scheduled cleaning still matters even in a wetter monsoon season."
 ---
 
 Deionized water cleaning is the only one of these three methods that leaves Tucson solar panels spot-free without physical risk to the panel. It works because the minerals that cause water spots have already been stripped out of the water before it ever touches the glass. Pressure washing can get panels visibly clean too, but it comes with a real risk of forcing water into seals and junction boxes. A hose and squeegee sits in between — harmless to the panel, but no match for Arizona's mineral-loaded tap water.

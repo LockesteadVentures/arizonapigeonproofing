@@ -3,15 +3,6 @@ title: "Bundling Pigeon-Proofing and Cleaning: What You Actually Save"
 description: "Wondering whether to bundle solar panel cleaning and pigeon proofing into one visit? Here's the real math on roof access, crew time, and when it pays off."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does bundling always cost less than booking separately?"
-    answer: "The savings come from paying for roof access once instead of twice, not from a fixed discount. A crew can give you the specific breakdown for your array."
-  - question: "Should cleaning happen before or after pigeon proofing?"
-    answer: "After. If a nest is removed as part of the proofing install, it typically leaves debris on and around the panels that should be cleaned up, washing first just means paying to undo that mess later."
-  - question: "What if I only need one service, not both?"
-    answer: "Then bundling doesn't help. If your panels are already proofed and were cleaned recently, or if there's no bird activity and no dust buildup, book only the service you actually need."
-  - question: "How do I know if I have an active pigeon problem before booking?"
-    answer: "Look for droppings or feathers on or near the panels, and listen for cooing at dawn. If you're not sure, describe what you're seeing when you call, and the crew can help you figure out if proofing is warranted before you book anything."
 ---
 
 Bundling solar panel cleaning with pigeon proofing means booking both jobs on the same roof-access visit instead of scheduling them separately, which cuts down on the labor and access costs that come with getting a crew, ladders, and safety gear up onto your roof twice. It also just makes sequencing sense: cleaning after proofing means the panels get washed right after any nest debris is cleared out, not before.

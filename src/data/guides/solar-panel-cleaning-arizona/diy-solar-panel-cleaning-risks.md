@@ -3,13 +3,6 @@ title: "DIY Solar Panel Cleaning: What Can Go Wrong"
 description: "DIY solar panel cleaning risks include falls, scratched glass, thermal shock, and voided warranties. Here's what's safe to do yourself in Arizona, and what isn't."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Can I use a pressure washer on solar panels?"
-    answer: "Most manufacturers advise against it or restrict the pressure and nozzle type. High pressure can force water under panel seals or crack glass, and it often voids the warranty outright."
-  - question: "Is it safe to clean solar panels myself if I have a single-story roof?"
-    answer: "It's lower-risk than a steep two-story roof, but the scratching, thermal shock, and streaking risks are the same regardless of roof height."
-  - question: "How often do solar panels actually need cleaning in Tucson?"
-    answer: "It depends on dust, pollen season, and proximity to agriculture or unpaved roads, but most Tucson homes benefit from a professional deionized-water clean once or twice a year, with light hose rinses in between if convenient."
 ---
 
 A light rinse with a garden hose on a cool morning is low-risk and can help with dust between deeper cleanings. Past that, DIY solar panel cleaning risks start stacking up fast: falling off a roof that's steeper or hotter than it looks, scratching the anti-reflective coating with the wrong brush, cracking a panel with thermal shock, leaving hard-water streaks that cut output, and voiding your manufacturer's warranty by cleaning it a way the paperwork doesn't allow. None of that is meant to scare you off doing anything yourself. It's meant to draw an honest line between what's reasonable and what isn't.

@@ -3,15 +3,6 @@ title: "HOA Rules for Solar Panels in Arizona: What's Allowed"
 description: "HOA solar panel rules in Arizona explained — what your association can and can't restrict, how approval works, and where bird mesh fits in. See the full guide."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Can my HOA legally stop me from installing solar panels in Arizona?"
-    answer: "Generally, no — Arizona's solar-access law limits an HOA's ability to prohibit solar energy devices outright. It can still regulate placement and appearance through architectural review, and the exact scope of that authority depends on the statute's language and your community's governing documents. Confirm specifics with your HOA before assuming either way."
-  - question: "Does adding bird mesh to existing solar panels require a new HOA application?"
-    answer: "It depends on the community. Some HOAs treat mesh as a minor addition that doesn't need separate review; others require an application for any visible exterior change. Check with your HOA to confirm what applies to your community."
-  - question: "What documents does an HOA architectural committee usually want to see?"
-    answer: "Typically a product description, a site or roof diagram, and confirmation the install won't damage roofing or void warranties. Some boards also want a street-view photo or rendering. Requirements vary, so check your specific HOA's application before submitting."
-  - question: "Is this page legal advice?"
-    answer: "No. This is general information based on how HOA architectural review commonly works in Arizona, not a legal opinion about your specific community. Rules vary by HOA and change over time. Confirm current requirements with your HOA board, management company, or an attorney if you need a legal opinion."
 ---
 
 Arizona law limits how much an HOA can restrict solar panels, but it doesn't eliminate the approval process — most associations can still regulate placement, mounting, and appearance through architectural review. In practice, that means your HOA can't say no to solar outright, but it can ask you to submit a plan and follow reasonable rules about how the system looks from the street. Adding bird deterrent mesh later usually falls into a gray area that depends on your community's specific documents.

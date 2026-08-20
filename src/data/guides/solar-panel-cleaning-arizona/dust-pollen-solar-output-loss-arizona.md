@@ -3,15 +3,6 @@ title: "How Much Does Dust Actually Cut Solar Output in Arizona?"
 description: "NREL found rain alone doesn't reliably clear dust and pollen from solar panels. See why Arizona's dry climate makes soiling loss worse, and what to do about it."
 publishDate: 2026-08-20
 draft: false
-faqs:
-  - question: "Does rain clean solar panels in Arizona?"
-    answer: "Not reliably. NREL's research found rain alone doesn't consistently clear dust and pollen film from panels, and in Arizona the dry stretches between storms give that film plenty of time to build up further before the next rain even has a chance."
-  - question: "How much solar output do I actually lose from dust?"
-    answer: "It varies by panel angle, dust exposure, and how long since the last cleaning, so there's no single figure that applies to every roof. What's well established is that heavy soiling in arid climates causes real, measurable production loss — enough that it's worth checking your production trend rather than assuming rain has it handled."
-  - question: "How often should panels be cleaned in Arizona because of dust and pollen?"
-    answer: "It depends on your specific location and roof exposure, but scheduling around spring pollen season and monsoon dust storms, rather than waiting until output visibly drops, tends to keep buildup from accumulating for months at a stretch."
-  - question: "Is dust buildup the same problem as pigeon droppings?"
-    answer: "No. Dust and pollen settle as an even film across the whole panel, while droppings concentrate on specific cells and can cause uneven heating. Both block light and both matter, but they're different problems with different signs to look for."
 ---
 
 A widely cited NREL finding says rain alone doesn't reliably clear dust and pollen buildup from solar panels — the light film just sits there through storms that would wash a windshield clean. In Arizona, where dust storms and heavy spring pollen are routine and rain is not, that film settles in and stays longer than it would almost anywhere else. Studies on arid-climate soiling have found meaningful production loss from heavy buildup, though the exact number for any given roof depends on the panel, the tilt angle, and how long the grime has been sitting there.
