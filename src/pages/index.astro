@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Testimonials from "../components/Testimonials.astro";
 import { liveCitiesByRegion } from "../data/locations.js";
 
 const tucsonCities = liveCitiesByRegion("tucson");
@@ -151,15 +152,7 @@ const restCities = [
 
   <section>
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Local proof</span>
-        <h2>What Arizona homeowners say.</h2>
-      </div>
-      <div class="trust-strip">
-        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"These guys did an amazing job on our solar panels! Not only did they clean the panels, install the bird proofing off the roof! When I looked at my cameras after they left, I also noticed that they also swept the rocks in my front yard because they pulled a power washer over them! They provided excellent service!! I highly recommend their services!!"</p><div class="who">— Rochelle S., Google review</div></div>
-        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"What a great job! Professional, personable, and efficient. Everything was left clean when the work was done and they made sure I had a way to contact them for issues. Thank you!"</p><div class="who">— Michelle S., Google review</div></div>
-        <div class="trust-card"><div class="stars">★★★★★</div><p class="quote">"Very professional company. They did excellent work. We are so happy we found them."</p><div class="who">— Mary S., Google review</div></div>
-      </div>
+      <Testimonials />
     </div>
   </section>
 
@@ -225,12 +218,6 @@ const restCities = [
   .region-panel { display: none; }
   .region-panel.active { display: block; }
 
-  .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-  .trust-card { padding: 1.6rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
-  .trust-card .quote { font-size: 0.95rem; margin: 0 0 0.9rem; }
-  .trust-card .who { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; }
-  .stars { color: var(--amber); letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.85rem; }
-
   .cta-band { background: linear-gradient(135deg, #173247, #1f6d78); color: #f2f5f1; border-radius: 18px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
   .cta-band h2 { color: #fbfbf7; font-size: 1.7rem; max-width: 30ch; }
   .cta-band p { color: #cbe0dd; margin: 0.5rem 0 0; }
@@ -238,7 +225,7 @@ const restCities = [
   @media (max-width: 920px) {
     .hero .wrap { grid-template-columns: 1fr; padding-top: 3rem; }
     .hero-art { max-width: 340px; margin: 0 auto; }
-    .services-grid, .steps, .trust-strip { grid-template-columns: 1fr; }
+    .services-grid, .steps { grid-template-columns: 1fr; }
     .cta-band { flex-direction: column; align-items: flex-start; }
   }
 </style>

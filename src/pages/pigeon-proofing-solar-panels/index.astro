@@ -1,7 +1,11 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import LocalStatsBlock from "../../components/LocalStatsBlock.astro";
+import Testimonials from "../../components/Testimonials.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
+import { SERVICE_CONTENT } from "../../data/serviceContent.js";
+
+const { signs, methodology, trustPoints } = SERVICE_CONTENT["pigeon-proofing-solar-panels"].hub;
 
 const stats = [
   {
@@ -29,13 +33,61 @@ const stats = [
       <span class="eyebrow">Service</span>
       <h1>Pigeon Proofing for Solar Panels</h1>
       <p class="lede">Stainless mesh, fitted to your array, installed by a local Tucson crew. Pick your city below for local details and a free quote.</p>
-      <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"service_hub","service":"pigeon-proofing-solar-panels"}'>Get a Free Quote</a>
+      <div class="cta-row">
+        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"service_hub","service":"pigeon-proofing-solar-panels"}'>Get a Free Quote</a>
+        <a href="tel:+15205550148" class="btn outline">Call (520) 555-0148</a>
+      </div>
+      <ul class="trust-row">
+        {trustPoints.map((t) => <li>{t}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <div class="section-head">
+        <span class="eyebrow">The problem</span>
+        <h2>Signs you have pigeons nesting under your panels</h2>
+        <p>The gap between a raised solar array and the roof is exactly the sheltered, warm spot pigeons look for in Arizona's heat. A few signs it's already happened:</p>
+      </div>
+      <ul class="signs-list">
+        {signs.map((s) => <li>{s}</li>)}
+      </ul>
+      <p class="guide-link-inline">
+        Curious how much actual damage this causes? <a href="/guides/do-pigeons-damage-solar-panels/">Read the full guide →</a>
+      </p>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap narrow">
+      <div class="section-head">
+        <span class="eyebrow">The process</span>
+        <h2>How it's done</h2>
+      </div>
+      <div class="process-list">
+        {methodology.map((step, i) => (
+          <div class="process-step">
+            <div class="n">{String(i + 1).padStart(2, "0")}</div>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
       <LocalStatsBlock heading="Solar in Tucson, by the numbers" stats={stats} />
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <Testimonials />
     </div>
   </section>
 
@@ -59,6 +111,18 @@ const stats = [
       </p>
     </div>
   </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Ready to stop losing output to pigeons?</h2>
+          <p>Tell us your city and what you're seeing — a local crew gets back to you within 24–48 hours.</p>
+        </div>
+        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"service_hub_footer","service":"pigeon-proofing-solar-panels"}'>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -67,10 +131,28 @@ const stats = [
   .hub-hero .eyebrow { color: #7fd1d6; }
   .hub-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
   .hub-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0 0 1.6rem; }
+  .hub-hero .cta-row { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
+  .hub-hero .btn.outline { border-color: rgba(255, 255, 255, 0.28); color: #f2f5f1; }
+  .hub-hero .btn.outline:hover { background: rgba(255, 255, 255, 0.08); }
+  .trust-row { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; }
+  .trust-row li { font-size: 0.85rem; color: #a8bdb9; }
+  .trust-row li::before { content: "✓ "; color: #7fd1d6; }
 
   section.alt { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
   .wrap.narrow { max-width: 760px; }
+
+  .signs-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-direction: column; gap: 0.8rem; }
+  .signs-list li { padding: 0.9rem 1.1rem; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); font-size: 0.92rem; }
+  .guide-link-inline { margin-top: 1.4rem; font-size: 0.92rem; color: var(--text-dim); }
+  .guide-link-inline a { font-weight: 700; color: var(--teal); }
+
+  .process-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1.5rem; }
+  .process-step { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; }
+  .process-step .n { font-family: ui-monospace, monospace; font-weight: 700; color: var(--teal); }
+  .process-step h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .process-step p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
+
   .region-block { margin-bottom: 2.5rem; }
   .region-block h2 { font-size: 1.3rem; margin-bottom: 1rem; }
   .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
@@ -79,6 +161,10 @@ const stats = [
   .soon-note { color: var(--text-dim); font-style: italic; }
   .guide-link { font-size: 0.92rem; color: var(--text-dim); }
   .guide-link a { font-weight: 700; color: var(--teal); }
+
+  .cta-band { background: linear-gradient(135deg, #173247, #1f6d78); color: #f2f5f1; border-radius: 18px; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+  .cta-band h2 { color: #fbfbf7; font-size: 1.5rem; max-width: 30ch; }
+  .cta-band p { color: #cbe0dd; margin: 0.5rem 0 0; }
 
   @media (max-width: 700px) {
     .city-grid { grid-template-columns: 1fr 1fr; }

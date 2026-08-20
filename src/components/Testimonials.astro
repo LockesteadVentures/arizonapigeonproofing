@@ -1,0 +1,45 @@
+---
+// Real Google reviews for the fulfilling vendor, filtered to exclude any mention of the
+// company name or owners by name (site plan decision -- lead-gen brand stays anonymized).
+// Reused across the homepage and both service hub pages rather than duplicated per-page.
+interface Props {
+  heading?: string;
+  eyebrow?: string;
+}
+
+const { heading = "What Arizona homeowners say.", eyebrow = "Local proof" } = Astro.props;
+---
+
+<div class="section-head">
+  <span class="eyebrow">{eyebrow}</span>
+  <h2>{heading}</h2>
+</div>
+<div class="trust-strip">
+  <div class="trust-card">
+    <div class="stars">★★★★★</div>
+    <p class="quote">"These guys did an amazing job on our solar panels! Not only did they clean the panels, install the bird proofing off the roof! When I looked at my cameras after they left, I also noticed that they also swept the rocks in my front yard because they pulled a power washer over them! They provided excellent service!! I highly recommend their services!!"</p>
+    <div class="who">— Rochelle S., Google review</div>
+  </div>
+  <div class="trust-card">
+    <div class="stars">★★★★★</div>
+    <p class="quote">"What a great job! Professional, personable, and efficient. Everything was left clean when the work was done and they made sure I had a way to contact them for issues. Thank you!"</p>
+    <div class="who">— Michelle S., Google review</div>
+  </div>
+  <div class="trust-card">
+    <div class="stars">★★★★★</div>
+    <p class="quote">"Very professional company. They did excellent work. We are so happy we found them."</p>
+    <div class="who">— Mary S., Google review</div>
+  </div>
+</div>
+
+<style>
+  .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  .trust-card { padding: 1.6rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
+  .trust-card .quote { font-size: 0.95rem; margin: 0 0 0.9rem; }
+  .trust-card .who { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; }
+  .stars { color: var(--amber); letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.85rem; }
+
+  @media (max-width: 920px) {
+    .trust-strip { grid-template-columns: 1fr; }
+  }
+</style>
