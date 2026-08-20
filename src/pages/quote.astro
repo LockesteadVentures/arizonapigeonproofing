@@ -86,6 +86,33 @@ import { REGIONS } from "../data/locations.js";
   const status = form?.querySelector<HTMLParagraphElement>(".form-status");
   const button = form?.querySelector<HTMLButtonElement>("button[type=submit]");
 
+  // Prefill from whichever city/service page sent someone here (see
+  // CityServicePage.astro's quoteUrl) -- one less thing for them to retype.
+  (function prefillFromQueryParams() {
+    if (!form) return;
+    const params = new URLSearchParams(window.location.search);
+    const metro = params.get("metro");
+    const city = params.get("city");
+    const service = params.get("service");
+
+    if (metro) {
+      const metroField = form.querySelector<HTMLSelectElement>('[name="metro"]');
+      if (metroField && [...metroField.options].some((o) => o.value === metro)) {
+        metroField.value = metro;
+      }
+    }
+    if (city) {
+      const cityField = form.querySelector<HTMLInputElement>('[name="city"]');
+      if (cityField) cityField.value = city;
+    }
+    if (service) {
+      const serviceField = form.querySelector<HTMLSelectElement>('[name="service"]');
+      if (serviceField && [...serviceField.options].some((o) => o.value === service)) {
+        serviceField.value = service;
+      }
+    }
+  })();
+
   function pushEvent(event: string, params: Record<string, unknown> = {}) {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event, page_path: window.location.pathname, ...params });

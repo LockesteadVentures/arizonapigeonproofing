@@ -15,6 +15,14 @@ interface Props {
 const { city, region, service, otherService, content, nearby } = Astro.props;
 const cityContext = CITY_CONTEXT[city.slug];
 
+// Prefills the quote form's metro/city/service fields for whoever clicks through
+// from this page, instead of making them retype what we already know.
+const SERVICE_OPTION_TEXT: Record<string, string> = {
+  "pigeon-proofing-solar-panels": "Pigeon proofing",
+  "solar-panel-cleaning": "Solar panel cleaning",
+};
+const quoteUrl = `/quote/?metro=${encodeURIComponent(city.region)}&city=${encodeURIComponent(city.name)}&service=${encodeURIComponent(SERVICE_OPTION_TEXT[service.slug] ?? "")}`;
+
 // The generic 3 service FAQs plus one genuinely city-specific question --
 // see cityContext.js for why each city's is different, not templated.
 const allFaqs = cityContext ? [...content.faqs, cityContext.localFaq] : content.faqs;
@@ -42,7 +50,7 @@ const faqJsonLd = {
       <h1>{service.name} in {city.name}</h1>
       <p class="lede">{content.intro(city)}</p>
       <div class="cta-row">
-        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_hero","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
+        <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_hero","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
         <a href="tel:+15205550148" class="btn outline">Call (520) 555-0148</a>
       </div>
     </div>
@@ -127,7 +135,7 @@ const faqJsonLd = {
           <h2>Ready for a free {city.name} quote?</h2>
           <p>Tell us your city and what you're seeing — a local crew gets back to you within 24–48 hours.</p>
         </div>
-        <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_footer_cta","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
+        <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_footer_cta","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
       </div>
     </div>
   </section>
