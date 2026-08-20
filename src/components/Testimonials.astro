@@ -2,12 +2,57 @@
 // Real Google reviews for the fulfilling vendor, filtered to exclude any mention of the
 // company name or owners by name (site plan decision -- lead-gen brand stays anonymized).
 // Reused across the homepage and both service hub pages rather than duplicated per-page.
+//
+// Review/AggregateRating schema below is attached to the SAME LocalBusiness @id that
+// BaseLayout emits (Astro.site + "#business"), by explicit instruction. Flagging once,
+// in code, since it's worth knowing later: these reviews were originally left for Desert
+// Solar Cleaning and Bird Proofing LLC (the actual fulfilling vendor), not for
+// "Arizona Pigeon Proofing" by name. reviewCount is set to 3 (only what's actually shown
+// here), not the vendor's real total of 30 on Google -- using 30 here would be a
+// numerically checkable mismatch against nothing, since no public "Arizona Pigeon
+// Proofing" listing has that count anywhere.
 interface Props {
   heading?: string;
   eyebrow?: string;
+  // Used only to label the CTA's data-gtm-params so it's distinguishable from
+  // every other "Get a Free Quote" button in analytics.
+  ctaLocation?: string;
 }
 
-const { heading = "What Arizona homeowners say.", eyebrow = "Local proof" } = Astro.props;
+const { heading = "What Arizona homeowners say.", eyebrow = "Local proof", ctaLocation = "testimonials" } = Astro.props;
+
+const reviews = [
+  {
+    quote: "These guys did an amazing job on our solar panels! Not only did they clean the panels, install the bird proofing off the roof! When I looked at my cameras after they left, I also noticed that they also swept the rocks in my front yard because they pulled a power washer over them! They provided excellent service!! I highly recommend their services!!",
+    author: "Rochelle S.",
+  },
+  {
+    quote: "What a great job! Professional, personable, and efficient. Everything was left clean when the work was done and they made sure I had a way to contact them for issues. Thank you!",
+    author: "Michelle S.",
+  },
+  {
+    quote: "Very professional company. They did excellent work. We are so happy we found them.",
+    author: "Mary S.",
+  },
+];
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": `${Astro.site}#business`,
+  review: reviews.map((r) => ({
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    author: { "@type": "Person", name: r.author },
+    reviewBody: r.quote,
+  })),
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    reviewCount: reviews.length,
+  },
+};
 ---
 
 <div class="section-head">
@@ -15,22 +60,26 @@ const { heading = "What Arizona homeowners say.", eyebrow = "Local proof" } = As
   <h2>{heading}</h2>
 </div>
 <div class="trust-strip">
-  <div class="trust-card">
-    <div class="stars">★★★★★</div>
-    <p class="quote">"These guys did an amazing job on our solar panels! Not only did they clean the panels, install the bird proofing off the roof! When I looked at my cameras after they left, I also noticed that they also swept the rocks in my front yard because they pulled a power washer over them! They provided excellent service!! I highly recommend their services!!"</p>
-    <div class="who">— Rochelle S., Google review</div>
-  </div>
-  <div class="trust-card">
-    <div class="stars">★★★★★</div>
-    <p class="quote">"What a great job! Professional, personable, and efficient. Everything was left clean when the work was done and they made sure I had a way to contact them for issues. Thank you!"</p>
-    <div class="who">— Michelle S., Google review</div>
-  </div>
-  <div class="trust-card">
-    <div class="stars">★★★★★</div>
-    <p class="quote">"Very professional company. They did excellent work. We are so happy we found them."</p>
-    <div class="who">— Mary S., Google review</div>
-  </div>
+  {reviews.map((r) => (
+    <div class="trust-card">
+      <div class="stars">★★★★★</div>
+      <p class="quote">"{r.quote}"</p>
+      <div class="who">— {r.author}, Google review</div>
+    </div>
+  ))}
 </div>
+<div class="testimonials-cta">
+  <a
+    href="/quote/"
+    class="btn amber"
+    data-gtm-event="cta_click"
+    data-gtm-params={`{"cta_location":"${ctaLocation}"}`}
+  >
+    Get a Free Quote
+  </a>
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 
 <style>
   .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
@@ -38,6 +87,7 @@ const { heading = "What Arizona homeowners say.", eyebrow = "Local proof" } = As
   .trust-card .quote { font-size: 0.95rem; margin: 0 0 0.9rem; }
   .trust-card .who { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; }
   .stars { color: var(--amber); letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.85rem; }
+  .testimonials-cta { text-align: center; margin-top: 2rem; }
 
   @media (max-width: 920px) {
     .trust-strip { grid-template-columns: 1fr; }

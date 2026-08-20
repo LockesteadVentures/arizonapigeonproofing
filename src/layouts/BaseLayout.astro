@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Tracking from "../components/Tracking.astro";
 import GtmNoscript from "../components/GtmNoscript.astro";
+import { liveCitiesByRegion } from "../data/locations.js";
 import "../styles/global.css";
 
 interface Props {
@@ -11,22 +12,44 @@ interface Props {
   // Page-level context seeded into the dataLayer before GTM loads -- e.g.
   // { content_group: "city_service_page", metro: "tucson", service: "...", city: "..." }
   pageData?: Record<string, unknown>;
+  // Schema.org areaServed for THIS page specifically -- a single {name} for a city
+  // page, or an array for a page that covers multiple cities. Defaults to every
+  // live Tucson-area city, which is accurate for the homepage/hub pages but was
+  // previously hardcoded to "Tucson" even on Oro Valley/Vail/etc pages, wasting
+  // the local-relevance signal those pages should carry.
+  areaServed?: { name: string } | { name: string }[];
 }
 
-const { title, description, pageData = {} } = Astro.props;
+const { title, description, pageData = {}, areaServed } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const organizationSchema = {
+const defaultAreaServed = liveCitiesByRegion("tucson").map((c) => ({
+  "@type": "City",
+  name: c.name,
+  containedInPlace: { "@type": "AdministrativeArea", name: "Arizona" },
+}));
+
+const resolvedAreaServed = areaServed
+  ? Array.isArray(areaServed)
+    ? areaServed.map((a) => ({
+        "@type": "City",
+        name: a.name,
+        containedInPlace: { "@type": "AdministrativeArea", name: "Arizona" },
+      }))
+    : { "@type": "City", name: areaServed.name, containedInPlace: { "@type": "AdministrativeArea", name: "Arizona" } }
+  : defaultAreaServed;
+
+const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "HomeAndConstructionBusiness",
+  // Fixed @id (not per-page) so the Review/AggregateRating block emitted separately
+  // by Testimonials.astro merges into this same entity instead of reading as a
+  // second, distinct business with the same name.
+  "@id": `${Astro.site}#business`,
   name: "Arizona Pigeon Proofing",
   url: Astro.site?.toString(),
   telephone: "+1-520-555-0148",
-  areaServed: {
-    "@type": "City",
-    name: "Tucson",
-    containedInPlace: { "@type": "AdministrativeArea", name: "Arizona" },
-  },
+  areaServed: resolvedAreaServed,
 };
 ---
 
@@ -50,7 +73,7 @@ const organizationSchema = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 
     <Tracking title={title} pageData={pageData} />
   </head>

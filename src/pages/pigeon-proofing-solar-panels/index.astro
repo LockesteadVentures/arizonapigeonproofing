@@ -2,10 +2,30 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import LocalStatsBlock from "../../components/LocalStatsBlock.astro";
 import Testimonials from "../../components/Testimonials.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
 import { SERVICE_CONTENT } from "../../data/serviceContent.js";
 
 const { signs, methodology, trustPoints } = SERVICE_CONTENT["pigeon-proofing-solar-panels"].hub;
+
+const faqs = [
+  {
+    q: "How much does solar panel bird mesh cost?",
+    a: "It depends on your array size and roof access, so we don't quote a flat number sight-unseen — every quote is based on your specific panels, not a generic per-panel rate.",
+  },
+  {
+    q: "How long does pigeon proofing take?",
+    a: "Most jobs, including removing any existing nest, finish in a single visit — same day in most cases.",
+  },
+  {
+    q: "Does bird mesh void my solar panel warranty?",
+    a: "No — mesh mounts to the panel's rails, not the roof or the panels themselves, so it doesn't affect your manufacturer or installer warranty.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "Tucson Metro today — including Oro Valley, Marana, Sahuarita, and 11 more cities below. Phoenix Metro pages are built and waiting on a confirmed local crew.",
+  },
+];
 
 const stats = [
   {
@@ -87,7 +107,7 @@ const stats = [
 
   <section class="alt">
     <div class="wrap">
-      <Testimonials />
+      <Testimonials ctaLocation="pigeon_hub_testimonials" />
     </div>
   </section>
 
@@ -109,6 +129,12 @@ const stats = [
         Wondering whether your HOA needs to sign off first?
         <a href="/guides/hoa-rules-bird-proofing-solar-panels/">Read the full guide →</a>
       </p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap narrow">
+      <FaqSection heading="Frequently asked" items={faqs} />
     </div>
   </section>
 
