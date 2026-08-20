@@ -115,8 +115,15 @@ const stats = [
     <div class="wrap narrow">
       <div class="region-block">
         <h2>{REGIONS.tucson.name}</h2>
+        <p class="pill-group-label">Primary service areas</p>
         <div class="city-grid">
-          {liveCitiesByRegion("tucson").map((c) => (
+          {liveCitiesByRegion("tucson").filter((c) => c.tier === 1).map((c) => (
+            <a class="city-card primary" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          ))}
+        </div>
+        <p class="pill-group-label">Also serving</p>
+        <div class="city-grid">
+          {liveCitiesByRegion("tucson").filter((c) => c.tier === 2).map((c) => (
             <a class="city-card" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
           ))}
         </div>
@@ -184,7 +191,10 @@ const stats = [
   .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
   .city-card { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; font-size: 0.92rem; }
   .city-card:hover { border-color: var(--teal); color: var(--teal); }
+  .city-card.primary { border-color: var(--teal); background: var(--teal-soft); color: var(--teal); }
   .soon-note { color: var(--text-dim); font-style: italic; }
+  .pill-group-label { font-family: ui-monospace, monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  .pill-group-label:not(:first-child) { margin-top: 1.2rem; }
   .guide-link { font-size: 0.92rem; color: var(--text-dim); }
   .guide-link a { font-weight: 700; color: var(--teal); }
 

@@ -28,6 +28,8 @@ const faqs = [
 ];
 
 const tucsonCities = liveCitiesByRegion("tucson");
+const tucsonPrimary = tucsonCities.filter((c) => c.tier === 1);
+const tucsonSecondary = tucsonCities.filter((c) => c.tier === 2);
 const phoenixCities = [
   { slug: "phoenix", name: "Phoenix" },
   { slug: "scottsdale", name: "Scottsdale" },
@@ -151,8 +153,15 @@ const restCities = [
         <button class="region-tab" role="tab" aria-selected="false" data-region="rest">Rest of Arizona</button>
       </div>
       <div class="region-panel active" data-region-panel="tuc">
+        <p class="pill-group-label">Primary service areas</p>
         <div class="city-pills">
-          {tucsonCities.map((c) => (
+          {tucsonPrimary.map((c) => (
+            <a class="city-pill primary" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
+          ))}
+        </div>
+        <p class="pill-group-label">Also serving</p>
+        <div class="city-pills">
+          {tucsonSecondary.map((c) => (
             <a class="city-pill" href={`/pigeon-proofing-solar-panels/${c.slug}/`}>{c.name}</a>
           ))}
         </div>
@@ -247,6 +256,9 @@ const restCities = [
   .city-pill { padding: 0.5rem 1rem; border-radius: 99px; background: var(--surface); border: 1px solid var(--border); font-size: 0.85rem; }
   .city-pill:hover { border-color: var(--teal); color: var(--teal); }
   .city-pill.soon { color: var(--text-dim); font-style: italic; }
+  .city-pill.primary { font-weight: 700; border-color: var(--teal); background: var(--teal-soft); color: var(--teal); }
+  .pill-group-label { font-family: ui-monospace, monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  .pill-group-label:not(:first-child) { margin-top: 1.4rem; }
   .region-panel { display: none; }
   .region-panel.active { display: block; }
 
