@@ -2,7 +2,7 @@
 
 > Solar panel pigeon proofing and cleaning for Arizona homeowners, fulfilled by local crews. Currently live in Tucson Metro, AZ; Phoenix Metro and the rest of Arizona are built but not yet fulfilled by a confirmed local crew.
 
-Arizona Pigeon Proofing connects homeowners with local, vetted crews for two services: bird mesh/deterrent installation for solar panel arrays ("pigeon proofing"), and deionized-water solar panel cleaning. Leads are routed to a confirmed local vendor per metro area; the site itself does not perform the work.
+Arizona Pigeon Proofing connects homeowners with local, licensed, insured crews for two services: bird mesh/deterrent installation for solar panel arrays ("pigeon proofing"), and deionized-water solar panel cleaning. Leads are routed to a confirmed local vendor per metro area; the site itself does not perform the work.
 
 ## Services
 
@@ -11,9 +11,8 @@ Arizona Pigeon Proofing connects homeowners with local, vetted crews for two ser
 
 ## Locations
 
-- [Tucson Metro](https://www.arizonapigeonproofing.com/locations/tucson-metro/) — live now: Tucson, Oro Valley, Marana, Sahuarita, Green Valley, Vail, Catalina Foothills.
-- Phoenix Metro — pages built, awaiting a confirmed local vendor.
-- Rest of Arizona — not yet available.
+- [Tucson Metro](https://www.arizonapigeonproofing.com/locations/tucson-metro/) — live now, 15 cities: Tucson, Oro Valley, Marana, Sahuarita, Green Valley, Vail, Catalina Foothills, Casas Adobes, South Tucson, Flowing Wells, Tanque Verde, Rita Ranch, Corona de Tucson, Saddlebrooke, Picture Rocks.
+- [All locations](https://www.arizonapigeonproofing.com/locations/): Phoenix Metro and the rest of Arizona — pages built, awaiting a confirmed local vendor.
 
 ## Get a quote
 
@@ -21,4 +20,16 @@ Arizona Pigeon Proofing connects homeowners with local, vetted crews for two ser
 
 ## Guides
 
-- [Guides and resources](https://www.arizonapigeonproofing.com/guides/): informational articles on solar panel bird proofing and cleaning for Arizona homeowners.
+Informational guides for Arizona homeowners, organized as four topic hubs with in-depth spoke articles under each. See the [full guides index](https://www.arizonapigeonproofing.com/guides/) for all articles.
+
+- [Pigeons and Solar Panels: The Complete Arizona Guide](https://www.arizonapigeonproofing.com/guides/pigeons-and-solar-panels/): why pigeons nest under panels, damage and health risks, mesh vs. spikes/sonic/decoys, DIY vs. professional.
+- [Solar Panel Cleaning in Arizona](https://www.arizonapigeonproofing.com/guides/solar-panel-cleaning-arizona/): dust/pollen output loss, monsoon season, cost, DIY risks, deionized water vs. pressure washing.
+- [HOA Rules for Solar Panel Bird Proofing in Arizona](https://www.arizonapigeonproofing.com/guides/hoa-solar-panel-rules-arizona/): Arizona's solar access law, architectural review, HOA approval paperwork, rules by community.
+- [Solar Panel Maintenance in Arizona](https://www.arizonapigeonproofing.com/guides/solar-panel-maintenance-arizona/): maintenance checklist, what decreases efficiency in the desert, choosing a maintenance company, bundling cleaning and proofing.
+
+## Company
+
+- [About](https://www.arizonapigeonproofing.com/about/): what Arizona Pigeon Proofing does and how the crew-matching model works.
+- [Contact](https://www.arizonapigeonproofing.com/contact/)
+- [Privacy Policy](https://www.arizonapigeonproofing.com/privacy/)
+- [Terms of Service](https://www.arizonapigeonproofing.com/terms/)
