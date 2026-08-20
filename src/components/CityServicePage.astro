@@ -36,10 +36,20 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: new URL("/", Astro.site) },
+    { "@type": "ListItem", position: 2, name: service.name, item: new URL(`/${service.slug}/`, Astro.site) },
+    { "@type": "ListItem", position: 3, name: city.name, item: new URL(`/${service.slug}/${city.slug}/`, Astro.site) },
+  ],
+};
 ---
 
 <BaseLayout
-  title={`${service.name} in ${city.name}, AZ | Arizona Pigeon Proofing`}
+  title={`${service.name} in ${city.name}, AZ`}
   description={`${service.name} for homeowners in ${city.name}, Arizona. Free quotes, local crews, 24–48 hour turnaround.`}
   pageData={{ content_group: "city_service_page", metro: city.region, service: service.slug, city: city.slug }}
   areaServed={{ name: city.name }}
@@ -141,6 +151,7 @@ const faqJsonLd = {
   </section>
 
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 </BaseLayout>
 
 <style>

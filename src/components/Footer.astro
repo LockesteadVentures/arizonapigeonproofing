@@ -42,7 +42,7 @@ import { REGIONS } from "../data/locations.js";
     </div>
     <div class="footer-bottom">
       <span>© 2026 Arizona Pigeon Proofing. All rights reserved.</span>
-      <span>Privacy Policy · Terms</span>
+      <span><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -58,6 +58,8 @@ import { REGIONS } from "../data/locations.js";
   .footer-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
   .footer-grid a:hover { color: var(--teal); }
   .footer-bottom { border-top: 1px solid var(--border); margin-top: 2.5rem; padding-top: 1.5rem; display: flex; justify-content: space-between; color: var(--text-dim); font-size: 0.8rem; flex-wrap: wrap; gap: 0.5rem; }
+  .footer-bottom a { color: var(--text-dim); }
+  .footer-bottom a:hover { color: var(--teal); }
 
   @media (max-width: 920px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }

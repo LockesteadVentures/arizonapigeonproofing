@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Privacy Policy | Arizona Pigeon Proofing"
+  description="How Arizona Pigeon Proofing collects, uses, and protects information submitted through this site."
+  pageData={{ content_group: "privacy" }}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="lede">Last updated August 20, 2026.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow article">
+      <p>This policy explains what information Arizona Pigeon Proofing ("we," "us") collects through arizonapigeonproofing.com, how we use it, and who we share it with.</p>
+
+      <h2>Information we collect</h2>
+      <p>When you submit the quote request form, we collect the name, phone number, city, and service details you provide. We do not ask for or store payment information on this site — any payment for completed work is handled directly between you and the local crew that performs it.</p>
+      <p>Like most websites, we also collect standard analytics data automatically — pages visited, general location, device and browser type — through Google Analytics and Google Tag Manager. Some of this browsing data is processed by Partytown, a tool that runs analytics scripts in a background thread for performance; it does not change what's collected, only where it runs.</p>
+
+      <h2>How we use it</h2>
+      <p>Quote request details are used to match you with a local, licensed, insured crew serving your area and to allow that crew to contact you about your request. Analytics data is used to understand site traffic and improve the pages themselves.</p>
+
+      <h2>Who we share it with</h2>
+      <p>We share your quote request details with the local crew assigned to fulfill it. We do not sell your information to third parties. Aggregated, non-identifying analytics data may be visible to standard tools like Google Analytics as part of normal site operation.</p>
+
+      <h2>Cookies and tracking</h2>
+      <p>This site uses cookies and similar technologies through Google Tag Manager and Google Analytics to understand how visitors use the site. You can block or clear cookies through your browser settings; doing so may affect some site functionality but won't prevent you from requesting a quote.</p>
+
+      <h2>Your choices</h2>
+      <p>To ask what information we have on file, or to request it be deleted, contact us using the details on our <a href="/contact/">Contact page</a>.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy as the site changes. The "last updated" date above reflects the most recent revision.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy? Call (520) 555-0148 or visit our <a href="/contact/">Contact page</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .page-hero .lede { font-size: 0.95rem; color: #c9d4d0; margin: 0; }
+  .wrap.narrow { max-width: 680px; }
+  .article h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; }
+  .article p { margin: 0.8rem 0; line-height: 1.7; color: var(--text); }
+  .article a { font-weight: 700; color: var(--teal); }
+</style>

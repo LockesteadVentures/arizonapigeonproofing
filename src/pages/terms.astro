@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Terms of Service | Arizona Pigeon Proofing"
+  description="The terms that govern use of the Arizona Pigeon Proofing website and quote request service."
+  pageData={{ content_group: "terms" }}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1>Terms of Service</h1>
+      <p class="lede">Last updated August 20, 2026.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow article">
+      <p>These terms govern your use of arizonapigeonproofing.com. By submitting a quote request or otherwise using this site, you agree to them.</p>
+
+      <h2>What this site does</h2>
+      <p>Arizona Pigeon Proofing connects homeowners with independent, local, licensed, and insured crews for solar panel pigeon proofing and cleaning. We are not the company physically performing the installation or cleaning work — that work is carried out by the local crew you're matched with, who you'll deal with directly for scheduling, service delivery, and payment.</p>
+
+      <h2>Quote requests</h2>
+      <p>Submitting the quote form is a request for a local crew to contact you — it is not a binding order, and pricing is not final until confirmed directly with the crew based on your specific panels, roof access, and property.</p>
+
+      <h2>No guarantee of results</h2>
+      <p>While every job is matched to a licensed, insured local crew, we don't guarantee specific outcomes, timelines, or pricing, since those depend on factors specific to each property that are assessed at the time of service.</p>
+
+      <h2>Site content</h2>
+      <p>Guides and educational content on this site are provided for general informational purposes and aren't a substitute for advice from a licensed contractor about your specific situation.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>To the extent permitted by law, Arizona Pigeon Proofing is not liable for damages arising from work performed by an independent local crew, or from your use of information on this site. Any dispute about completed work should be directed to the crew that performed it.</p>
+
+      <h2>Governing law</h2>
+      <p>These terms are governed by the laws of the State of Arizona.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms? Call (520) 555-0148 or visit our <a href="/contact/">Contact page</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
+  .page-hero .lede { font-size: 0.95rem; color: #c9d4d0; margin: 0; }
+  .wrap.narrow { max-width: 680px; }
+  .article h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; }
+  .article p { margin: 0.8rem 0; line-height: 1.7; color: var(--text); }
+  .article a { font-weight: 700; color: var(--teal); }
+</style>

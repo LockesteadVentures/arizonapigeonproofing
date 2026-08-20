@@ -8,6 +8,25 @@ import { SERVICE_CONTENT } from "../../data/serviceContent.js";
 
 const { signs, methodology, trustPoints } = SERVICE_CONTENT["pigeon-proofing-solar-panels"].hub;
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: new URL("/", Astro.site) },
+    { "@type": "ListItem", position: 2, name: "Pigeon Proofing for Solar Panels", item: new URL("/pigeon-proofing-solar-panels/", Astro.site) },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Pigeon Proofing for Solar Panels",
+  serviceType: "Bird mesh installation",
+  provider: { "@type": "HomeAndConstructionBusiness", "@id": `${Astro.site}#business` },
+  areaServed: { "@type": "City", name: "Tucson" },
+  description: "Stainless mesh installed around solar arrays to stop pigeons from nesting underneath.",
+};
+
 const faqs = [
   {
     q: "How much does solar panel bird mesh cost?",
@@ -44,7 +63,7 @@ const stats = [
 ---
 
 <BaseLayout
-  title="Pigeon Proofing for Solar Panels in Tucson, AZ | Arizona Pigeon Proofing"
+  title="Pigeon Proofing in Tucson, AZ | Arizona Pigeon Proofing"
   description="Bird mesh and pigeon deterrent installation for solar arrays across Tucson, Arizona."
   pageData={{ content_group: "service_hub", service: "pigeon-proofing-solar-panels" }}
 >
@@ -156,6 +175,9 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 </BaseLayout>
 
 <style>

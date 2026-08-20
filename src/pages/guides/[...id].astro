@@ -21,6 +21,10 @@ const articleSchema = {
   headline: entry.data.title,
   description: entry.data.description,
   datePublished: entry.data.publishDate.toISOString(),
+  // No separate last-edited tracking on these static files -- publishDate is
+  // also the most recent truth we have, so it doubles as dateModified rather
+  // than omitting the field Google's Article guidelines recommend.
+  dateModified: entry.data.publishDate.toISOString(),
   author: { "@type": "Organization", name: "Arizona Pigeon Proofing Crew" },
   publisher: { "@type": "Organization", name: "Arizona Pigeon Proofing" },
 };
@@ -56,6 +60,13 @@ const faqSchema = faqs.length
     }
   : null;
 
+// Guide titles are Byword.ai-generated and vary widely in length; only append
+// the brand suffix when it still fits Google's ~60-char SERP display budget,
+// rather than truncating long titles mid-word.
+const BRAND_SUFFIX = " | Arizona Pigeon Proofing";
+const pageTitle =
+  entry.data.title.length + BRAND_SUFFIX.length <= 60 ? `${entry.data.title}${BRAND_SUFFIX}` : entry.data.title;
+
 const breadcrumbSchema = hub
   ? {
       "@context": "https://schema.org",
@@ -70,7 +81,7 @@ const breadcrumbSchema = hub
 ---
 
 <BaseLayout
-  title={entry.data.title}
+  title={pageTitle}
   description={entry.data.description}
   pageData={{ content_group: "guide_article", guide_id: entry.id }}
 >
