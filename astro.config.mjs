@@ -12,6 +12,14 @@ export default defineConfig({
   // sitemap URL reads as unfetchable in Search Console.
   site: 'https://www.arizonapigeonproofing.com',
   trailingSlash: 'always',
+  // The 3 original placeholder guides are retired in favor of the hub-and-spoke
+  // content pack (Aug 2026) -- redirect their indexed URLs to the closest new
+  // equivalent instead of letting them 404.
+  redirects: {
+    '/guides/do-pigeons-damage-solar-panels/': '/guides/pigeons-and-solar-panels/',
+    '/guides/hoa-rules-bird-proofing-solar-panels/': '/guides/hoa-solar-panel-rules-arizona/',
+    '/guides/solar-panel-cleaning-frequency-arizona/': '/guides/solar-panel-cleaning-arizona/',
+  },
   // 'static' by default — output: 'server' would make every page an on-demand
   // function. We only need that for the two API routes, which opt in per-file
   // via `export const prerender = false`. Everything else stays static/fast.

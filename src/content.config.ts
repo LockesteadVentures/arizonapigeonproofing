@@ -11,6 +11,10 @@ const guides = defineCollection({
     description: z.string(),
     publishDate: z.coerce.date(),
     draft: z.boolean().default(false),
+    // Hub-and-spoke pieces carry their FAQ as structured data (kept byte-identical
+    // to the visible "## FAQ" section in the body) so the page can emit FAQPage
+    // schema without re-parsing markdown. Flat Byword.ai output just omits this.
+    faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
   }),
 });
 

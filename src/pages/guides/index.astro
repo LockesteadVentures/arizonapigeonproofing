@@ -3,7 +3,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const allGuides = await getCollection("guides", ({ data }) => !data.draft);
-const guides = allGuides.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+// Spokes live at "<hub-id>/<spoke-id>" (nested files under the hub's directory);
+// group them under their hub here rather than listing all 30+ pieces flat.
+const topLevel = allGuides
+  .filter((g) => !g.id.includes("/"))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const spokesFor = (hubId: string) =>
+  allGuides
+    .filter((g) => g.id.startsWith(`${hubId}/`))
+    .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
 <BaseLayout
@@ -20,14 +28,24 @@ const guides = allGuides.sort((a, b) => b.data.publishDate.valueOf() - a.data.pu
   </section>
   <section>
     <div class="wrap narrow">
-      {guides.length === 0 && <p class="empty-note">No guides published yet — check back soon.</p>}
+      {topLevel.length === 0 && <p class="empty-note">No guides published yet — check back soon.</p>}
       <ul class="guide-list">
-        {guides.map((g) => (
-          <li>
-            <a href={`/guides/${g.id}/`}>{g.data.title}</a>
-            <p>{g.data.description}</p>
-          </li>
-        ))}
+        {topLevel.map((g) => {
+          const spokes = spokesFor(g.id);
+          return (
+            <li>
+              <a href={`/guides/${g.id}/`}>{g.data.title}</a>
+              <p>{g.data.description}</p>
+              {spokes.length > 0 && (
+                <ul class="spoke-list">
+                  {spokes.map((s) => (
+                    <li><a href={`/guides/${s.id}/`}>{s.data.title}</a></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   </section>
@@ -45,4 +63,6 @@ const guides = allGuides.sort((a, b) => b.data.publishDate.valueOf() - a.data.pu
   .guide-list a { font-weight: 700; font-size: 1.05rem; }
   .guide-list a:hover { color: var(--teal); }
   .guide-list p { margin: 0.3rem 0 0; color: var(--text-dim); font-size: 0.9rem; }
+  .spoke-list { list-style: none; padding: 0; margin: 0.7rem 0 0; padding-left: 1.1rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 0.4rem; }
+  .spoke-list a { font-weight: 400; font-size: 0.92rem; }
 </style>

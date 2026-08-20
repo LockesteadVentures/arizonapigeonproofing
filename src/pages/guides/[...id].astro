@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, getEntry, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides", ({ data }) => !data.draft);
+  return guides.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// A spoke's id is "<hub-id>/<spoke-id>" (nested file under the hub's directory
+// in src/data/guides); a hub or standalone guide has no slash.
+const slashIndex = entry.id.lastIndexOf("/");
+const hub = slashIndex === -1 ? null : await getEntry("guides", entry.id.slice(0, slashIndex));
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: entry.data.publishDate.toISOString(),
+  author: { "@type": "Organization", name: "Arizona Pigeon Proofing Crew" },
+  publisher: { "@type": "Organization", name: "Arizona Pigeon Proofing" },
+};
+
+const faqSchema = entry.data.faqs?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: entry.data.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    }
+  : null;
+
+const breadcrumbSchema = hub
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Guides", item: new URL("/guides/", Astro.site) },
+        { "@type": "ListItem", position: 2, name: hub.data.title, item: new URL(`/guides/${hub.id}/`, Astro.site) },
+        { "@type": "ListItem", position: 3, name: entry.data.title, item: new URL(`/guides/${entry.id}/`, Astro.site) },
+      ],
+    }
+  : null;
+---
+
+<BaseLayout
+  title={`${entry.data.title} | Arizona Pigeon Proofing`}
+  description={entry.data.description}
+  pageData={{ content_group: "guide_article", guide_id: entry.id }}
+>
+  <section class="page-hero">
+    <div class="wrap narrow">
+      <span class="eyebrow">Guide</span>
+      {hub && (
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guides/">Guides</a> / <a href={`/guides/${hub.id}/`}>{hub.data.title}</a>
+        </nav>
+      )}
+      <h1>{entry.data.title}</h1>
+    </div>
+  </section>
+  <section>
+    <div class="wrap narrow article">
+      <Content />
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero .breadcrumb { display: block; margin-top: 0.7rem; font-size: 0.85rem; color: #c9d4d0; }
+  .page-hero .breadcrumb a { color: #c9d4d0; text-decoration: underline; }
+  .page-hero .breadcrumb a:hover { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2rem; margin: 0.6rem 0 0; color: #fbfbf7; max-width: 30ch; }
+  .wrap.narrow { max-width: 680px; }
+  .article :global(h2) { font-size: 1.3rem; margin: 2rem 0 0.8rem; }
+  .article :global(p) { margin: 0.9rem 0; line-height: 1.7; color: var(--text); }
+  .article :global(em) { color: var(--text-dim); }
+</style>
