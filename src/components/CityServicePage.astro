@@ -21,7 +21,7 @@ const SERVICE_OPTION_TEXT: Record<string, string> = {
   "pigeon-proofing-solar-panels": "Pigeon proofing",
   "solar-panel-cleaning": "Solar panel cleaning",
 };
-const quoteUrl = `/quote/?metro=${encodeURIComponent(city.region)}&city=${encodeURIComponent(city.name)}&service=${encodeURIComponent(SERVICE_OPTION_TEXT[service.slug] ?? "")}`;
+const quoteUrl = `/quote/?metro=${encodeURIComponent(city.region)}&address=${encodeURIComponent(city.name)}&service=${encodeURIComponent(SERVICE_OPTION_TEXT[service.slug] ?? "")}`;
 
 // The generic 3 service FAQs plus one genuinely city-specific question --
 // see cityContext.js for why each city's is different, not templated.

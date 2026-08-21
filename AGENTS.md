@@ -16,9 +16,9 @@
 ### Architecture
 - Astro (static output) + `@astrojs/vercel` adapter, deployed via `vercel --prod` (project: `lockestead-ventures-8943683a/arizonapigeonproofing` — do NOT use/recreate the erroneous duplicate `arizona-pigeon-proofing` project from earlier linking mistakes).
 - `src/components/CityServicePage.astro` is the shared template rendering all 27 Tucson city×service pages; `src/layouts/BaseLayout.astro` renders sitewide `HomeAndConstructionBusiness` JSON-LD (per-page `areaServed` prop, defaults to the full live-city array on non-city pages); `FaqSection.astro` and `Testimonials.astro` are shared components used on the homepage and both service hub pages, each carrying their own FAQPage / Review+AggregateRating schema.
-- Quote form (`src/pages/quote.astro` + `src/pages/api/quote.ts`, Resend for email) accepts `?metro=&city=&service=` query params and prefills the form — city/service pages link to `/quote/` with these params pre-populated rather than a bare link.
+- Quote form (`src/pages/quote.astro` + `src/pages/api/quote.ts`, Resend for email) accepts `?metro=&address=&service=` query params and prefills the form — city/service pages link to `/quote/` with these params pre-populated rather than a bare link. Metro dropdown currently offers Tucson Metro only (Phoenix/Rest of Arizona removed from the form until those regions go live); name/phone/metro/address/service are all required client- and server-side.
 - GTM (`GTM-NRVDP9X4`) loads via Partytown web worker. GA4 events: `form_start`, `generate_lead` (includes raw name/phone by deliberate business decision — GA4 is the system of record for lead PII), `form_error`, `cta_click`, `click_to_call`, `region_tab_select`, `nav_menu_open`.
-- Guides content collection (`src/content.config.ts`, `astro:content`) — only 3 guides exist so far; keep publishing more using the established content-silo topics (chosen for AI-answer-engine / SERP pickup), same cadence as before.
+- Guides content collection (`src/content.config.ts`, `astro:content`) — 4 hub-and-spoke topic silos, 30 guides total (pigeons-and-solar-panels, solar-panel-cleaning-arizona, hoa-solar-panel-rules-arizona, solar-panel-maintenance-arizona). Keep publishing more using the same hub-and-spoke pattern (chosen for AI-answer-engine / SERP pickup). `/guides/` index collapses each hub's spoke list into a closed-by-default `<details>` accordion — don't re-expand that back into a flat list.
 
 ### Standing conventions
 - Never hand-write HTML entities (`&amp;`) inside an Astro prop string that gets interpolated into `{}` — Astro auto-escapes, so literal `&amp;` becomes `&amp;amp;` on render. Use the literal character (`&`).
@@ -27,9 +27,10 @@
 - A `ServiceWorker` registration error in the browser console on every page load is a known sandbox limitation of the test browser, not a site bug — don't re-diagnose it.
 - Don't add fake urgency, fabricated stats, or invented review counts/photos. Real, sourced data only (see `cityContext.js` and the `LocalStatsBlock` stats, which cite NREL/NWS/Arizona Daily Star).
 
-### Status of the last punch list (10 items, priority order)
-Done: (1) fixed double-HTML-encoded titles, (2) added Review/AggregateRating schema, (3) upgraded Organization→LocalBusiness schema with per-page `areaServed`, (7) added post-testimonial CTA + quote-form city prefill, (8) removed hard-coded hero `<br>`, (9) regrouped city pills into Primary/Also-serving (tier-based, all links kept), (10) added FAQ schema to homepage + both service hubs.
-Still open: (4) real photos sitewide — blocked on Sam sourcing real assets, do not fabricate; (5) de-duplicate the 27 city×service pages beyond current per-city facts — see `serviceContent.js` note above; (6) Tucson-vs-Arizona branding gap — last audit found body copy already uses correct "Tucson today, expanding" hedging, but titles/meta on `about.astro`, `contact.astro`, and `quote.astro` say bare "Arizona" without a Tucson qualifier and haven't been judged/fixed yet.
+### Open items
+- **Real photos sitewide** — zero `<img>` tags as of the last audit; blocked on Sam sourcing real assets (Desert Solar Cleaning or new job sites), do not fabricate. Also blocks `og:image`/`twitter:image` (currently missing sitewide), per-guide Article schema `image`, and a PNG/ICO favicon fallback (SVG-only today).
+- **De-duplicate the 27 city×service pages** — ~86% text similarity measured between near-identical city pages (e.g. Oro Valley vs. Vail). Root cause is `serviceContent.js`'s shared `hub.{signs,methodology}` content being identical across all city pages for a given service — see the Data model note above. Titles/meta/FAQ already vary correctly per city; this needs real content variation, not more metadata tweaks.
+- Full technical SEO audit (meta titles/descriptions, schema, sitemap, llms.txt) was completed and fixed in this session — Tucson-vs-Arizona branding gap, About page placeholder copy, breadcrumb/Service schema, privacy/terms pages, and a stale llms.txt are all resolved. Don't re-run that audit from scratch; ask what's changed since if unsure.
 
 ## Development
 

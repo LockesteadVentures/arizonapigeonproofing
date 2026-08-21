@@ -8,7 +8,7 @@ interface QuotePayload {
   name?: string;
   phone?: string;
   metro?: string; // dropdown value — a REGIONS key, drives routing
-  city?: string; // free-text detail (city/neighborhood) for the vendor, not used for routing
+  address?: string; // free-text street address for the vendor, not used for routing
   service?: string;
   page?: string;
   // honeypot — real users never fill this in; bots often do
@@ -47,9 +47,9 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   }
 
-  const { name, phone, metro, city, service } = data;
-  if (!name?.trim() || !phone?.trim() || !metro?.trim()) {
-    return new Response(JSON.stringify({ ok: false, error: "Name, phone, and metro area are required." }), {
+  const { name, phone, metro, address, service } = data;
+  if (!name?.trim() || !phone?.trim() || !metro?.trim() || !address?.trim() || !service?.trim()) {
+    return new Response(JSON.stringify({ ok: false, error: "Name, phone, metro area, address, and service are required." }), {
       status: 400,
     });
   }
@@ -75,8 +75,8 @@ export const POST: APIRoute = async ({ request }) => {
     `Name: ${name}`,
     `Phone: ${phone}`,
     `Metro area: ${regionName}`,
-    `City/neighborhood: ${city?.trim() || "not specified"}`,
-    `Service: ${service ?? "not specified"}`,
+    `Address: ${address}`,
+    `Service: ${service}`,
     `Source page: ${data.page ?? "unknown"}`,
     "",
     note,

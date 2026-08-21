@@ -12,7 +12,7 @@ import { REGIONS } from "../data/locations.js";
     <div class="wrap">
       <span class="eyebrow">Free Quote</span>
       <h1>Get a free quote</h1>
-      <p class="lede">Tell us your city and what you're seeing — a local crew gets back to you within 24–48 hours.</p>
+      <p class="lede">Tell us your address and what you're seeing — a local crew gets back to you within 24–48 hours.</p>
     </div>
   </section>
   <section>
@@ -45,17 +45,16 @@ import { REGIONS } from "../data/locations.js";
             <select name="metro" required>
               <option value="" disabled selected>Select your area…</option>
               <option value="tucson">{REGIONS.tucson.name}</option>
-              <option value="phoenix">{REGIONS.phoenix.name} (coming soon)</option>
-              <option value="rest">{REGIONS.rest.name}</option>
             </select>
           </label>
           <label>
-            City / neighborhood
-            <input type="text" name="city" placeholder="e.g. Oro Valley, near Tangerine Rd" required />
+            Address
+            <input type="text" name="address" placeholder="e.g. 123 W Calle Real, Oro Valley, AZ 85737" required />
           </label>
           <label>
             What do you need?
-            <select name="service">
+            <select name="service" required>
+              <option value="" disabled selected>Select a service…</option>
               <option>Pigeon proofing</option>
               <option>Solar panel cleaning</option>
               <option>Both</option>
@@ -121,7 +120,7 @@ import { REGIONS } from "../data/locations.js";
     if (!form) return;
     const params = new URLSearchParams(window.location.search);
     const metro = params.get("metro");
-    const city = params.get("city");
+    const address = params.get("address");
     const service = params.get("service");
 
     if (metro) {
@@ -130,9 +129,9 @@ import { REGIONS } from "../data/locations.js";
         metroField.value = metro;
       }
     }
-    if (city) {
-      const cityField = form.querySelector<HTMLInputElement>('[name="city"]');
-      if (cityField) cityField.value = city;
+    if (address) {
+      const addressField = form.querySelector<HTMLInputElement>('[name="address"]');
+      if (addressField) addressField.value = address;
     }
     if (service) {
       const serviceField = form.querySelector<HTMLSelectElement>('[name="service"]');
@@ -166,13 +165,13 @@ import { REGIONS } from "../data/locations.js";
     const name = String(formData.get("name") ?? "");
     const phone = String(formData.get("phone") ?? "");
     const metro = String(formData.get("metro") ?? "");
-    const city = String(formData.get("city") ?? "");
+    const address = String(formData.get("address") ?? "");
     const service = String(formData.get("service") ?? "");
     const payload = {
       name,
       phone,
       metro,
-      city,
+      address,
       service,
       company: String(formData.get("company") ?? ""),
       page: window.location.pathname,
@@ -197,7 +196,7 @@ import { REGIONS } from "../data/locations.js";
         // lead data per business decision, not a default. Anyone adding a new
         // GTM tag later can now read name/phone off the dataLayer too, so
         // treat that as a live consideration when connecting new tags.
-        pushEvent("generate_lead", { form_name: "quote_request", name, phone, metro, city, service });
+        pushEvent("generate_lead", { form_name: "quote_request", name, phone, metro, address, service });
         form.reset();
         startedForm = false;
       } else {
