@@ -37,11 +37,14 @@ const spokesFor = (hubId: string) =>
               <a href={`/guides/${g.id}/`}>{g.data.title}</a>
               <p>{g.data.description}</p>
               {spokes.length > 0 && (
-                <ul class="spoke-list">
-                  {spokes.map((s) => (
-                    <li><a href={`/guides/${s.id}/`}>{s.data.title}</a></li>
-                  ))}
-                </ul>
+                <details class="spoke-toggle">
+                  <summary>{spokes.length} related guides</summary>
+                  <ul class="spoke-list">
+                    {spokes.map((s) => (
+                      <li><a href={`/guides/${s.id}/`}>{s.data.title}</a></li>
+                    ))}
+                  </ul>
+                </details>
               )}
             </li>
           );
@@ -63,6 +66,25 @@ const spokesFor = (hubId: string) =>
   .guide-list a { font-weight: 700; font-size: 1.05rem; }
   .guide-list a:hover { color: var(--teal); }
   .guide-list p { margin: 0.3rem 0 0; color: var(--text-dim); font-size: 0.9rem; }
+  .spoke-toggle { margin-top: 0.7rem; }
+  .spoke-toggle summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .spoke-toggle summary::-webkit-details-marker { display: none; }
+  .spoke-toggle summary::before {
+    content: "▸";
+    font-size: 0.75rem;
+    transition: transform 0.15s ease;
+  }
+  .spoke-toggle[open] summary::before { transform: rotate(90deg); }
+  .spoke-toggle summary:hover { text-decoration: underline; }
   .spoke-list { list-style: none; padding: 0; margin: 0.7rem 0 0; padding-left: 1.1rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 0.4rem; }
   .spoke-list a { font-weight: 400; font-size: 0.92rem; }
 </style>
