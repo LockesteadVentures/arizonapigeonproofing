@@ -14,6 +14,7 @@ interface Props {
 
 const { city, region, service, otherService, content, nearby } = Astro.props;
 const cityContext = CITY_CONTEXT[city.slug];
+const pageContent = cityContext.content[service.slug];
 
 // Prefills the quote form's metro/city/service fields for whoever clicks through
 // from this page, instead of making them retype what we already know.
@@ -23,17 +24,17 @@ const SERVICE_OPTION_TEXT: Record<string, string> = {
 };
 const quoteUrl = `/quote/?metro=${encodeURIComponent(city.region)}&address=${encodeURIComponent(city.name)}&service=${encodeURIComponent(SERVICE_OPTION_TEXT[service.slug] ?? "")}`;
 
-// The generic 3 service FAQs plus one genuinely city-specific question --
-// see cityContext.js for why each city's is different, not templated.
-const allFaqs = cityContext ? [...content.faqs, cityContext.localFaq] : content.faqs;
+// FAQ answers are pre-authored HTML (see cityContext.js) so the page can render inline
+// guide links; schema.org text should be plain, so strip tags for the JSON-LD copy.
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, "");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: allFaqs.map((f: any) => ({
+  mainEntity: pageContent.faqs.map((f: any) => ({
     "@type": "Question",
-    name: typeof f.q === "function" ? f.q(city) : f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: stripTags(f.a) },
   })),
 };
 
@@ -58,7 +59,7 @@ const breadcrumbSchema = {
     <div class="wrap">
       <span class="eyebrow">{region.name} &middot; {city.name}, AZ</span>
       <h1>{service.name} in {city.name}</h1>
-      <p class="lede">{content.intro(city)}</p>
+      <p class="lede">{pageContent.intro}</p>
       <div class="cta-row">
         <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_hero","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
         <a href="tel:+15205550148" class="btn outline">Call (520) 555-0148</a>
@@ -69,22 +70,13 @@ const breadcrumbSchema = {
   <section>
     <div class="wrap narrow">
       <h2>Why this matters in {city.name}</h2>
-      <p>{content.problemFraming(city, region)}</p>
-      {cityContext && (
-        <>
-          <p>{cityContext.character}</p>
-          {cityContext.communities.length > 0 && (
-            <p class="communities-note">
-              <strong>Communities we serve in {city.name}:</strong> {cityContext.communities.join(", ")}
-            </p>
-          )}
-          <p class="jurisdiction-note">
-            {cityContext.jurisdiction.type === "incorporated"
-              ? `${city.name} is incorporated, so permits and inspections go through ${cityContext.jurisdiction.authority} rather than the county.`
-              : `${city.name} is unincorporated, so permits and inspections go through ${cityContext.jurisdiction.authority} rather than a local town government.`}
-          </p>
-        </>
+      <p set:html={pageContent.whyItMatters} />
+      {cityContext.communities.length > 0 && (
+        <p class="communities-note">
+          <strong>Communities we serve in {city.name}:</strong> {cityContext.communities.join(", ")}
+        </p>
       )}
+      <p class="jurisdiction-note">{pageContent.permitNote}</p>
     </div>
   </section>
 
@@ -109,10 +101,10 @@ const breadcrumbSchema = {
     <div class="wrap narrow">
       <h2>Frequently asked — {city.name}</h2>
       <div class="faq-list">
-        {allFaqs.map((f: any) => (
+        {pageContent.faqs.map((f: any) => (
           <details class="faq-item">
-            <summary>{typeof f.q === "function" ? f.q(city) : f.q}</summary>
-            <p>{f.a}</p>
+            <summary>{f.q}</summary>
+            <p set:html={f.a} />
           </details>
         ))}
       </div>
