@@ -43,7 +43,7 @@ A quick gut check: sudden and tied to an error code points to the inverter. Grad
 
 If dust, pollen, or monsoon grime sounds like your problem, start with the [Arizona solar panel cleaning guide](/guides/solar-panel-cleaning-arizona/). If pigeons are part of the picture, start with the [pigeons and solar panels guide](/guides/pigeons-and-solar-panels/). If you're not sure which, or you suspect it's both, that's common on Tucson roofs and the reason we sell pigeon proofing and cleaning as one call. Tell us what you're seeing and hearing, and a local crew will look at your specific array and quote both jobs at once if that's what it needs.
 
-See [pigeon proofing](/pigeon-proofing-solar-panels/) or [solar panel cleaning](/solar-panel-cleaning/) for how each service works, or just [get a quote](/quote/) and skip the guesswork.
+See [pigeon proofing](/pigeon-proofing-solar-panels/) or [solar panel cleaning](/solar-panel-cleaning/) for how each service works, or just [get a quote](/quote/) and skip the guesswork. For the full picture on keeping a system running well in this climate, see our [Arizona solar panel maintenance guide](/guides/solar-panel-maintenance-arizona/).
 
 ## FAQ
 
