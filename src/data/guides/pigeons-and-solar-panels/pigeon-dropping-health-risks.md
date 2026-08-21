@@ -29,7 +29,7 @@ Arizona has a large retiree population, and that's directly relevant here. Older
 
 A few stray droppings on a walkway are fine to hose off. An established nest under a solar array, built up over a season or longer, is a different situation — dried, layered, and exactly the kind of material that shouldn't be disturbed without the right precautions. That's the core reason we recommend against DIY removal of an established nest: it's not about the difficulty of the job, it's about kicking up dust and mites into air you or your family will breathe. If you've noticed [signs of pigeons under your solar panels](/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/), that's the point to get it removed properly rather than climbing up with a shop vac.
 
-Our [pigeon proofing service](/pigeon-proofing-solar-panels/) removes existing nests before sealing the array, so the mesh goes on clean and the birds don't come back to rebuild. If you want a straightforward look at what that costs for your roof, [get a quote](/quote/).
+Our [pigeon proofing service](/pigeon-proofing-solar-panels/) removes existing nests before sealing the array, so the mesh goes on clean and the birds don't come back to rebuild. If you want a straightforward look at what that costs for your roof, [get a quote](/quote/). For the full picture on pigeons and solar panels, see our [complete guide](/guides/pigeons-and-solar-panels/).
 
 ## FAQ
 

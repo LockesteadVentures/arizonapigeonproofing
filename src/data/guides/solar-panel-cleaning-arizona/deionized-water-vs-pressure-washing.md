@@ -33,7 +33,7 @@ We're not going to pretend a garden hose is useless. If your panels picked up a 
 
 ## Which one makes sense for your panels
 
-If your array is due for an actual cleaning — visible dust, pollen film, streaks already forming, or it's just been a while — deionized water washing is the method that gets the result without the seal and junction-box risk pressure washing carries. See our [solar panel cleaning](/solar-panel-cleaning/) page for how the process works, or go straight to a [quote](/quote/) and we'll tell you honestly whether your panels need it yet.
+If your array is due for an actual cleaning — visible dust, pollen film, streaks already forming, or it's just been a while — deionized water washing is the method that gets the result without the seal and junction-box risk pressure washing carries. See our [solar panel cleaning](/solar-panel-cleaning/) page for how the process works, or go straight to a [quote](/quote/) and we'll tell you honestly whether your panels need it yet. For the full picture on cleaning solar panels in Arizona's climate, see our [hub guide](/guides/solar-panel-cleaning-arizona/).
 
 ## FAQ
 

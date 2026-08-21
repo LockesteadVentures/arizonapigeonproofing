@@ -15,7 +15,7 @@ Oro Valley has a mix of general-residential planned communities and age-restrict
 
 **Rancho Vistoso** is a large master-planned residential development with multiple sub-associations under it, each potentially running its own architectural committee. That layered structure is the pattern worth knowing going in: a homeowner in Rancho Vistoso may need to clear both a sub-association's design review and the master association's guidelines, depending on which parcel the home sits in. General residential communities like this typically ask for a site plan or roof diagram showing panel placement, a product spec sheet, and sometimes a statement on how the array will be screened from street view. Turnaround varies by how often the committee meets — some review weekly, others monthly.
 
-**Sun City Oro Valley** is an age-restricted retirement community, and retirement communities as a category tend to run more uniform, more consistently enforced architectural standards than general residential subdivisions — often because the housing stock is more homogeneous and the association has had decades to standardize its review process. That doesn't mean solar is harder to get approved; Arizona's solar access law (covered in our companion piece) limits how far any HOA can go in blocking panels outright. It does mean the submittal packet is often more standardized and the committee more practiced at reviewing it, which can actually make timelines more predictable.
+**Sun City Oro Valley** is an age-restricted retirement community, and retirement communities as a category tend to run more uniform, more consistently enforced architectural standards than general residential subdivisions — often because the housing stock is more homogeneous and the association has had decades to standardize its review process. That doesn't mean solar is harder to get approved; [Arizona's solar access law](/guides/hoa-solar-panel-rules-arizona/arizona-solar-access-law/) limits how far any HOA can go in blocking panels outright. It does mean the submittal packet is often more standardized and the committee more practiced at reviewing it, which can actually make timelines more predictable.
 
 ## SaddleBrooke
 
@@ -38,11 +38,11 @@ Across every community type, the honest general expectation looks like this:
 - **Fragmented retirement areas** (Green Valley) require you to identify your specific HOA before any rule applies to you.
 - **Mixed-density foothills communities** (Catalina Foothills) often scale scrutiny with street visibility.
 
-None of this is legal advice, and none of it substitutes for reading your own HOA's current governing documents. Arizona state law does limit how restrictive an HOA can be with solar (see our breakdown of the Arizona solar access law), but the practical submittal process still runs through your board.
+None of this is legal advice, and none of it substitutes for reading your own HOA's current governing documents. Arizona state law does limit how restrictive an HOA can be with solar (see our breakdown of the [Arizona solar access law](/guides/hoa-solar-panel-rules-arizona/arizona-solar-access-law/)), but the practical submittal process still runs through your board.
 
 ## We'll help you figure out what your HOA actually needs
 
-We've quoted and installed pigeon-proofing and cleaned panels across Oro Valley, SaddleBrooke, Green Valley, Catalina Foothills, and the rest of Tucson Metro, so we've sat across the table from a fair number of HOA architectural committees. When you request a quote, tell us your community and we'll help you figure out what your specific board is likely to ask for, and build the submittal packet around it. We can't promise your HOA's answer, but we won't leave you guessing about the process.
+We've quoted and installed [pigeon-proofing](/pigeon-proofing-solar-panels/) and cleaned panels across [Tucson Metro](/locations/tucson-metro/) — Oro Valley, SaddleBrooke, Green Valley, Catalina Foothills, and the rest of the area — so we've sat across the table from a fair number of HOA architectural committees. When you [request a quote](/quote/), tell us your community and we'll help you figure out what your specific board is likely to ask for, and build the submittal packet around it. We can't promise your HOA's answer, but we won't leave you guessing about the process. For the full picture on HOA rules for solar in Arizona, see our [hub guide](/guides/hoa-solar-panel-rules-arizona/).
 
 ## FAQ
 
@@ -50,10 +50,10 @@ We've quoted and installed pigeon-proofing and cleaned panels across Oro Valley,
 No. Rules vary by individual HOA, even within the same town or master-planned community. Age-restricted communities tend to run more standardized review; large communities with sub-associations may require multiple layers of approval; fragmented retirement areas like Green Valley have dozens of separate associations with their own standards.
 
 **Can my HOA legally deny solar panels outright?**
-Arizona's solar access law limits an HOA's ability to prohibit solar entirely, though the HOA can still regulate placement and aesthetics within limits. See our guide to the Arizona solar access law for how that works.
+Arizona's solar access law limits an HOA's ability to prohibit solar entirely, though the HOA can still regulate placement and aesthetics within limits. See our guide to the [Arizona solar access law](/guides/hoa-solar-panel-rules-arizona/arizona-solar-access-law/) for how that works.
 
 **What should I bring to my HOA's architectural review committee?**
-Typically a site plan or roof diagram, product spec sheet for the panels and mounting hardware, and sometimes photos or renderings showing street-view impact. Our HOA approval spec sheet covers what to gather before you submit.
+Typically a site plan or roof diagram, product spec sheet for the panels and mounting hardware, and sometimes photos or renderings showing street-view impact. Our [HOA approval spec sheet](/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/) covers what to gather before you submit.
 
 **How do I find out my specific HOA's rules?**
 Contact your HOA board or management company directly and ask for current architectural review guidelines covering solar. Rules change over time, so don't rely on a neighbor's experience from a few years ago.

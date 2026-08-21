@@ -27,7 +27,9 @@ This is the actual logistics question, and it's a normal one. Most of our rental
 
 Cleaning and bird-proofing don't need to be separate calls or separate trips. Pigeon proofing removes any existing nest and seals the array with custom-fit stainless mesh — not draped netting that sags and needs replacing — so it's a one-time install you check on, not a recurring visit. Cleaning is the part that belongs on a real calendar: set around monsoon season and pollen cycles rather than left to chance, so production stays where it should be between tenant turnovers. Once both are in place, "maintenance" on this property stops being something you have to remember and becomes something that just happens.
 
-For the seasonal cadence that works best in this climate, see our [seasonal cleaning schedule guide](/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/). And if you're weighing which company to trust with a property you don't visit often, our [guide to choosing a maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) covers exactly what to ask.
+For the seasonal cadence that works best in this climate, see our [seasonal cleaning schedule guide](/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/). And if you're weighing which company to trust with a property you don't visit often, our [guide to choosing a maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) covers exactly what to ask, as part of our broader [Arizona solar panel maintenance guide](/guides/solar-panel-maintenance-arizona/).
+
+Ready to set up a standing schedule for a property you don't visit daily? [Get a quote](/quote/) and tell us how access works — property manager, tenant, or lockbox — and a local crew will build the schedule around it, whether that means [pigeon proofing](/pigeon-proofing-solar-panels/), [cleaning](/solar-panel-cleaning/), or both.
 
 ## FAQ
 

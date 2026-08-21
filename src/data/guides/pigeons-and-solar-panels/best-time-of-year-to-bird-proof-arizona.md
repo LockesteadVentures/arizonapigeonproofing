@@ -29,7 +29,7 @@ If early spring has already passed you by, don't write off the whole year. Fall,
 
 Since a bird-proofing crew is already on your roof, it's worth pairing the visit with a solar panel cleaning appointment — especially if you're doing the work in that late-winter-to-spring window, right before monsoon season brings dust storms and, eventually, rain that (per NREL's research) doesn't actually rinse panels clean on its own. One visit, two problems solved, and your system heads into the hottest, dustiest stretch of the year already protected and running at full output. That's the logic behind doing pigeon proofing and cleaning as a single call rather than two separate projects months apart.
 
-If you're not sure where your roof or HOA stands on timing, a quick look at [why pigeons nest under solar panels in the first place](/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/) explains what makes the space so attractive to them, and our [monsoon season guide](/guides/solar-panel-cleaning-arizona/monsoon-season-solar-panels/) covers why cleaning timing matters just as much as bird-proofing timing.
+If you're not sure where your roof or HOA stands on timing, a quick look at [why pigeons nest under solar panels in the first place](/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/) explains what makes the space so attractive to them, and our [monsoon season guide](/guides/solar-panel-cleaning-arizona/monsoon-season-solar-panels/) covers why cleaning timing matters just as much as bird-proofing timing. For the full picture on pigeons and solar panels, see our [complete guide](/guides/pigeons-and-solar-panels/).
 
 ## FAQ
 

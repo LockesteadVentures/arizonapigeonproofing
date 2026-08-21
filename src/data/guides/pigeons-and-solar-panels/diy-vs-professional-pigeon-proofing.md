@@ -29,7 +29,7 @@ None of this means DIY is always a bad call. It's a legitimate option if most of
 - There's no existing infestation — droppings and nesting material are minimal or absent
 - You're willing to inspect and re-tension the mesh periodically, not install it once and forget it
 
-If that's you, a careful DIY job on a small, accessible array is a reasonable weekend project. Compare mesh, spikes, sonic deterrents, and decoys before you buy anything — they're not interchangeable, and our [bird mesh vs. spikes vs. sonic vs. decoys guide](/guides/pigeons-and-solar-panels/bird-mesh-vs-spikes-vs-sonic-vs-decoys/) walks through which actually holds up on a roof versus which just looks like it will.
+If that's you, a careful DIY job on a small, accessible array is a reasonable weekend project. Compare mesh, spikes, sonic deterrents, and decoys before you buy anything — they're not interchangeable, and our [bird mesh vs. spikes vs. sonic vs. decoys guide](/guides/pigeons-and-solar-panels/bird-mesh-vs-spikes-vs-sonic-vs-decoys/) walks through which actually holds up on a roof versus which just looks like it will, part of our broader [pigeons and solar panels guide](/guides/pigeons-and-solar-panels/).
 
 ## When to Call a Pro Instead
 

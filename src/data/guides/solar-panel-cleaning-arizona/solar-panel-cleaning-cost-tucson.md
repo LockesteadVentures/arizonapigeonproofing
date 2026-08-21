@@ -43,4 +43,4 @@ There's no single universal schedule — it depends on your surroundings — but
 **Do I need to be home for the quote or the cleaning?**
 You don't need to be present for the crew to assess and clean the array, though many homeowners like to be there for the first visit to see the before-and-after results directly.
 
-Ready to see what your specific array would cost? Get a quote at [/quote/](/quote/) or learn more about the [cleaning service itself](/solar-panel-cleaning/).
+Ready to see what your specific array would cost? [Get a quote](/quote/) or learn more about the [cleaning service itself](/solar-panel-cleaning/). For the full picture on cleaning solar panels in Arizona's climate, see our [hub guide](/guides/solar-panel-cleaning-arizona/).

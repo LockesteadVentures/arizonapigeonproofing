@@ -43,7 +43,7 @@ For reference, here's the kind of detail worth looking for: "These guys did an a
 
 ## What to do with this checklist
 
-Whichever company you choose, hold them to these five things: Arizona-specific experience, a deionized-water process, clarity on whether they cover both cleaning and bird-proofing, a flat per-panel quote for your array, and a 24-48 hour response time. If you'd rather skip the vetting process and start with a company built around exactly this standard, [request a quote](/quote/) and a local crew will look at your specific setup.
+Whichever company you choose, hold them to these five things: Arizona-specific experience, a deionized-water process, clarity on whether they cover both cleaning and bird-proofing, a flat per-panel quote for your array, and a 24-48 hour response time. If you'd rather skip the vetting process and start with a company built around exactly this standard, [request a quote](/quote/) and a local crew will look at your specific setup, whether the answer turns out to be [bird-proofing](/pigeon-proofing-solar-panels/), [cleaning](/solar-panel-cleaning/), or both. For the full picture on maintaining a system in Arizona's climate, see our [hub guide](/guides/solar-panel-maintenance-arizona/).
 
 ## FAQ
 

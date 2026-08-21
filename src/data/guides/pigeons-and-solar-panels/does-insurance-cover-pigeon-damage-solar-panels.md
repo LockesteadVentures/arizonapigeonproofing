@@ -43,7 +43,7 @@ Given all of the above, the practical takeaway is simple: don't plan around insu
 
 This article is general information, not insurance or legal advice. Coverage depends on your specific carrier, policy language, and state, and only your agent or a read of your actual policy can tell you what applies to you. What we can tell you, from years of working on Tucson roofs: the homeowners who never have this problem are the ones who pigeon-proofed before the birds moved in, not the ones who filed a claim afterward.
 
-If you want to see what that looks like for your array, our [pigeon proofing service](/pigeon-proofing-solar-panels/) uses custom-fit stainless mesh, not generic draped netting, and most jobs finish same-day. [Get a quote](/quote/) and skip the insurance question altogether.
+If you want to see what that looks like for your array, our [pigeon proofing service](/pigeon-proofing-solar-panels/) uses custom-fit stainless mesh, not generic draped netting, and most jobs finish same-day. [Get a quote](/quote/) and skip the insurance question altogether. For the full picture on pigeons and solar panels, see our [complete guide](/guides/pigeons-and-solar-panels/).
 
 ## FAQ
 

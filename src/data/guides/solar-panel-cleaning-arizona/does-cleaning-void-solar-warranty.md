@@ -33,7 +33,7 @@ Put simply: DI-water cleaning is built around avoiding the four specific things 
 
 Rain alone doesn't solve this either — NREL has found that rain doesn't adequately clear pollen and dust buildup from panels, which is part of why periodic cleaning matters here even though it can feel like a Tucson monsoon "should" handle it.
 
-For more on how DI-water cleaning compares to pressure washing directly, see our breakdown at /guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/. If bird activity is part of what's driving you to clean more often, our guide on whether bird mesh installation voids a warranty covers the same manufacturer-fine-print question from that angle: /guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/. And if you want the full picture on cleaning solar panels in Arizona's climate — heat, dust, pollen, monsoon timing — start with our hub guide at /guides/solar-panel-cleaning-arizona/.
+For more on how DI-water cleaning compares to pressure washing directly, see our breakdown of [deionized water vs. pressure washing](/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/). If bird activity is part of what's driving you to clean more often, our guide on [whether bird mesh installation voids a warranty](/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/) covers the same manufacturer-fine-print question from that angle. And if you want the full picture on cleaning solar panels in Arizona's climate — heat, dust, pollen, monsoon timing — start with our [hub guide](/guides/solar-panel-cleaning-arizona/).
 
 ## FAQ
 
@@ -47,6 +47,6 @@ It varies, but if a panel comes in for a warranty claim with a cracked cell, scr
 No manufacturer requires you to hire a professional. What matters is the method, not who's holding the equipment. Professional DI-water cleaning just removes the guesswork.
 
 **How often should Tucson homeowners clean their panels?**
-Most Tucson homes benefit from cleaning a couple times a year, timed around monsoon dust and spring pollen — see your manufacturer's guidance and our service details at /solar-panel-cleaning/ for scheduling recommendations.
+Most Tucson homes benefit from cleaning a couple times a year, timed around monsoon dust and spring pollen — see your manufacturer's guidance and our [service details](/solar-panel-cleaning/) for scheduling recommendations.
 
-If you'd rather not risk the wrong method on your own roof, our /solar-panel-cleaning/ service uses deionized water, low pressure, and no chemicals — built specifically around what manufacturers flag. Get a quote at /quote/.
+If you'd rather not risk the wrong method on your own roof, our [solar panel cleaning](/solar-panel-cleaning/) service uses deionized water, low pressure, and no chemicals — built specifically around what manufacturers flag. [Get a quote](/quote/).

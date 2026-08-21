@@ -41,7 +41,7 @@ Bundling isn't free of tradeoffs. If your roof only needs proofing and the panel
 
 ## Next step
 
-If you're not sure whether your panels need proofing, cleaning, or both, that's exactly what a quote call sorts out — tell the crew what you're seeing (droppings, dust, a strange sound at dawn) and they'll quote the actual work your roof needs. [Get a quote](/quote/) or read more about [pigeon proofing](/pigeon-proofing-solar-panels/) and [solar panel cleaning](/solar-panel-cleaning/) as standalone services.
+If you're not sure whether your panels need proofing, cleaning, or both, that's exactly what a quote call sorts out — tell the crew what you're seeing (droppings, dust, a strange sound at dawn) and they'll quote the actual work your roof needs. [Get a quote](/quote/) or read more about [pigeon proofing](/pigeon-proofing-solar-panels/) and [solar panel cleaning](/solar-panel-cleaning/) as standalone services. If you're already dealing with pigeon-related damage rather than just deciding whether to bundle, see [what pigeon damage actually costs](/guides/pigeons-and-solar-panels/pigeon-damage-cost/); if you're still choosing who to hire, our guide on [how to choose a maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) covers what to ask. Both are part of our broader [Arizona solar panel maintenance guide](/guides/solar-panel-maintenance-arizona/).
 
 ## FAQ
 

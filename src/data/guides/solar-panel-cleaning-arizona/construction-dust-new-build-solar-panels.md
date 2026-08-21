@@ -25,7 +25,7 @@ The standard Arizona guidance is to clean panels roughly twice a year, timed aro
 
 You don't need to guess at when to check. A visible haze on the glass, or a production number that looks lower than it did the month before, is your cue. That's also the exact reason new-build areas tend to see the sharpest early production drop of any Tucson neighborhoods: owners assume new panels are still in some kind of grace period and skip the first cleaning altogether, right when the panels need it most.
 
-For more on how dust and pollen translate into actual output loss, see our guide on [dust and pollen's effect on solar output in Arizona](/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/). If you're weighing how often to budget for cleaning against the cost, our [Tucson solar panel cleaning cost guide](/guides/solar-panel-cleaning-arizona/solar-panel-cleaning-cost-tucson/) breaks that down.
+For more on how dust and pollen translate into actual output loss, see our guide on [dust and pollen's effect on solar output in Arizona](/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/). If you're weighing how often to budget for cleaning against the cost, our [Tucson solar panel cleaning cost guide](/guides/solar-panel-cleaning-arizona/solar-panel-cleaning-cost-tucson/) breaks that down, and our [Arizona solar panel cleaning hub](/guides/solar-panel-cleaning-arizona/) covers the full seasonal picture.
 
 ## Next step
 

@@ -39,9 +39,9 @@ Over 20-25 years, the realistic budgeting view looks like this: cleaning as a re
 
 ## Where to go from here
 
-If you want the specifics on choosing a company that does bird proofing right the first time, or the real math on bundling cleaning and proofing into one visit, both are covered in depth below. If you already know what your roof needs, a quote call is the fastest way to get real numbers for your specific array.
+If you want the specifics on [choosing a company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) that does bird proofing right the first time, or the real math on bundling cleaning and proofing into one visit, both are covered in depth below, as part of our broader [Arizona solar panel maintenance guide](/guides/solar-panel-maintenance-arizona/). If you already know what your roof needs, a quote call is the fastest way to get real numbers for your specific array.
 
-[Get a quote](/quote/) and describe what you're seeing — a crew can tell you honestly whether you're looking at a one-time job, a recurring one, or both.
+[Get a quote](/quote/) and describe what you're seeing — a crew can tell you honestly whether you're looking at [bird-proofing](/pigeon-proofing-solar-panels/), [cleaning](/solar-panel-cleaning/), or both.
 
 ## FAQ
 

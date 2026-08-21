@@ -32,7 +32,7 @@ If you've noticed your production numbers slipping and you can see droppings on 
 1. **Clean the existing buildup off the panels.** Dried droppings need more than a garden hose — they need an actual wash to come off without scratching the glass.
 2. **Stop the birds from coming back.** Cleaning without pigeon-proofing just resets the clock until the same birds roost in the same spot again.
 
-That's the whole reason we sell this as one call instead of two separate services. We wash the panels with deionized water — spot-free, no streaking, no mineral residue left behind to attract more grime — and we install stainless mesh and deterrents that are fitted to your specific array, not draped netting that looks like an afterthought. If there's an existing nest, we remove it before we seal anything up.
+That's the whole reason we sell this as one call instead of two separate services. We [wash the panels](/solar-panel-cleaning/) with deionized water — spot-free, no streaking, no mineral residue left behind to attract more grime — and we [install stainless mesh and deterrents](/pigeon-proofing-solar-panels/) that are fitted to your specific array, not draped netting that looks like an afterthought. If there's an existing nest, we remove it before we seal anything up.
 
 For the broader picture on pigeons and solar output, see our [pigeon and solar panel guide](/guides/pigeons-and-solar-panels/). If you're dealing with the dust-and-pollen side of things rather than birds, our [Arizona solar panel cleaning guide](/guides/solar-panel-cleaning-arizona/) and its piece on [dust and pollen output loss](/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/) cover that in more depth.
 

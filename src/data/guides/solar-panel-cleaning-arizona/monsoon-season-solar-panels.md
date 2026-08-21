@@ -38,7 +38,7 @@ Because the residue by late monsoon season is dried mud rather than loose dust, 
 
 For a look at how dust and pollen affect output the rest of the year, see our guide on [dust and pollen output loss in Arizona](/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/). And if pigeons have also claimed your array, monsoon wind and debris tend to disturb existing nests, which is worth knowing before you plan any bird-proofing work — see [the best time of year to bird-proof in Arizona](/guides/pigeons-and-solar-panels/best-time-of-year-to-bird-proof-arizona/).
 
-If you're not sure where your panels stand right now, book a [solar panel cleaning](/solar-panel-cleaning/) before or after this year's monsoon and let a local crew tell you which side of the season you're on. Or just [get a quote](/quote/) and ask.
+If you're not sure where your panels stand right now, book a [solar panel cleaning](/solar-panel-cleaning/) before or after this year's monsoon and let a local crew tell you which side of the season you're on. Or just [get a quote](/quote/) and ask. For the full picture on cleaning solar panels in Arizona's climate, see our [hub guide](/guides/solar-panel-cleaning-arizona/).
 
 ## FAQ
 

@@ -45,4 +45,4 @@ Sometimes, sometimes not. Insurers can treat a known, unaddressed infestation di
 **What's the fastest way to stop the damage from getting worse?**
 Get the array inspected and proofed before the next nesting cycle. Removing existing nests and sealing the gap is a one-time job, not an ongoing cost.
 
-If you're seeing pigeons around your panels, don't wait for a wiring fault to force the issue. Our [pigeon proofing service](/pigeon-proofing-solar-panels/) removes existing nests and seals the array with custom-fit stainless mesh, and you can [get a quote](/quote/) with a turnaround of 24-48 hours for a flat, per-panel rate specific to your roof.
+If you're seeing pigeons around your panels, don't wait for a wiring fault to force the issue. Our [pigeon proofing service](/pigeon-proofing-solar-panels/) removes existing nests and seals the array with custom-fit stainless mesh, and you can [get a quote](/quote/) with a turnaround of 24-48 hours for a flat, per-panel rate specific to your roof. For the full picture on pigeons and solar panels, see our [complete guide](/guides/pigeons-and-solar-panels/).
