@@ -16,45 +16,60 @@ import { REGIONS } from "../data/locations.js";
     </div>
   </section>
   <section>
-    <div class="wrap narrow">
-      <form class="quote-form" id="quote-form">
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Phone
-          <input type="tel" name="phone" required />
-        </label>
-        <label>
-          Metro area
-          <select name="metro" required>
-            <option value="" disabled selected>Select your area…</option>
-            <option value="tucson">{REGIONS.tucson.name}</option>
-            <option value="phoenix">{REGIONS.phoenix.name} (coming soon)</option>
-            <option value="rest">{REGIONS.rest.name}</option>
-          </select>
-        </label>
-        <label>
-          City / neighborhood
-          <input type="text" name="city" placeholder="e.g. Oro Valley, near Tangerine Rd" required />
-        </label>
-        <label>
-          What do you need?
-          <select name="service">
-            <option>Pigeon proofing</option>
-            <option>Solar panel cleaning</option>
-            <option>Both</option>
-            <option>Not sure</option>
-          </select>
-        </label>
-        <label class="hp" aria-hidden="true">
-          Company
-          <input type="text" name="company" tabindex="-1" autocomplete="off" />
-        </label>
-        <button type="submit" class="btn amber">Request a Quote</button>
-        <p class="form-status" data-state="idle"></p>
-      </form>
+    <div class="wrap quote-layout">
+      <div class="quote-sidebar">
+        <h2>Prefer to call?</h2>
+        <div class="phone-box">
+          <span class="phone-box-label">{REGIONS.tucson.name}</span>
+          <span class="phone-box-status live">Live now</span>
+          <a href="tel:+15205550148" class="phone-box-number">(520) 555-0148</a>
+        </div>
+        <div class="phone-box soon">
+          <span class="phone-box-label">{REGIONS.phoenix.name}</span>
+          <span class="phone-box-status">Coming soon</span>
+        </div>
+      </div>
+
+      <div class="quote-form-box">
+        <form class="quote-form" id="quote-form">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Metro area
+            <select name="metro" required>
+              <option value="" disabled selected>Select your area…</option>
+              <option value="tucson">{REGIONS.tucson.name}</option>
+              <option value="phoenix">{REGIONS.phoenix.name} (coming soon)</option>
+              <option value="rest">{REGIONS.rest.name}</option>
+            </select>
+          </label>
+          <label>
+            City / neighborhood
+            <input type="text" name="city" placeholder="e.g. Oro Valley, near Tangerine Rd" required />
+          </label>
+          <label>
+            What do you need?
+            <select name="service">
+              <option>Pigeon proofing</option>
+              <option>Solar panel cleaning</option>
+              <option>Both</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+          <label class="hp" aria-hidden="true">
+            Company
+            <input type="text" name="company" tabindex="-1" autocomplete="off" />
+          </label>
+          <button type="submit" class="btn amber">Request a Quote</button>
+          <p class="form-status" data-state="idle"></p>
+        </form>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -65,13 +80,23 @@ import { REGIONS } from "../data/locations.js";
   .page-hero .eyebrow { color: #7fd1d6; }
   .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
   .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0; }
-  .wrap.narrow { max-width: 480px; }
+  .quote-layout { max-width: 880px; padding: 2.5rem 1.5rem 4rem; display: grid; grid-template-columns: 260px 1fr; gap: 2rem; align-items: start; }
 
-  .quote-form { display: flex; flex-direction: column; gap: 1.1rem; padding: 2rem 0; }
+  .quote-sidebar { display: flex; flex-direction: column; gap: 1rem; }
+  .quote-sidebar h2 { font-size: 1rem; margin: 0; }
+  .phone-box { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .phone-box-label { font-weight: 700; font-size: 0.95rem; }
+  .phone-box-status { font-family: ui-monospace, monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); }
+  .phone-box-status.live { color: var(--teal); }
+  .phone-box-number { font-size: 1.15rem; font-weight: 700; color: var(--teal); }
+  .phone-box.soon { opacity: 0.7; }
+
+  .quote-form-box { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 1.5rem 1.6rem; }
+  .quote-form { display: flex; flex-direction: column; gap: 1.1rem; }
   .quote-form label { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; font-weight: 600; }
   .quote-form input, .quote-form select {
     font: inherit; padding: 0.65rem 0.8rem; border-radius: 8px; border: 1px solid var(--border);
-    background: var(--surface); color: var(--text);
+    background: var(--bg); color: var(--text);
   }
   .quote-form button { margin-top: 0.4rem; }
   .quote-form button[disabled] { opacity: 0.6; cursor: not-allowed; }
@@ -79,6 +104,10 @@ import { REGIONS } from "../data/locations.js";
   .form-status { font-size: 0.85rem; min-height: 1.2em; }
   .form-status[data-state="success"] { color: var(--teal); font-weight: 600; }
   .form-status[data-state="error"] { color: var(--amber-dark); font-weight: 600; }
+
+  @media (max-width: 700px) {
+    .quote-layout { grid-template-columns: 1fr; }
+  }
 </style>
 
 <script>
