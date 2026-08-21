@@ -72,6 +72,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
 
         <a class="plain" href="/guides/">Resources</a>
         <a class="plain" href="/about/">About</a>
+        <a href="/quote/" class="btn amber mobile-cta" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"nav_mobile_menu"}'>Get a Free Quote</a>
       </div>
 
       <div class="nav-cta">
@@ -117,6 +118,7 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
   .mega-regions .see-all { margin-top: 0.6rem; font-size: 0.8rem; font-weight: 700; color: var(--teal); }
 
   .nav-cta { display: flex; align-items: center; gap: 0.9rem; }
+  .mobile-cta { display: none; }
 
   .hamburger { display: none; background: none; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; }
   .hamburger svg { width: 20px; height: 20px; }
@@ -124,6 +126,17 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
   @media (max-width: 920px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
+  }
+
+  /* Below ~560px the logo + header CTA + hamburger no longer fit on one row
+     (logo alone runs ~268px in a ~327px content area), forcing the whole
+     page to scroll horizontally. Drop the header CTA here -- every page
+     already repeats it in the hero -- and surface it inside the mobile
+     menu instead so it's still one tap away. */
+  @media (max-width: 560px) {
+    .nav-cta .btn.amber { display: none; }
+    .mobile-cta { display: inline-flex; margin-top: 0.6rem; }
+    .logo { font-size: 1.05rem; }
   }
 </style>
 
