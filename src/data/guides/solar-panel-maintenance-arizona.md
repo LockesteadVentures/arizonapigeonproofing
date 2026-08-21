@@ -1,7 +1,7 @@
 ---
 title: "The Arizona Homeowner's Guide to Solar Panel Maintenance"
 description: "Solar panel maintenance in Arizona means managing heat, dust, monsoon grime, and pigeons together. Here's the full picture and where to start."
-publishDate: 2026-08-20
+publishDate: 2026-08-21
 draft: false
 ---
 
@@ -33,7 +33,7 @@ This is a fundamentally different problem than dust. Cleaning it up doesn't stop
 
 ## General wear: mounts, wiring, and the parts that just age
 
-Beyond dirt and wildlife, panels and their hardware age the way anything on a roof does. Mounting bolts loosen slightly with thermal expansion and contraction across hot days and cool nights. Junction boxes and connectors can develop small cracks in their seals over years of UV exposure. None of this happens fast, and none of it is usually visible from the ground, which is why a periodic look at the whole system — not just the glass — matters more in a desert climate than in a mild one. Our [complete maintenance checklist](/guides/solar-panel-maintenance-arizona/maintenance-checklist-arizona/) walks through what to check and how often, covering the parts of the system that aren't just dust or droppings.
+Beyond dirt and wildlife, panels and their hardware age the way anything on a roof does. Mounting bolts loosen slightly with thermal expansion and contraction across hot days and cool nights. Junction boxes and connectors can develop small cracks in their seals over years of UV exposure. None of this happens fast, and none of it is usually visible from the ground, which is why a periodic look at the whole system — not just the glass — matters more in a desert climate than in a mild one. Our [complete maintenance checklist](/guides/solar-panel-maintenance-arizona/maintenance-checklist-arizona/) walks through what to check and how often, covering the parts of the system that aren't just dust or droppings, and if you'd rather have a professional do that walk-around, our page on [what a professional solar inspection includes](/guides/solar-panel-maintenance-arizona/what-a-professional-solar-inspection-includes/) covers exactly what gets checked.
 
 ## Not sure which problem you actually have?
 
@@ -41,7 +41,7 @@ If you're staring at a production number that's lower than it should be and you 
 
 ## Choosing who does the work
 
-Once you know what you're dealing with, the next question is who handles it. Not every company that cleans panels also handles bird proofing, and not every bird-proofing outfit does cleaning well, which means homeowners often end up juggling two contractors, two schedules, and two invoices for problems that live on the same roof. Our guide on [how to choose a solar maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) covers what to actually ask before you hire anyone, including licensing, insurance, and whether they'll work around your roof's specific panel layout rather than a generic routine.
+Once you know what you're dealing with, the next question is who handles it. Not every company that cleans panels also handles bird proofing, and not every bird-proofing outfit does cleaning well, which means homeowners often end up juggling two contractors, two schedules, and two invoices for problems that live on the same roof. Our guide on [how to choose a solar maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) covers what to actually ask before you hire anyone, including licensing, insurance, and whether they'll work around your roof's specific panel layout rather than a generic routine. For a sense of what all this adds up to over time, see our breakdown of [maintenance costs over the system's lifetime](/guides/solar-panel-maintenance-arizona/solar-maintenance-costs-over-system-lifetime/).
 
 ## Bundling cleaning and bird proofing
 
@@ -49,7 +49,7 @@ Because dust and pigeons are both roof-access jobs, doing them together in one v
 
 ## Just bought a solar home? Start here
 
-If you inherited a solar system with a home purchase and have no history on when it was last cleaned, inspected, or checked for nesting, don't guess. Our [new homeowner solar upkeep guide](/guides/solar-panel-maintenance-arizona/new-homeowner-solar-upkeep-guide/) walks through the first things to check in your first few months of ownership, so you're not finding out about a pigeon problem or a season of unaddressed dust the hard way.
+If you inherited a solar system with a home purchase and have no history on when it was last cleaned, inspected, or checked for nesting, don't guess. Our [new homeowner solar upkeep guide](/guides/solar-panel-maintenance-arizona/new-homeowner-solar-upkeep-guide/) walks through the first things to check in your first few months of ownership, so you're not finding out about a pigeon problem or a season of unaddressed dust the hard way. If the home is a rental or Airbnb rather than your primary residence, our guide on [solar maintenance for rental and Airbnb properties](/guides/solar-panel-maintenance-arizona/solar-maintenance-for-rentals-and-airbnb/) covers the added logistics of scheduling access without a full-time occupant on site.
 
 ## Every guide in this cluster
 
@@ -60,6 +60,9 @@ This hub is the starting point for solar maintenance in Arizona. Here's the full
 3. [How to choose a maintenance company](/guides/solar-panel-maintenance-arizona/how-to-choose-a-maintenance-company/) — what to ask before you hire anyone
 4. [Bundling cleaning and proofing for savings](/guides/solar-panel-maintenance-arizona/bundling-cleaning-and-proofing-savings/) — when combining the two jobs makes sense
 5. [New homeowner solar upkeep guide](/guides/solar-panel-maintenance-arizona/new-homeowner-solar-upkeep-guide/) — where to start if you just bought a solar home
+6. [Solar maintenance for rental and Airbnb properties](/guides/solar-panel-maintenance-arizona/solar-maintenance-for-rentals-and-airbnb/) — scheduling and access when there's no full-time occupant
+7. [What a professional solar inspection includes](/guides/solar-panel-maintenance-arizona/what-a-professional-solar-inspection-includes/) — what gets checked when you hire it out
+8. [Maintenance costs over the system's lifetime](/guides/solar-panel-maintenance-arizona/solar-maintenance-costs-over-system-lifetime/) — what cleaning, proofing, and upkeep add up to over time
 
 And the two problem-specific hubs this guide routes to:
 

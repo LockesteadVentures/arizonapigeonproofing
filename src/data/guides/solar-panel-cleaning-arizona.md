@@ -1,7 +1,7 @@
 ---
 title: "Solar Panel Cleaning in Arizona: The Complete Guide"
 description: "Dust, pollen, and monsoon grime quietly cut Arizona solar output. This guide covers why it happens, cleaning methods, real cost, and how often panels need it."
-publishDate: 2026-08-20
+publishDate: 2026-08-21
 draft: false
 ---
 
@@ -13,7 +13,7 @@ This guide is the overview. If you want the deep dive on a specific piece — ho
 
 Solar panels generate power from sunlight hitting the cells directly. Anything sitting between the sun and the glass — dust, pollen grain, mineral residue — scatters or blocks that light before it ever reaches the cell. In most parts of the country this is a minor issue. In the Sonoran Desert it's a year-round one.
 
-Tucson gets fine, dry dust carried on wind almost constantly, plus a heavy mesquite and olive pollen season in spring. Then monsoon season arrives from roughly June through September and does something counterintuitive: instead of washing panels clean, storm runoff carries dust and grit up onto the glass and leaves it there when the water evaporates, often as a streaked, uneven film that's worse than what was there before the rain. We break down exactly how this plays out storm by storm on our page about [monsoon season effects on solar panels](/guides/solar-panel-cleaning-arizona/monsoon-season-solar-panels/).
+Tucson gets fine, dry dust carried on wind almost constantly, plus a heavy mesquite and olive pollen season in spring. Then monsoon season arrives from roughly June through September and does something counterintuitive: instead of washing panels clean, storm runoff carries dust and grit up onto the glass and leaves it there when the water evaporates, often as a streaked, uneven film that's worse than what was there before the rain. We break down exactly how this plays out storm by storm on our page about [monsoon season effects on solar panels](/guides/solar-panel-cleaning-arizona/monsoon-season-solar-panels/). New construction nearby adds its own dust load on top of all this — see our page on [construction dust and new-build solar panels](/guides/solar-panel-cleaning-arizona/construction-dust-new-build-solar-panels/) if you're in a growing subdivision.
 
 The output loss from this buildup is gradual and easy to miss on a monthly utility bill, which is exactly why it goes unaddressed for so long. For the specifics on how much dust and pollen actually costs in lost output, see our page on [dust and pollen solar output loss in Arizona](/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/).
 
@@ -21,7 +21,7 @@ Bird droppings compound the problem in a different way — they don't just block
 
 ## How do you know your panels need cleaning?
 
-The honest answer: your eyes usually catch it late. Panel glass has to get fairly dirty before dust is visible from the ground, and by then output has often already dropped several percentage points. The more reliable signals are a slow drift downward in your production monitoring app, or a physical inspection after a dust storm or a run of monsoon weather. Our page on [signs your panels need cleaning](/guides/solar-panel-cleaning-arizona/signs-your-panels-need-cleaning/) walks through what to actually check and when to stop guessing and get a professional look.
+The honest answer: your eyes usually catch it late. Panel glass has to get fairly dirty before dust is visible from the ground, and by then output has often already dropped several percentage points. The more reliable signals are a slow drift downward in your production monitoring app, or a physical inspection after a dust storm or a run of monsoon weather. Our page on [signs your panels need cleaning](/guides/solar-panel-cleaning-arizona/signs-your-panels-need-cleaning/) walks through what to actually check and when to stop guessing and get a professional look, and our companion piece on [reading your solar monitoring app for soiling signs](/guides/solar-panel-cleaning-arizona/how-to-read-solar-monitoring-app-for-soiling/) shows what a real soiling dip looks like versus normal day-to-day fluctuation.
 
 ## Cleaning methods: what actually works
 
@@ -31,11 +31,11 @@ There are two common approaches, and they are not interchangeable.
 
 **Pressure washing** works fast and looks satisfying, but it carries real risk on solar glass and on the seals and connectors around each panel. Too much pressure, the wrong nozzle, or the wrong angle can crack anti-reflective coating or force water into a junction box. We lay out exactly where pressure washing helps and where it hurts on our [deionized water vs. pressure washing](/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/) page.
 
-There's also the DIY option — a hose and a squeegee on a Saturday morning. It's not nothing, but Arizona's hard water leaves mineral spots that a plain hose rinse can't avoid, and getting on a roof in July heat carries its own set of hazards. We go through the honest tradeoffs, including where DIY genuinely works and where it backfires, in [DIY solar panel cleaning risks](/guides/solar-panel-cleaning-arizona/diy-solar-panel-cleaning-risks/).
+There's also the DIY option — a hose and a squeegee on a Saturday morning. It's not nothing, but Arizona's hard water leaves mineral spots that a plain hose rinse can't avoid, and getting on a roof in July heat carries its own set of hazards. We go through the honest tradeoffs, including where DIY genuinely works and where it backfires, in [DIY solar panel cleaning risks](/guides/solar-panel-cleaning-arizona/diy-solar-panel-cleaning-risks/). Robotic cleaning systems come up occasionally too, and whether they're worth it in our conditions depends on the array — see [do robotic cleaners work in Arizona](/guides/solar-panel-cleaning-arizona/robotic-solar-panel-cleaners-arizona/).
 
 ## How often do panels really need cleaning in Arizona?
 
-There's no single number that applies to every roof. A ground-mounted array near a dirt road in Marana accumulates grime faster than a rooftop system in a quiet Catalina Foothills neighborhood. As a general baseline, most Tucson Metro homeowners land on cleaning once or twice a year — often once before monsoon season builds up dust for the summer storms to redistribute, and once more in fall or winter after pollen season and any late-summer buildup.
+There's no single number that applies to every roof. A ground-mounted array near a dirt road in Marana accumulates grime faster than a rooftop system in a quiet Catalina Foothills neighborhood, and panel tilt angle changes the math too — see [does tilt angle affect cleaning frequency](/guides/solar-panel-cleaning-arizona/does-panel-tilt-angle-affect-cleaning-frequency/). As a general baseline, most Tucson Metro homeowners land on cleaning once or twice a year — often once before monsoon season builds up dust for the summer storms to redistribute, and once more in fall or winter after pollen season and any late-summer buildup.
 
 Seasonal homeowners add another wrinkle. If you're gone for months at a time, dust and pollen keep accumulating with nobody around to notice the slow output drop. We built a schedule specifically for part-time residents and snowbirds — see [seasonal homeowner cleaning schedule](/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/) for a plan you can set and mostly forget.
 
