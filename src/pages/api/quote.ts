@@ -13,6 +13,31 @@ interface QuotePayload {
   page?: string;
   // honeypot — real users never fill this in; bots often do
   company?: string;
+  recaptchaToken?: string;
+}
+
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
+
+// Skips verification (rather than hard-failing every submission) until
+// RECAPTCHA_SECRET_KEY is actually set in the Vercel env -- lets this route
+// deploy safely before the reCAPTCHA site/secret key pair exists yet.
+async function verifyRecaptcha(token: string | undefined): Promise<{ ok: boolean; reason?: string }> {
+  const secretKey = import.meta.env.RECAPTCHA_SECRET_KEY;
+  if (!secretKey) return { ok: true };
+  if (!token) return { ok: false, reason: "Missing reCAPTCHA token" };
+
+  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ secret: secretKey, response: token }),
+  });
+  const result = await res.json();
+
+  if (!result.success) return { ok: false, reason: `siteverify rejected: ${JSON.stringify(result["error-codes"])}` };
+  if (typeof result.score === "number" && result.score < RECAPTCHA_SCORE_THRESHOLD) {
+    return { ok: false, reason: `score ${result.score} below threshold` };
+  }
+  return { ok: true };
 }
 
 function recipientFor(metroKey: string): { email: string | undefined; note: string } {
@@ -47,9 +72,19 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   }
 
-  const { name, phone, metro, address, service } = data;
+  const { name, phone, metro, address, service, recaptchaToken } = data;
   if (!name?.trim() || !phone?.trim() || !metro?.trim() || !address?.trim() || !service?.trim()) {
     return new Response(JSON.stringify({ ok: false, error: "Name, phone, metro area, address, and service are required." }), {
+      status: 400,
+    });
+  }
+
+  const recaptcha = await verifyRecaptcha(recaptchaToken);
+  if (!recaptcha.ok) {
+    console.error("reCAPTCHA check failed", recaptcha.reason);
+    // Generic message -- don't tell a bot (or its operator) it was the
+    // reCAPTCHA check specifically that stopped the submission.
+    return new Response(JSON.stringify({ ok: false, error: "Could not verify submission. Try calling us instead." }), {
       status: 400,
     });
   }

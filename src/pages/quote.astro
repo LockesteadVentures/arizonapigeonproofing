@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { REGIONS } from "../data/locations.js";
+
+// Public by design -- the reCAPTCHA site key is meant to ship to the
+// client. Verification (and the real secret) happens in api/quote.ts.
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
 ---
 
 <BaseLayout
@@ -71,6 +75,7 @@ import { REGIONS } from "../data/locations.js";
       </div>
     </div>
   </section>
+  {recaptchaSiteKey && <script src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}></script>}
 </BaseLayout>
 
 <style>
@@ -146,6 +151,28 @@ import { REGIONS } from "../data/locations.js";
     window.dataLayer.push({ event, page_path: window.location.pathname, ...params });
   }
 
+  const RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+
+  // Resolves to "" (not a rejected promise) whenever reCAPTCHA isn't
+  // configured/loaded, so a missing site key never blocks a real submission --
+  // api/quote.ts treats a missing token the same way when its own secret
+  // key isn't configured yet.
+  function getRecaptchaToken(action: string): Promise<string> {
+    return new Promise((resolve) => {
+      const grecaptcha = (window as any).grecaptcha;
+      if (!RECAPTCHA_SITE_KEY || !grecaptcha) {
+        resolve("");
+        return;
+      }
+      grecaptcha.ready(() => {
+        grecaptcha
+          .execute(RECAPTCHA_SITE_KEY, { action })
+          .then(resolve)
+          .catch(() => resolve(""));
+      });
+    });
+  }
+
   let startedForm = false;
   form?.addEventListener(
     "focusin",
@@ -167,6 +194,12 @@ import { REGIONS } from "../data/locations.js";
     const metro = String(formData.get("metro") ?? "");
     const address = String(formData.get("address") ?? "");
     const service = String(formData.get("service") ?? "");
+
+    button.disabled = true;
+    status.dataset.state = "idle";
+    status.textContent = "Sending…";
+
+    const recaptchaToken = await getRecaptchaToken("quote_submit");
     const payload = {
       name,
       phone,
@@ -175,11 +208,8 @@ import { REGIONS } from "../data/locations.js";
       service,
       company: String(formData.get("company") ?? ""),
       page: window.location.pathname,
+      recaptchaToken,
     };
-
-    button.disabled = true;
-    status.dataset.state = "idle";
-    status.textContent = "Sending…";
 
     try {
       const res = await fetch("/api/quote/", {
