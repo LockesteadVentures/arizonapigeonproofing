@@ -118,4 +118,9 @@ const breadcrumbSchema = hub
   .article :global(h2) { font-size: 1.3rem; margin: 2rem 0 0.8rem; }
   .article :global(p) { margin: 0.9rem 0; line-height: 1.7; color: var(--text); }
   .article :global(em) { color: var(--text-dim); }
+  /* Sitewide default is `a { text-decoration: none; color: inherit }` (global.css),
+     which makes inline links in a wall of body text invisible as links. Article
+     copy is the one place readers need to spot a link mid-sentence. */
+  .article :global(a) { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+  .article :global(a:hover) { opacity: 0.75; }
 </style>
