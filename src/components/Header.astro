@@ -75,10 +75,6 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
       </div>
 
       <div class="nav-cta">
-        <span class="nav-phone">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"></path></svg>
-          (520) 555-0148
-        </span>
         <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"nav_header"}'>Get a Free Quote</a>
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
@@ -121,14 +117,12 @@ const tucsonCities = liveCitiesByRegion("tucson").filter((c) => c.tier === 1);
   .mega-regions .see-all { margin-top: 0.6rem; font-size: 0.8rem; font-weight: 700; color: var(--teal); }
 
   .nav-cta { display: flex; align-items: center; gap: 0.9rem; }
-  .nav-phone { display: flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 0.94rem; white-space: nowrap; }
-  .nav-phone svg { width: 15px; height: 15px; color: var(--teal); }
 
   .hamburger { display: none; background: none; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; }
   .hamburger svg { width: 20px; height: 20px; }
 
   @media (max-width: 920px) {
-    .nav-links, .nav-phone { display: none; }
+    .nav-links { display: none; }
     .hamburger { display: flex; }
   }
 </style>
