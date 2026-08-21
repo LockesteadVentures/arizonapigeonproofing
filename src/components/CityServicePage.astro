@@ -108,6 +108,7 @@ const breadcrumbSchema = {
           </details>
         ))}
       </div>
+      <p class="faq-pointer" set:html={content.faqPointer} />
     </div>
   </section>
 
@@ -173,6 +174,8 @@ const breadcrumbSchema = {
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; }
   .faq-item summary { font-weight: 700; cursor: pointer; font-size: 0.95rem; }
   .faq-item p { margin: 0.7rem 0 0; color: var(--text-dim); font-size: 0.92rem; }
+  .faq-pointer { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-dim); }
+  .faq-pointer a { font-weight: 700; color: var(--teal); }
 
   .cross-links { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .cross-links h3 { font-size: 1rem; margin-bottom: 0.7rem; }

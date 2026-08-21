@@ -38,11 +38,31 @@ const faqs = [
   },
   {
     q: "Does bird mesh void my solar panel warranty?",
-    a: "No — mesh mounts to the panel's rails, not the roof or the panels themselves, so it doesn't affect your manufacturer or installer warranty.",
+    a: `No — mesh mounts to the panel's rails, not the roof or the panels themselves, so it doesn't affect your manufacturer or installer warranty. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">See how this holds up across major panel manufacturers' warranty language</a>.`,
   },
   {
     q: "What areas do you serve?",
     a: "Tucson Metro today — including Oro Valley, Marana, Sahuarita, and 11 more cities below. Phoenix Metro pages are built and waiting on a confirmed local crew.",
+  },
+  {
+    q: "Bird mesh, spikes, sonic deterrents, or decoys — which actually works for solar panels?",
+    a: `Mesh is the only method that physically blocks the space under the array rather than just discouraging birds from using it — spikes and sonic deterrents can push pigeons to a neighboring roof instead of solving the problem, and decoys tend to stop working once pigeons get used to them. <a href="/guides/pigeons-and-solar-panels/bird-mesh-vs-spikes-vs-sonic-vs-decoys/">Full comparison of all four methods</a>.`,
+  },
+  {
+    q: "How much damage can pigeons actually do to a solar array?",
+    a: `Beyond the mess, droppings are acidic enough to degrade panel coatings and roofing material over time, and accumulated nesting debris can block airflow that panels need to run efficiently — costs that tend to compound the longer nesting goes unaddressed. <a href="/guides/pigeons-and-solar-panels/pigeon-damage-cost/">What that typically costs to repair, and how it compares to prevention</a>.`,
+  },
+  {
+    q: "Are pigeon droppings under solar panels a health risk?",
+    a: `Dried pigeon droppings can carry histoplasmosis and other fungal spores that become airborne when disturbed, which is why we wear PPE and sanitize the area during nest removal rather than just sweeping it out. <a href="/guides/pigeons-and-solar-panels/pigeon-dropping-health-risks/">Full health-risk breakdown and safe-handling guidance</a>.`,
+  },
+  {
+    q: "Do I need HOA approval to install bird mesh in Arizona?",
+    a: `Arizona law (A.R.S. § 33-1816) prevents an HOA from banning solar panels outright, but that protection covers the solar system itself — bird mesh, as an added accessory, typically still goes through your community's standard architectural review. Most HOAs approve it quickly since it's barely visible from the street. <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">What that review actually asks for, and what to submit</a>.`,
+  },
+  {
+    q: "Can I install bird mesh myself, or should I hire a professional?",
+    a: `DIY mesh kits exist, but a loose or gapped install often just relocates the problem to the next unsealed edge, and re-doing it professionally after a failed DIY attempt usually costs more than starting with a pro. <a href="/guides/pigeons-and-solar-panels/diy-vs-professional-pigeon-proofing/">Full DIY-vs-professional breakdown, including where DIY can work fine</a>.`,
   },
 ];
 
@@ -159,7 +179,7 @@ const stats = [
 
   <section class="alt">
     <div class="wrap narrow">
-      <FaqSection heading="Frequently asked" items={faqs} />
+      <FaqSection id="faq" heading="Frequently asked" items={faqs} />
     </div>
   </section>
 

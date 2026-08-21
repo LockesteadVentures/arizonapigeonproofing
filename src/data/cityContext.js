@@ -32,14 +32,6 @@ export const CITY_CONTEXT = {
             a: `It depends on the neighborhood — HOA review varies a lot within city limits. <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">See what a typical architectural review actually asks for</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh attaches to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full breakdown of warranty language across major panel manufacturers</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, nest removal included, finish in a single same-day visit. <a href="/guides/pigeons-and-solar-panels/how-to-safely-remove-a-pigeon-nest/">What's actually involved in safely removing an active nest</a>.`,
-          },
-          {
             q: "Does an older Tucson home need a different mesh install than new construction?",
             a: `Often, yes — older adobe and 1970s ranch roofs tend to use different mounting hardware than newer subdivisions, which is part of why every job starts with an in-person inspection instead of a blind quote. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">Ground-mounted arrays carry a different risk profile than roof-mounted ones, too</a>.`,
           },
@@ -60,10 +52,6 @@ export const CITY_CONTEXT = {
           {
             q: "How often should panels be cleaned in Tucson?",
             a: `Twice a year for most homes — once before monsoon season and once after. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal cleaning schedule for Tucson-area homes</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing on panel glass</a>.`,
           },
           {
             q: "Does an older Tucson roof change how the cleaning visit is done?",
@@ -91,14 +79,6 @@ export const CITY_CONTEXT = {
             a: `Most HOAs in both communities allow it since the mesh sits close to the panel and is barely visible from the street, but architectural review is common — we can provide spec sheets for submittal if yours requires one. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What to submit for HOA approval</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full breakdown of warranty language across major panel manufacturers</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "What does unpermitted bird mesh actually risk in an HOA community like Sun City Oro Valley?",
             a: `Mostly a fine-and-remove letter rather than anything structural — but it's an avoidable hassle. <a href="/guides/hoa-solar-panel-rules-arizona/installing-bird-mesh-without-hoa-approval-risk/">What actually happens if you skip HOA approval</a>.`,
           },
@@ -113,16 +93,8 @@ export const CITY_CONTEXT = {
           `Oro Valley is incorporated, so permits and inspections go through the Town of Oro Valley rather than the county — though a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL research on solar soiling puts typical annual losses around 4–15%, with short-term spikes well beyond that right after a heavy dust storm. <a href="/guides/solar-panel-cleaning-arizona/how-to-read-solar-monitoring-app-for-soiling/">How to spot that loss on your own monitoring app</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Oro Valley?",
             a: `Twice a year for most homes — once before monsoon season and once after — though Sun City Oro Valley's single-level rooflines make access easier than a two-story Rancho Vistoso custom home. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only, which is also why there's no streaking afterward.`,
           },
           {
             q: "Does Sun City Oro Valley's HOA have rules about cleaning trucks or equipment on-site?",
@@ -150,14 +122,6 @@ export const CITY_CONTEXT = {
             a: `Both have active community associations with architectural guidelines, though neither typically restricts bird mesh once it's clear the install doesn't alter the roofline. We handle the paperwork if a submittal is required. <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">What a typical architectural review actually checks for</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Are newer Dove Mountain and Gladden Farms homes more prone to nesting under panels?",
             a: `Often, yes — taller racking on newer installs creates a bigger, more sheltered gap than older flush-mount setups. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why pigeons choose the space under a panel in the first place</a>.`,
           },
@@ -172,16 +136,8 @@ export const CITY_CONTEXT = {
           `Marana is incorporated, so permits and inspections go through the Town of Marana rather than the county — a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, with bigger short-term hits after a dust storm — construction-adjacent homes in Marana often run toward the higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Marana?",
             a: `Twice a year for most homes; homes near active construction in Dove Mountain or Gladden Farms may need a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does new-home construction nearby actually make a measurable difference?",
@@ -209,14 +165,6 @@ export const CITY_CONTEXT = {
             a: `Yes — Quail Creek is a Robson-developed 55+ community with its own architectural review separate from Rancho Sahuarita's. Both are usually straightforward for bird mesh since it doesn't change how the roofline looks from the street. <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">What that review typically asks for</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Does Madera Highlands have the same nesting issues as Rancho Sahuarita?",
             a: `Generally yes — panel height and roof pitch matter more than which subdivision you're in, which is why we inspect every roof individually rather than quoting off the community name alone.`,
           },
@@ -231,16 +179,8 @@ export const CITY_CONTEXT = {
           `Sahuarita is incorporated, so permits and inspections go through the Town of Sahuarita rather than the county — a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, with short-term spikes well beyond that after a dust storm. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Sahuarita?",
             a: `Twice a year for most homes — Quail Creek's single-level rooflines are usually quicker to access than Rancho Sahuarita's larger two-story builds. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Is Quail Creek's cleaning process any different from Rancho Sahuarita's?",
@@ -268,14 +208,6 @@ export const CITY_CONTEXT = {
             a: `Pima County, not a town building department — Green Valley Recreation manages community facilities and HOA-style architectural rules for member communities, but permitting itself runs through the county. <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">What a typical architectural review checks for</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Do Canoa Ranch and Las Campanas see the same level of pigeon activity?",
             a: `Both do, mainly because single-level rooflines are common in each — the low mounting height matters more than which community you're in. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why nesting behavior tracks roof height more than location</a>.`,
           },
@@ -290,16 +222,8 @@ export const CITY_CONTEXT = {
           `Green Valley is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, with short-term spikes well beyond that after a dust storm. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Green Valley?",
             a: `Twice a year for most homes — golf-course-adjacent homes in Canoa Ranch sometimes need an extra visit for turf and irrigation overspray. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does living near Canoa Ranch's golf course change what panels need?",
@@ -327,14 +251,6 @@ export const CITY_CONTEXT = {
             a: `Most Rocking K and Del Webb HOAs allow it since the mesh is barely visible from the ground, but architectural review is common in these communities — we can provide spec sheets if yours requires one. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What to submit for approval</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Does Vail have its own building department for permits?",
             a: `No — Vail residents have voted against incorporating twice, so Pima County handles permitting rather than a town government. Individual HOAs like Rocking K still run their own architectural review separately.`,
           },
@@ -349,16 +265,8 @@ export const CITY_CONTEXT = {
           `Vail is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and Vail's exposed-desert edge lots can run toward the higher end between cleanings. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Vail?",
             a: `Twice a year for most homes; lots backing directly onto preserved desert in Rocking K may benefit from a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does Vail have its own building department for cleaning visits?",
@@ -386,14 +294,6 @@ export const CITY_CONTEXT = {
             a: `Usually yes — La Paloma, Ventana Canyon, and Skyline Country Club all require gate clearance for contractors, so we coordinate access ahead of the appointment rather than showing up unannounced.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Do La Paloma, Ventana Canyon, or Skyline require HOA sign-off before mesh goes up?",
             a: `All three run tight architectural review, more so than a standard subdivision — we build the submittal into the timeline up front. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What that submittal typically needs to include</a>.`,
           },
@@ -408,16 +308,8 @@ export const CITY_CONTEXT = {
           `Catalina Foothills is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically trigger either.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and mountain-facing Foothills lots can run higher between storms. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Catalina Foothills?",
             a: `Twice a year for most homes — exposed, mountain-adjacent lots in La Paloma or Ventana Canyon may need a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Do guard-gated Foothills communities need advance notice for a cleaning visit?",
@@ -445,14 +337,6 @@ export const CITY_CONTEXT = {
             a: `It still does — South Tucson has run its own city government since 1940 despite being only 1.2 square miles, so permitting is separate from the City of Tucson even though the two are seamlessly adjacent.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Does South Tucson's older housing stock change how mesh gets installed?",
             a: `Sometimes — older, lower-slung roofs and tighter eave gaps need a slightly different mesh fit than a newer subdivision roof, which is why we inspect before quoting rather than pricing blind. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">How roof type affects nesting risk</a>.`,
           },
@@ -467,16 +351,8 @@ export const CITY_CONTEXT = {
           `South Tucson has run its own city government since 1940 despite its size, so permitting is separate from the City of Tucson — though a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and street-level dust and traffic residue can push older, lower-mounted panels toward that higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in South Tucson?",
             a: `Twice a year for most homes — busier streets may warrant a slightly tighter schedule. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does South Tucson's older housing stock make panels harder to access for cleaning?",
@@ -504,14 +380,6 @@ export const CITY_CONTEXT = {
             a: `Often, yes — acre-plus lots here tend to have larger roof areas and correspondingly bigger arrays, which is exactly the kind of detail that changes a quote from a flat per-panel guess to something accurate.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit — larger acre-plus properties sometimes run slightly longer.`,
-          },
-          {
             q: "Does an older, mid-century Casas Adobes home need a different mesh install?",
             a: `It can — homes built since the Nanini-era subdivisions of the 1950s span a wide range of roof ages and mounting hardware, which is why we inspect in person before quoting. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">How roof age affects mesh fit</a>.`,
           },
@@ -526,16 +394,8 @@ export const CITY_CONTEXT = {
           `Casas Adobes is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and larger acre-plus-lot arrays in Casas Adobes show a proportionally bigger swing simply due to size. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Casas Adobes?",
             a: `Twice a year for most homes; larger arrays are quoted by square footage rather than a flat per-visit rate. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Do larger Casas Adobes lots take longer to clean?",
@@ -563,14 +423,6 @@ export const CITY_CONTEXT = {
             a: `It can — older mounting hardware and manufactured-home roof structures sometimes need a slightly different mesh fit than a newer standard subdivision roof, which is exactly why we inspect before quoting rather than pricing blind.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Is a manufactured home in Flowing Wells more prone to pigeon problems than a standard house?",
             a: `Not inherently — it comes down to mounting height and gap size rather than construction type, which is why every quote starts with a look at your specific setup. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">What actually draws pigeons to the space under a panel</a>.`,
           },
@@ -585,16 +437,8 @@ export const CITY_CONTEXT = {
           `Flowing Wells is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, regardless of roof age or type. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Flowing Wells?",
             a: `Twice a year for most homes. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does a manufactured home's roof change how cleaning is done?",
@@ -622,14 +466,6 @@ export const CITY_CONTEXT = {
             a: `Usually, yes — bigger roofs and larger arrays mean more linear footage of mesh, which is why we quote by measuring the actual install rather than a flat per-home rate.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single visit — larger horse-property installs sometimes run slightly longer.`,
-          },
-          {
             q: "Do nearby barns or stables make pigeon problems worse under solar panels?",
             a: `Often, yes — outbuildings give pigeons a nearby home base, which tends to mean a more established, harder-to-discourage flock finds the array too. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">What draws pigeons to the space under a panel in the first place</a>.`,
           },
@@ -644,16 +480,8 @@ export const CITY_CONTEXT = {
           `Tanque Verde is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and unpaved-road properties in Tanque Verde often run toward the higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "Do larger, unpaved-road properties in Tanque Verde need more frequent cleaning?",
             a: `Generally yes — homes on unpaved roads or larger acreage tend to accumulate dust faster between monsoon and haboob seasons than panels closer to paved, developed streets. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule as a baseline</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does horse-property dust (hay, arena footing) affect panels differently than street dust?",
@@ -681,14 +509,6 @@ export const CITY_CONTEXT = {
             a: `Yes, typical for a master-planned community this size — bird mesh installs are usually straightforward since they don't change how the roofline looks from the street, but we can provide documentation if a submittal is needed. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What that documentation typically covers</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Since Rita Ranch homes are mostly the same era, do they all need the same mesh setup?",
             a: `Close to it — early-1990s tract construction here is fairly consistent, which is part of why jobs in Rita Ranch tend to be quick, predictable installs.`,
           },
@@ -703,16 +523,8 @@ export const CITY_CONTEXT = {
           `Rita Ranch is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and desert-edge Rita Ranch lots can run toward the higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Rita Ranch?",
             a: `Twice a year for most homes; lots on the community's outer, desert-adjacent edge may benefit from a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Since most Rita Ranch homes are the same era, does cleaning take the same amount of time everywhere?",
@@ -740,14 +552,6 @@ export const CITY_CONTEXT = {
             a: `Yes — newer construction here tends to come with newer racking and larger arrays than the area's older ranch-style homes, so we size the quote to your specific roof rather than a flat estimate either way.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit.`,
-          },
-          {
             q: "Should a brand-new Corona de Tucson install get mesh proactively, before pigeons show up?",
             a: `It's worth considering — mesh installed at move-in is cheaper and less disruptive than removing an established nest later. <a href="/guides/pigeons-and-solar-panels/pigeon-damage-cost/">The real cost difference between prevention and after-the-fact removal</a>.`,
           },
@@ -764,14 +568,6 @@ export const CITY_CONTEXT = {
           {
             q: "Is Corona de Tucson's rapid growth changing how often panels need cleaning?",
             a: `Yes — homes near active new-construction phases typically need cleaning more often than the area's older, established ranch-style homes. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule as a baseline</a>.`,
-          },
-          {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and construction-adjacent Corona de Tucson homes often run toward the higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Should a brand-new Corona de Tucson install get its first cleaning sooner than the standard schedule?",
@@ -799,14 +595,6 @@ export const CITY_CONTEXT = {
             a: `It tends to be more thorough than average for an age-restricted community, so we build the HOA submittal into the timeline up front rather than treating it as an afterthought. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What a typical submittal package includes</a>.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single same-day visit — SaddleBrooke's single-level homes are usually quick to access.`,
-          },
-          {
             q: "Does SaddleBrooke Ranch have the same HOA process as the original SaddleBrooke community?",
             a: `They're separate associations with their own architectural review, though both are Robson-developed and generally straightforward for bird mesh once the paperwork is submitted.`,
           },
@@ -821,16 +609,8 @@ export const CITY_CONTEXT = {
           `SaddleBrooke is unincorporated, so permits and inspections go through Pinal County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and foothill-elevation SaddleBrooke homes can catch more windblown dust than valley-floor homes. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in SaddleBrooke?",
             a: `Twice a year for most homes. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Are SaddleBrooke's single-level homes quicker to clean than a two-story house?",
@@ -858,14 +638,6 @@ export const CITY_CONTEXT = {
             a: `Not for permitting — there's no park-adjacency restriction on residential solar work — but properties out here do tend to be larger and further apart, which we factor into scheduling.`,
           },
           {
-            q: "Will this damage my solar panels or void my warranty?",
-            a: `No — mesh is fitted to the mounting rails, not the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">Full warranty breakdown</a>.`,
-          },
-          {
-            q: "How long does the pigeons-are-already-there problem take to fix?",
-            a: `Most jobs, including nest removal, finish in a single visit — larger ranchette-style properties sometimes run slightly longer.`,
-          },
-          {
             q: "Do Picture Rocks' generous lot sizes mean bigger arrays to proof?",
             a: `Often, yes — larger custom homes on ranchette-sized lots frequently carry bigger arrays than a standard suburban roof, which is part of why we quote after an in-person look. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">How array size affects nesting risk</a>.`,
           },
@@ -880,16 +652,8 @@ export const CITY_CONTEXT = {
           `Picture Rocks is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
         faqs: [
           {
-            q: "How much output do dirty panels actually lose?",
-            a: `NREL soiling research puts typical annual losses around 4–15%, and unpaved-road properties in Picture Rocks often run toward the higher end. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What's driving that loss</a>.`,
-          },
-          {
             q: "How often should panels be cleaned in Picture Rocks?",
             a: `Twice a year for most homes; unpaved-road properties may benefit from a third visit between monsoon and haboob seasons. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
-          },
-          {
-            q: "Do you use anything that could scratch the glass?",
-            a: `No abrasive tools — deionized water and soft brushes only. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water beats pressure washing</a>.`,
           },
           {
             q: "Does being this close to Saguaro National Park affect a cleaning visit?",

@@ -3,13 +3,20 @@
 // FAQPage schema. City pages have their own inline version (with a per-city 4th
 // question mixed in) and aren't migrated to this -- this is for pages that had no
 // FAQ/schema at all: homepage, and both service hub pages.
+//
+// Answers may contain pre-authored inline HTML (guide links) -- see the pillar-page
+// FAQ expansion (2026-08-21). That's trusted, static content, safe to render with
+// set:html; schema.org text should stay plain, so tags are stripped for the JSON-LD copy.
 interface Props {
   heading: string;
   eyebrow?: string;
+  id?: string;
   items: { q: string; a: string }[];
 }
 
-const { heading, eyebrow = "FAQ", items } = Astro.props;
+const { heading, eyebrow = "FAQ", id, items } = Astro.props;
+
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, "");
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -17,12 +24,12 @@ const faqSchema = {
   mainEntity: items.map((f) => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: { "@type": "Answer", text: stripTags(f.a) },
   })),
 };
 ---
 
-<div class="section-head">
+<div class="section-head" id={id}>
   <span class="eyebrow">{eyebrow}</span>
   <h2>{heading}</h2>
 </div>
@@ -30,7 +37,7 @@ const faqSchema = {
   {items.map((f) => (
     <details class="faq-item">
       <summary>{f.q}</summary>
-      <p>{f.a}</p>
+      <p set:html={f.a} />
     </details>
   ))}
 </div>
@@ -38,6 +45,7 @@ const faqSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <style>
+  .section-head { scroll-margin-top: 90px; }
   .faq-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.4rem; }
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; }
   .faq-item summary { font-weight: 700; cursor: pointer; font-size: 0.95rem; }

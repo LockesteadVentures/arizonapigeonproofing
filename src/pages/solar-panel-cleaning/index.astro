@@ -38,11 +38,31 @@ const faqs = [
   },
   {
     q: "Will cleaning damage my panels?",
-    a: "No — we use spot-free deionized water and soft tools only, no abrasive brushes or high-pressure spray that could risk the glass or seals.",
+    a: `No — we use spot-free deionized water and soft tools only, no abrasive brushes or high-pressure spray that could risk the glass or seals. <a href="/guides/solar-panel-cleaning-arizona/deionized-water-vs-pressure-washing/">Why deionized water outperforms pressure washing on panel glass</a>.`,
   },
   {
     q: "What areas do you serve?",
     a: "Tucson Metro today — including Oro Valley, Marana, Sahuarita, and 11 more cities below. Phoenix Metro pages are built and waiting on a confirmed local crew.",
+  },
+  {
+    q: "How much output do dirty panels actually lose?",
+    a: `NREL's soiling-loss research puts a typical annual output loss around 5%, with a documented range of 2% up to 25% during long, dry, high-dust stretches between cleanings — and Arizona's monsoon-and-drought pattern pushes most local systems toward the higher end of that range, which is exactly why we recommend cleaning on both sides of monsoon season rather than once a year. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">How that loss actually shows up over a season</a>.`,
+  },
+  {
+    q: "Can I clean my own solar panels, or is that risky?",
+    a: `Tap water leaves mineral spotting that actually reduces output, and a garden hose or pressure washer can drive water past seals or crack cold glass if it's hit with cold water on a hot panel — both common DIY mistakes. <a href="/guides/solar-panel-cleaning-arizona/diy-solar-panel-cleaning-risks/">Full breakdown of what can go wrong, and what's safe to do yourself</a>.`,
+  },
+  {
+    q: "How do I know if my panels actually need cleaning right now?",
+    a: `Dust build-up is gradual enough that most homeowners don't notice until it shows up on a utility bill — checking your monitoring app for a slow, steady output dip (not explained by shorter days or cloud cover) is the most reliable early sign. <a href="/guides/solar-panel-cleaning-arizona/signs-your-panels-need-cleaning/">How to read your monitoring app for soiling loss, and other signs to watch for</a>.`,
+  },
+  {
+    q: "Does panel tilt angle affect how often I need to clean?",
+    a: `Flatter-mounted panels hold onto dust longer than steeply tilted ones, since there's less gravity and rain assist to help clear debris between cleanings — which means two identical panels in the same neighborhood can need different schedules based on mounting angle alone. <a href="/guides/solar-panel-cleaning-arizona/does-panel-tilt-angle-affect-cleaning-frequency/">Full explanation of how tilt affects soiling rate</a>.`,
+  },
+  {
+    q: "Does cleaning ever void my solar panel warranty?",
+    a: `No, as long as it's done with non-abrasive tools and deionized water rather than a pressure washer or anything that could crack glass or force water past seals. <a href="/guides/solar-panel-cleaning-arizona/does-cleaning-void-solar-warranty/">Full warranty-language breakdown across major manufacturers</a>.`,
   },
 ];
 
@@ -60,8 +80,8 @@ const stats = [
     sourceUrl: "https://www.weather.gov/",
   },
   {
-    value: "4–15%",
-    label: "Typical annual solar output loss from soiling when panels go uncleaned, per NREL research.",
+    value: "2–25%",
+    label: "Documented range of annual solar output loss from soiling when panels go uncleaned — typically around 5%, per NREL research, with the higher end in long, dry, high-dust conditions like Arizona's.",
     source: "NREL",
     sourceUrl: "https://docs.nrel.gov/docs/fy22osti/83486.pdf",
   },
@@ -165,7 +185,7 @@ const stats = [
 
   <section class="alt">
     <div class="wrap narrow">
-      <FaqSection heading="Frequently asked" items={faqs} />
+      <FaqSection id="faq" heading="Frequently asked" items={faqs} />
     </div>
   </section>
 

@@ -9,6 +9,10 @@
 export const SERVICE_CONTENT = {
   "pigeon-proofing-solar-panels": {
     heroVerb: "Pigeon Proofing",
+    // City pages no longer repeat the warranty/turnaround FAQs verbatim (30-page
+    // duplicate-content fix, 2026-08-21) -- they point here instead, where the
+    // pillar page's expanded FAQ section answers both in full, with schema.
+    faqPointer: `General questions about cost, warranty coverage, and typical turnaround are answered in full on our <a href="/pigeon-proofing-solar-panels/#faq">pigeon proofing overview page</a>.`,
     process: [
       { title: "Inspection", body: "We check under the array for existing nests, droppings, and gaps before quoting mesh." },
       { title: "Nest removal", body: "Any existing nesting material is cleared out and the area is sanitized before sealing." },
@@ -48,6 +52,7 @@ export const SERVICE_CONTENT = {
   },
   "solar-panel-cleaning": {
     heroVerb: "Solar Panel Cleaning",
+    faqPointer: `General questions about output loss, safe cleaning methods, and typical costs are answered in full on our <a href="/solar-panel-cleaning/#faq">solar panel cleaning overview page</a>.`,
     process: [
       { title: "Output check", body: "Where possible, we log your current output so you can see the before/after difference." },
       { title: "Deionized wash", body: "Panels are washed with spot-free deionized water — no mineral streaking from Arizona's hard water." },
