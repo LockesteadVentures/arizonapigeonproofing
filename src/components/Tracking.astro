@@ -30,13 +30,6 @@ const initialDataLayer = [
 <Analytics />
 <SpeedInsights />
 
-{/*
-  IMPORTANT: never reassign window.dataLayer wholesale here. Partytown's
-  forward mechanism patches the .push method on the existing array (or
-  creates it) as soon as its bootstrap script runs; `window.dataLayer = [...]`
-  would silently destroy that patched method and break forwarding into the
-  worker. Always initialize-if-absent, then .push.
-*/}
 <script is:inline define:vars={{ initialDataLayer }}>
   window.dataLayer = window.dataLayer || [];
   initialDataLayer.forEach(function (item) {
@@ -45,27 +38,26 @@ const initialDataLayer = [
 </script>
 
 {/*
-  GTM loads through Partytown (web worker) for normal visitors -- the
-  performance win. But GTM Preview/Tag Assistant's debug handshake needs a
-  direct postMessage connection to the real gtm.js instance, which a worker
-  sandbox blocks entirely (long-standing, documented incompatibility:
-  github.com/QwikDev/partytown/issues/72). So: detect Tag Assistant's own
-  debug signals (URL param, referrer, or cookie -- per Simo Ahava's
-  documented list) and load gtm.js normally, on the main thread, whenever
-  any of them are present. Everyone else still gets the worker.
+  Standard, direct GTM install (Google's official snippet) -- loaded on the
+  main thread, not through Partytown. Partytown was tried here for the TBT/
+  LCP win, but its worker sandbox never actually finished initializing in
+  production (confirmed via zero googletagmanager.com/partytown.js network
+  activity and window.dataLayer staying undefined indefinitely, in both a
+  sandboxed test browser and a real, remotely-driven Chrome), which meant
+  GTM silently never loaded at all -- no console error, no visible sign,
+  just a fully dark tracking pipeline. Correctness beats the perf win here.
 */}
 {gtmId && (
   <script is:inline define:vars={{ gtmId }}>
-    var isGtmDebug =
-      /[?&]gtm_debug=/.test(window.location.search) ||
-      document.referrer.indexOf("tagassistant.google.com") !== -1 ||
-      document.cookie.indexOf("__TAG_ASSISTANT") !== -1;
-    var gtmScript = document.createElement("script");
-    gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + gtmId;
-    if (!isGtmDebug) {
-      gtmScript.type = "text/partytown";
-    }
-    document.head.appendChild(gtmScript);
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", gtmId);
   </script>
 )}
 
