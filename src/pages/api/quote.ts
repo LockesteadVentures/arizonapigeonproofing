@@ -117,6 +117,8 @@ export const POST: APIRoute = async ({ request }) => {
     note,
   ].join("\n");
 
+  const ccEmail = import.meta.env.LEAD_EMAIL_CC;
+
   const resendResponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -126,6 +128,7 @@ export const POST: APIRoute = async ({ request }) => {
     body: JSON.stringify({
       from: fromEmail,
       to: recipient,
+      ...(ccEmail ? { cc: ccEmail } : {}),
       subject,
       text: body,
     }),
