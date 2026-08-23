@@ -27,4 +27,10 @@ export default defineConfig({
   // via `export const prerender = false`. Everything else stays static/fast.
   adapter: vercel(),
   integrations: [sitemap()],
+  // Per-page CSS is only a couple KB (BaseLayout + page styles) but was
+  // shipping as separate <link> files, each a render-blocking round trip
+  // before first paint. Inlining folds it straight into the HTML response --
+  // one less network hop on the critical path, at the cost of a few KB
+  // duplicated across pages instead of cached once (a fine trade at this size).
+  build: { inlineStylesheets: 'always' },
 });
