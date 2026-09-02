@@ -21,19 +21,6 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
   </section>
   <section>
     <div class="wrap quote-layout">
-      <div class="quote-sidebar">
-        <h2>Prefer to call?</h2>
-        <div class="phone-box">
-          <span class="phone-box-label">{REGIONS.tucson.name}</span>
-          <span class="phone-box-status live">Live now</span>
-          <a href="tel:+15206362796" class="phone-box-number">(520) 636-2796</a>
-        </div>
-        <div class="phone-box soon">
-          <span class="phone-box-label">{REGIONS.phoenix.name}</span>
-          <span class="phone-box-status">Coming soon</span>
-        </div>
-      </div>
-
       <div class="quote-form-box">
         <form class="quote-form" id="quote-form">
           <label>
@@ -86,16 +73,7 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
   .page-hero .eyebrow { color: #7fd1d6; }
   .page-hero h1 { font-size: 2.3rem; margin: 0.6rem 0 0.9rem; color: #fbfbf7; }
   .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 52ch; margin: 0; }
-  .quote-layout { max-width: 880px; padding: 2.5rem 1.5rem 4rem; display: grid; grid-template-columns: 260px 1fr; gap: 2rem; align-items: start; }
-
-  .quote-sidebar { display: flex; flex-direction: column; gap: 1rem; }
-  .quote-sidebar h2 { font-size: 1rem; margin: 0; }
-  .phone-box { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
-  .phone-box-label { font-weight: 700; font-size: 0.95rem; }
-  .phone-box-status { font-family: ui-monospace, monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); }
-  .phone-box-status.live { color: var(--teal); }
-  .phone-box-number { font-size: 1.15rem; font-weight: 700; color: var(--teal); }
-  .phone-box.soon { opacity: 0.7; }
+  .quote-layout { max-width: 560px; padding: 2.5rem 1.5rem 4rem; }
 
   .quote-form-box { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 1.5rem 1.6rem; }
   .quote-form { display: flex; flex-direction: column; gap: 1.1rem; }
@@ -110,10 +88,6 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
   .form-status { font-size: 0.85rem; min-height: 1.2em; }
   .form-status[data-state="success"] { color: var(--teal); font-weight: 600; }
   .form-status[data-state="error"] { color: var(--amber-dark); font-weight: 600; }
-
-  @media (max-width: 700px) {
-    .quote-layout { grid-template-columns: 1fr; }
-  }
 </style>
 
 <script>
@@ -233,12 +207,12 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
         startedForm = false;
       } else {
         status.dataset.state = "error";
-        status.textContent = result.error ?? "Something went wrong. Try calling us instead.";
+        status.textContent = result.error ?? "Something went wrong. Please try again in a moment.";
         pushEvent("form_error", { form_name: "quote_request", reason: result.error ?? "unknown" });
       }
     } catch {
       status.dataset.state = "error";
-      status.textContent = "Something went wrong. Try calling us instead.";
+      status.textContent = "Something went wrong. Please try again in a moment.";
       pushEvent("form_error", { form_name: "quote_request", reason: "network_error" });
     } finally {
       button.disabled = false;

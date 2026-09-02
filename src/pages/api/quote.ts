@@ -84,7 +84,7 @@ export const POST: APIRoute = async ({ request }) => {
     console.error("reCAPTCHA check failed", recaptcha.reason);
     // Generic message -- don't tell a bot (or its operator) it was the
     // reCAPTCHA check specifically that stopped the submission.
-    return new Response(JSON.stringify({ ok: false, error: "Could not verify submission. Try calling us instead." }), {
+    return new Response(JSON.stringify({ ok: false, error: "Could not verify submission. Please try again in a moment." }), {
       status: 400,
     });
   }
