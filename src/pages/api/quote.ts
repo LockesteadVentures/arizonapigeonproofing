@@ -40,6 +40,16 @@ async function verifyRecaptcha(token: string | undefined): Promise<{ ok: boolean
   return { ok: true };
 }
 
+// Each regional address must be referenced by its literal name. Astro only
+// inlines private env vars it finds as static `import.meta.env.NAME` accesses;
+// a computed lookup like import.meta.env[`LEAD_EMAIL_${key}`] compiles against
+// an object that never contains them, so every lead silently fell back to
+// LEAD_EMAIL_FALLBACK (found when the first real Tucson lead never reached the
+// vendor). Add a new region's variable here when it goes live.
+const REGION_EMAILS: Record<string, string | undefined> = {
+  tucson: import.meta.env.LEAD_EMAIL_TUCSON,
+};
+
 function recipientFor(metroKey: string): { email: string | undefined; note: string } {
   const region = REGIONS[metroKey as keyof typeof REGIONS];
 
@@ -55,8 +65,15 @@ function recipientFor(metroKey: string): { email: string | undefined; note: stri
   }
 
   const vendor = VENDOR_BY_REGION[metroKey as keyof typeof VENDOR_BY_REGION];
-  const email = import.meta.env[`LEAD_EMAIL_${metroKey.toUpperCase()}`] ?? import.meta.env.LEAD_EMAIL_FALLBACK;
-  return { email, note: vendor ? `Routed to ${vendor.label}` : `Routed for ${region.name}` };
+  const regionalEmail = REGION_EMAILS[metroKey];
+  if (!regionalEmail) {
+    // Say so in the email itself instead of claiming it was routed to the vendor.
+    return {
+      email: import.meta.env.LEAD_EMAIL_FALLBACK,
+      note: `${vendor?.label ?? region.name} has no routing address configured — sent to the default address, needs manual forwarding.`,
+    };
+  }
+  return { email: regionalEmail, note: vendor ? `Routed to ${vendor.label}` : `Routed for ${region.name}` };
 }
 
 export const POST: APIRoute = async ({ request }) => {
