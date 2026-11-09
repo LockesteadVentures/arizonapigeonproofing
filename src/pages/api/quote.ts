@@ -14,6 +14,58 @@ interface QuotePayload {
   // honeypot — real users never fill this in; bots often do
   company?: string;
   recaptchaToken?: string;
+  // From the browser's _ga cookie, when GA actually loaded there.
+  gaClientId?: string;
+  // True only if GTM/GA were running in the browser, i.e. the browser-side
+  // generate_lead event will fire. Used to avoid double-counting.
+  browserTracked?: boolean;
+}
+
+const GA4_MEASUREMENT_ID = "G-VV0HWBDHZZ";
+
+// Server-side fallback for generate_lead. The browser-side event (GTM) never
+// fires for visitors running an ad blocker or privacy browser, but their lead
+// email still arrives -- so when the browser says it wasn't tracking, report
+// the lead to GA4 from here via the Measurement Protocol. Best-effort: a GA
+// failure must never fail the submission.
+async function sendServerLead(data: QuotePayload): Promise<void> {
+  const apiSecret = import.meta.env.GA4_API_SECRET;
+  if (!apiSecret || data.browserTracked) return;
+
+  const clientId = /^\d+\.\d+$/.test(data.gaClientId ?? "") ? data.gaClientId! : crypto.randomUUID();
+  const payload = {
+    client_id: clientId,
+    events: [
+      {
+        name: "generate_lead",
+        params: {
+          form_name: "quote_request",
+          metro: data.metro,
+          service: data.service,
+          tracking_source: "server",
+          engagement_time_msec: 100,
+        },
+      },
+    ],
+    // Mirrors the user properties the GTM generate_lead tag sets (Name, Phone
+    // Number, Service, Metro) so a server-reported lead carries the same data.
+    user_properties: {
+      Name: { value: data.name },
+      Phone_Number: { value: data.phone },
+      Service: { value: data.service },
+      Metro: { value: data.metro },
+    },
+  };
+
+  try {
+    const res = await fetch(
+      `https://www.google-analytics.com/mp/collect?measurement_id=${GA4_MEASUREMENT_ID}&api_secret=${apiSecret}`,
+      { method: "POST", body: JSON.stringify(payload), signal: AbortSignal.timeout(2500) }
+    );
+    if (!res.ok) console.error("GA4 Measurement Protocol failed", res.status);
+  } catch (err) {
+    console.error("GA4 Measurement Protocol error", err);
+  }
 }
 
 const RECAPTCHA_SCORE_THRESHOLD = 0.5;
@@ -158,6 +210,8 @@ export const POST: APIRoute = async ({ request }) => {
       status: 502,
     });
   }
+
+  await sendServerLead(data);
 
   return new Response(JSON.stringify({ ok: true }), { status: 200 });
 };

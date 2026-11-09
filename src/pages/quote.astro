@@ -149,6 +149,21 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
     });
   }
 
+  // GA client id from the _ga cookie ("GA1.1.<id>.<timestamp>" -> "<id>.<timestamp>"),
+  // empty when GA never ran (blocked). Used by api/quote.ts for its server-side
+  // generate_lead fallback.
+  function getGaClientId(): string {
+    const m = document.cookie.match(/(?:^|;\s*)_ga=GA\d\.\d\.(\d+\.\d+)/);
+    return m ? m[1] : "";
+  }
+
+  // True when GTM and the GA4 tag loaded in this browser, i.e. the browser-side
+  // generate_lead event will fire and the server shouldn't report it again.
+  function browserTrackingActive(): boolean {
+    const gtm = (window as any).google_tag_manager;
+    return !!(gtm && gtm["G-VV0HWBDHZZ"]) && !!getGaClientId();
+  }
+
   let startedForm = false;
   form?.addEventListener(
     "focusin",
@@ -185,6 +200,8 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
       company: String(formData.get("company") ?? ""),
       page: window.location.pathname,
       recaptchaToken,
+      gaClientId: getGaClientId(),
+      browserTracked: browserTrackingActive(),
     };
 
     try {
