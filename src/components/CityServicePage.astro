@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { REGIONS, SERVICES } from "../data/locations.js";
 import { CITY_CONTEXT } from "../data/cityContext.js";
+import PigeonPhoto from "./PigeonPhoto.astro";
 
 interface Props {
   city: { slug: string; name: string; region: string; tier: number };
@@ -70,6 +71,7 @@ const breadcrumbSchema = {
     <div class="wrap narrow">
       <h2>Why this matters in {city.name}</h2>
       <p set:html={pageContent.whyItMatters} />
+      {service.slug === "pigeon-proofing-solar-panels" && <PigeonPhoto />}
       {cityContext.communities.length > 0 && (
         <p class="communities-note">
           <strong>Communities we serve in {city.name}:</strong> {cityContext.communities.join(", ")}

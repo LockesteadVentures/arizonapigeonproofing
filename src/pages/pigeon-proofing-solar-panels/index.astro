@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import LocalStatsBlock from "../../components/LocalStatsBlock.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import FaqSection from "../../components/FaqSection.astro";
+import PigeonPhoto from "../../components/PigeonPhoto.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
 import { SERVICE_CONTENT } from "../../data/serviceContent.js";
 
@@ -108,6 +109,7 @@ const stats = [
         <h2>Signs you have pigeons nesting under your panels</h2>
         <p>The gap between a raised solar array and the roof is exactly the sheltered, warm spot pigeons look for in Arizona's heat. A few signs it's already happened:</p>
       </div>
+      <PigeonPhoto />
       <ul class="signs-list">
         {signs.map((s) => <li>{s}</li>)}
       </ul>
