@@ -4,6 +4,7 @@ import { REGIONS, SERVICES } from "../data/locations.js";
 import { CITY_CONTEXT } from "../data/cityContext.js";
 import PigeonPhoto from "./PigeonPhoto.astro";
 import { SERVICE_SEO } from "../lib/seo.js";
+import PriceBlock from "./PriceBlock.astro";
 import { LIVE_CITIES } from "../data/locations.js";
 
 interface Props {
@@ -100,6 +101,16 @@ const breadcrumbSchema = {
         </p>
       )}
       <p class="jurisdiction-note">{pageContent.permitNote}</p>
+      {pageContent.whyDirty && (
+        <>
+          <h2>Why panels get dirty in {city.name}</h2>
+          <p>
+            {pageContent.whyDirty}
+            <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">See what dust and pollen cost in output</a>.
+          </p>
+          <p>Birds under your panels too? See <a href={`/pigeon-proofing-solar-panels/${city.slug}/`}>solar panel pigeon proofing in {city.name}</a>.</p>
+        </>
+      )}
       {pageContent.removalLocal && (
         <>
           <h2>Pigeon removal and nest cleanup for solar homes in {city.name}</h2>
@@ -131,6 +142,14 @@ const breadcrumbSchema = {
       <p class="pillar-link">Want the full picture before you request a quote? Read <a href={`/${service.slug}/`}>{pillarAnchor}</a> across the Tucson Metro.</p>
     </div>
   </section>
+
+  {pageContent.whyDirty && (
+    <section>
+      <div class="wrap narrow">
+        <PriceBlock service="cleaning" heading={`What solar panel cleaning costs in ${city.name}`} city={city.name} />
+      </div>
+    </section>
+  )}
 
   <section>
     <div class="wrap narrow">

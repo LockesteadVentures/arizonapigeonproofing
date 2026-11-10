@@ -97,10 +97,12 @@ export const CITY_CONTEXT = {
           `Tucson's surrounding terrain doesn't set up Phoenix's dramatic haboobs, but the region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself. Rancho Vistoso's 7,600+ acres and Sun City Oro Valley's roughly 2,500 single-level homes (built 1987–1995) both sit in the same wash of desert dust, which is why we recommend cleaning on each side of the season regardless of which community you're in. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What dust and pollen actually cost you in output</a>.`,
         permitNote:
           `Oro Valley is incorporated, so permits and inspections go through the Town of Oro Valley rather than the county — though a routine cleaning visit doesn't typically trigger either.`,
+        whyDirty:
+          "Dust in Oro Valley comes in two waves. Heavy dust settles on the glass ahead of monsoon storms, and when the rain arrives it leaves mineral spotting behind as it dries. Rancho Vistoso's 7,600+ acres and Sun City Oro Valley's roughly 2,500 single-level homes (built 1987-1995) both sit in the same dust, so the schedule is the same whichever community you live in: clean on each side of the season. Pollen adds a film on top of that. Left alone, the build-up trims output quietly, and most homeowners only notice it on a utility bill.",
         faqs: [
           {
-            q: "How often should panels be cleaned in Oro Valley?",
-            a: `Twice a year for most homes — once before monsoon season and once after — though Sun City Oro Valley's single-level rooflines make access easier than a two-story Rancho Vistoso custom home. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
+            q: "How often should I clean my solar panels in Oro Valley?",
+            a: `Twice a year for most homes: once before monsoon season and once after. Heavy dust arrives ahead of the storms, and the rain leaves mineral spotting behind. Sun City Oro Valley's single-level rooflines make access easier than a two-story Rancho Vistoso custom home. <a href="/guides/solar-panel-cleaning-arizona/">See how often panels need cleaning</a>.`,
           },
           {
             q: "Does Sun City Oro Valley's HOA have rules about cleaning trucks or equipment on-site?",
@@ -146,10 +148,12 @@ export const CITY_CONTEXT = {
           `The region's official monsoon season — June 15 through September 30, per the National Weather Service — brings heavy dust ahead of storms and mineral spotting from the rain itself. Marana incorporated in 1977 and has grown fast since; Dove Mountain and Gladden Farms, its two largest master-planned communities, both sit near ongoing new-home construction, which kicks up extra dust beyond the seasonal norm. <a href="/guides/solar-panel-cleaning-arizona/construction-dust-new-build-solar-panels/">How construction dust specifically affects new-build panels</a>.`,
         permitNote:
           `Marana is incorporated, so permits and inspections go through the Town of Marana rather than the county — a routine cleaning visit doesn't typically trigger either.`,
+        whyDirty:
+          "Marana has grown fast since incorporating in 1977. Its two largest master-planned communities, Dove Mountain and Gladden Farms, both sit near ongoing new-home construction, which kicks up extra dust beyond the seasonal norm. Monsoon season, June 15 through September 30, adds heavy dust ahead of the storms and mineral spotting as the rain dries. Fresh grading and nearby framing work throw off more particulate than an established neighborhood does, so panels collect more between cleanings. The loss builds slowly and rarely stands out day to day.",
         faqs: [
           {
-            q: "How often should panels be cleaned in Marana?",
-            a: `Twice a year for most homes; homes near active construction in Dove Mountain or Gladden Farms may need a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
+            q: "How often should I clean my solar panels in Marana?",
+            a: `Twice a year for most homes: once before monsoon season and once after. Homes near active construction in Dove Mountain or Gladden Farms may need a third visit, since construction dust adds to the seasonal dust and the mineral spotting the rain leaves behind. <a href="/guides/solar-panel-cleaning-arizona/">Read the full cleaning guide</a>.`,
           },
           {
             q: "Does new-home construction nearby actually make a measurable difference?",
@@ -336,10 +340,12 @@ export const CITY_CONTEXT = {
           `The region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself. The Foothills is unincorporated Pima County; La Paloma, Ventana Canyon, and Skyline Country Club are its three best-known guard-gated communities, and their mountain-facing lots tend to catch more windblown dust than homes further down the valley. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What that build-up actually costs in output</a>.`,
         permitNote:
           `Catalina Foothills is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically trigger either.`,
+        whyDirty:
+          "The Foothills is unincorporated Pima County, and mountain-facing lots in La Paloma, Ventana Canyon and Skyline Country Club tend to catch more windblown dust than homes further down the valley. Monsoon season, June 15 through September 30, adds heavy dust ahead of the storms and mineral spotting from the rain itself. On exposed lots, that can add up faster than a twice-a-year rhythm assumes. The build-up cuts output gradually, which is why it often goes unnoticed until you check your monitoring app or your utility bill.",
         faqs: [
           {
-            q: "How often should panels be cleaned in Catalina Foothills?",
-            a: `Twice a year for most homes — exposed, mountain-adjacent lots in La Paloma or Ventana Canyon may need a third visit. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
+            q: "How often should I clean my solar panels in Catalina Foothills?",
+            a: `Twice a year for most homes: once before monsoon season and once after. Exposed, mountain-adjacent lots in La Paloma or Ventana Canyon may need a third visit, since they catch more windblown dust. Dust builds up ahead of the storms, and the rain leaves mineral spotting as it dries. <a href="/guides/solar-panel-cleaning-arizona/">Read the full cleaning guide</a>.`,
           },
           {
             q: "Do guard-gated Foothills communities need advance notice for a cleaning visit?",
@@ -428,10 +434,12 @@ export const CITY_CONTEXT = {
           `The region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself. Casas Adobes has stayed unincorporated since developer Sam Nanini began building its original subdivisions in the mid-1950s, and its acre-plus lots — some of the largest in the Tucson area — typically carry bigger arrays that take longer to clean but also show a more noticeable output recovery afterward. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What that build-up actually costs in output</a>.`,
         permitNote:
           `Casas Adobes is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
+        whyDirty:
+          "Casas Adobes lots often run over an acre, which usually means bigger roofs and larger panel arrays. More glass collects more dust, and monsoon season, June 15 through September 30, adds heavy dust ahead of the storms and mineral spotting from the rain. Larger arrays take longer to clean but also show a more noticeable output recovery afterward. Dust and pollen build up slowly enough that most homeowners only spot the loss in their monitoring app or on a utility bill.",
         faqs: [
           {
-            q: "How often should panels be cleaned in Casas Adobes?",
-            a: `Twice a year for most homes; larger arrays are quoted by square footage rather than a flat per-visit rate. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
+            q: "How often should I clean my solar panels in Casas Adobes?",
+            a: `Twice a year for most homes: once before monsoon season and once after. Heavy dust arrives ahead of the storms, and the rain leaves mineral spotting behind. Larger arrays on bigger Casas Adobes lots are quoted by square footage rather than a flat per-visit rate. <a href="/guides/solar-panel-cleaning-arizona/">See the full cleaning guide</a>.`,
           },
           {
             q: "Do larger Casas Adobes lots take longer to clean?",
@@ -520,7 +528,13 @@ export const CITY_CONTEXT = {
           `The region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself. Tanque Verde is horse country, with a working ranching history going back to Tanque Verde Ranch's founding in 1868, and many of its large-acreage properties sit on unpaved or lightly paved roads near Saguaro National Park's Rincon Mountain District — both factors that add dust beyond the seasonal norm. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What that build-up actually costs in output</a>.`,
         permitNote:
           `Tanque Verde is unincorporated, so permits and inspections go through Pima County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
+        whyDirty:
+          "Tanque Verde is horse country, and many large-acreage properties sit on unpaved or lightly paved roads near Saguaro National Park's Rincon Mountain District. That adds dust beyond the seasonal norm. During monsoon season, June 15 through September 30, heavy dust arrives ahead of the storms and the rain leaves mineral spotting behind. Horse-property dust can also add a gritty component, such as hay or arena footing. Together, panels here can collect more between cleanings than panels on a paved street, and the lost output shows up slowly.",
         faqs: [
+          {
+            q: "How often should I clean my solar panels in Tanque Verde?",
+            a: `Twice a year is the baseline: once before monsoon season and once after. Homes on unpaved roads or larger acreage tend to collect dust faster, so some Tanque Verde properties may want a third visit. Dust arrives ahead of the storms, and the rain leaves mineral spotting as it dries. <a href="/guides/solar-panel-cleaning-arizona/">Read the full cleaning guide</a>.`,
+          },
           {
             q: "Do larger, unpaved-road properties in Tanque Verde need more frequent cleaning?",
             a: `Generally yes — homes on unpaved roads or larger acreage tend to accumulate dust faster between monsoon and haboob seasons than panels closer to paved, developed streets. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule as a baseline</a>.`,
@@ -655,10 +669,12 @@ export const CITY_CONTEXT = {
           `The region's official monsoon season — June 15 through September 30, per the National Weather Service — still means heavy dust ahead of storms and mineral spotting from the rain itself. SaddleBrooke is a 55+ age-restricted community in the Santa Catalina Mountain foothills near Oracle, developed by Robson Communities, with SaddleBrooke Ranch as a newer, separate age-restricted Robson community nearby — both sit high enough against the mountains to catch extra windblown dust beyond the valley-floor norm. <a href="/guides/solar-panel-cleaning-arizona/dust-pollen-solar-output-loss-arizona/">What that build-up actually costs in output</a>.`,
         permitNote:
           `SaddleBrooke is unincorporated, so permits and inspections go through Pinal County rather than a local town government — a routine cleaning visit doesn't typically require one either way.`,
+        whyDirty:
+          "SaddleBrooke and SaddleBrooke Ranch both sit in the Santa Catalina Mountain foothills near Oracle, high enough against the mountains to catch extra windblown dust beyond the valley-floor norm. Add the monsoon season, June 15 through September 30, with heavy dust ahead of the storms and mineral spotting from the rain, and panels pick up a lot between cleanings. Single-level roofs make access simple, but the dust still cuts output gradually and quietly. Most owners only notice the dip after the fact.",
         faqs: [
           {
-            q: "How often should panels be cleaned in SaddleBrooke?",
-            a: `Twice a year for most homes. <a href="/guides/solar-panel-cleaning-arizona/seasonal-homeowner-cleaning-schedule/">The full seasonal schedule</a>.`,
+            q: "How often should I clean my solar panels in SaddleBrooke?",
+            a: `Twice a year for most homes: once before monsoon season and once after. SaddleBrooke's position against the mountains means extra windblown dust, and the monsoon rain leaves mineral spotting as it dries, so cleaning on both sides of the season keeps output steady. <a href="/guides/solar-panel-cleaning-arizona/">See the full cleaning guide</a>.`,
           },
           {
             q: "Are SaddleBrooke's single-level homes quicker to clean than a two-story house?",
