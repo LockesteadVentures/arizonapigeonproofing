@@ -98,7 +98,7 @@ export const CITY_CONTEXT = {
         permitNote:
           `Oro Valley is incorporated, so permits and inspections go through the Town of Oro Valley rather than the county — though a routine cleaning visit doesn't typically trigger either.`,
         whyDirty:
-          "Dust in Oro Valley comes in two waves. Heavy dust settles on the glass ahead of monsoon storms, and when the rain arrives it leaves mineral spotting behind as it dries. Rancho Vistoso's 7,600+ acres and Sun City Oro Valley's roughly 2,500 single-level homes (built 1987-1995) both sit in the same dust, so the schedule is the same whichever community you live in: clean on each side of the season. Pollen adds a film on top of that. Left alone, the build-up trims output quietly, and most homeowners only notice it on a utility bill.",
+          "Dust in Oro Valley comes in two waves. Heavy dust settles on the glass ahead of monsoon storms, and when the rain arrives it leaves mineral spotting behind as it dries. Rancho Vistoso and Sun City Oro Valley both sit in the same dust, so the schedule is the same whichever community you live in: clean on each side of the season. Pollen adds a film on top of that. Left alone, the build-up trims output quietly, and most homeowners only notice it on a utility bill.",
         faqs: [
           {
             q: "How often should I clean my solar panels in Oro Valley?",

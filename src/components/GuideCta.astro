@@ -42,7 +42,7 @@ const location = `guide_${kind}_${variant}`;
 
 {kind === "inline" ? (
   <p class="guide-inline-cta">
-    {INLINE.lead}
+    {INLINE.lead}{" "}
     <a href={INLINE.href} data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>{anchor}</a>.
   </p>
 ) : (
@@ -50,16 +50,14 @@ const location = `guide_${kind}_${variant}`;
     {variant === "pigeon" ? (
       <p>
         Pigeons already under your panels in the Tucson area? A local crew removes the nests, sanitizes, and fits
-        stainless bird mesh, usually in one visit.
-        <a href="/pigeon-proofing-solar-panels/tucson/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel pigeon proofing in Tucson</a>
-        or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
+        stainless bird mesh, usually in one visit.{" "}
+        <a href="/pigeon-proofing-solar-panels/tucson/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel pigeon proofing in Tucson</a>{" "}or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
       </p>
     ) : (
       <p>
         Panels dusty or spotted in the Tucson area? A local crew washes them with spot-free deionized water and soft
-        tools only.
-        <a href="/solar-panel-cleaning/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel cleaning in the Tucson Metro</a>
-        or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
+        tools only.{" "}
+        <a href="/solar-panel-cleaning/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel cleaning in the Tucson Metro</a>{" "}or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
       </p>
     )}
   </aside>
