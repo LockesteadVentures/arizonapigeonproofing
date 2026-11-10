@@ -1,22 +1,21 @@
 ---
 // Supporting photo for the pigeon-proofing pages (hub + every city page).
 // Describes the scene only -- it is not presented as a completed customer job.
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import photo from "../assets/pigeons-on-solar-roof.jpg";
 ---
 
 <figure class="pigeon-photo">
-  <Image
+  <Picture
     src={photo}
     alt="A row of pigeons perched along the ridge of a tile roof directly above a rooftop solar array"
     widths={[480, 760, 1140]}
     sizes="(max-width: 800px) 100vw, 760px"
-    format="webp"
-    quality={78}
+    formats={["avif", "webp"]}
     loading="lazy"
     decoding="async"
   />
-  <figcaption>Pigeons lining up along the ridge, right above the array — the first step before they start nesting underneath.</figcaption>
+  <figcaption>Pigeons lining up along the ridge, right above the array.</figcaption>
 </figure>
 
 <style>
