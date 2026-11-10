@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, getEntry, render } from "astro:content";
+import GuideCta from "../../components/GuideCta.astro";
+import PriceBlock from "../../components/PriceBlock.astro";
 
 export async function getStaticPaths() {
   const guides = await getCollection("guides", ({ data }) => !data.draft);
@@ -46,6 +48,22 @@ function extractFaqs(markdownBody: string | undefined) {
     answer: stripInlineMarkdown(m[2].trim()),
   }));
 }
+
+// Which CTA variant a guide gets. Pigeon guides point at pigeon proofing; cleaning and
+// maintenance guides point at cleaning. HOA guides are left alone (not in the plan).
+const ctaVariant: "pigeon" | "cleaning" | null = entry.id.startsWith("pigeons-and-solar-panels")
+  ? "pigeon"
+  : entry.id.startsWith("solar-panel-cleaning-arizona") || entry.id.startsWith("solar-panel-maintenance-arizona")
+    ? "cleaning"
+    : null;
+
+// Cost guides also get the (gated) price block and a link to the matching Tucson page.
+const COST_GUIDES: Record<string, { service: "proofing" | "cleaning"; href: string; label: string }> = {
+  "pigeons-and-solar-panels/pigeon-damage-cost": { service: "proofing", href: "/pigeon-proofing-solar-panels/tucson/", label: "solar panel pigeon proofing in Tucson" },
+  "pigeons-and-solar-panels/solar-panel-bird-proofing-cost-tucson": { service: "proofing", href: "/pigeon-proofing-solar-panels/tucson/", label: "solar panel pigeon proofing in Tucson" },
+  "solar-panel-cleaning-arizona/solar-panel-cleaning-cost-tucson": { service: "cleaning", href: "/solar-panel-cleaning/tucson/", label: "solar panel cleaning in Tucson" },
+};
+const costGuide = COST_GUIDES[entry.id];
 
 const faqs = extractFaqs(entry.body);
 const faqSchema = faqs.length
@@ -98,7 +116,15 @@ const breadcrumbSchema = hub
   </section>
   <section>
     <div class="wrap narrow article">
+      {ctaVariant && <GuideCta variant={ctaVariant} kind="inline" guideId={entry.id} />}
       <Content />
+      {costGuide && (
+        <>
+          <PriceBlock service={costGuide.service} heading={costGuide.service === "proofing" ? "What solar panel bird proofing costs" : "What solar panel cleaning costs"} city="Tucson" />
+          <p>Ready for a real number? See <a href={costGuide.href}>{costGuide.label}</a>.</p>
+        </>
+      )}
+      {ctaVariant && <GuideCta variant={ctaVariant} kind="block" guideId={entry.id} />}
     </div>
   </section>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />

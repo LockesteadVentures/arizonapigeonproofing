@@ -1,0 +1,73 @@
+---
+// Passes readers from guides to the quote/service pages (SEO plan, Task 12).
+// `kind="block"` is the end-of-article CTA; `kind="inline"` is the short link near the
+// top (the first third of the page). Inline anchor text rotates by guide so the same
+// keyword anchor is not repeated across every guide.
+interface Props {
+  variant: "pigeon" | "cleaning";
+  kind: "block" | "inline";
+  guideId?: string;
+}
+
+const { variant, kind, guideId = "" } = Astro.props;
+
+const hash = [...guideId].reduce((n, ch) => (n * 31 + ch.charCodeAt(0)) >>> 0, 7);
+
+const INLINE = {
+  pigeon: {
+    href: "/pigeon-proofing-solar-panels/tucson/",
+    lead: "Pigeons under your panels right now?",
+    anchors: [
+      "See solar panel pigeon proofing in Tucson",
+      "Get pigeons out from under your solar panels",
+      "See how a local crew proofs a solar array",
+      "Local pigeon proofing for Tucson-area solar homes",
+    ],
+  },
+  cleaning: {
+    href: "/solar-panel-cleaning/",
+    lead: "Panels dusty or spotted after monsoon?",
+    anchors: [
+      "See solar panel cleaning in the Tucson Metro",
+      "Get your panels washed with deionized water",
+      "See how a local crew cleans a solar array",
+      "Local solar panel cleaning for Tucson-area homes",
+    ],
+  },
+}[variant];
+
+const anchor = INLINE.anchors[hash % INLINE.anchors.length];
+const location = `guide_${kind}_${variant}`;
+---
+
+{kind === "inline" ? (
+  <p class="guide-inline-cta">
+    {INLINE.lead}
+    <a href={INLINE.href} data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>{anchor}</a>.
+  </p>
+) : (
+  <aside class="guide-cta-block">
+    {variant === "pigeon" ? (
+      <p>
+        Pigeons already under your panels in the Tucson area? A local crew removes the nests, sanitizes, and fits
+        stainless bird mesh, usually in one visit.
+        <a href="/pigeon-proofing-solar-panels/tucson/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel pigeon proofing in Tucson</a>
+        or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
+      </p>
+    ) : (
+      <p>
+        Panels dusty or spotted in the Tucson area? A local crew washes them with spot-free deionized water and soft
+        tools only.
+        <a href="/solar-panel-cleaning/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: location })}>See solar panel cleaning in the Tucson Metro</a>
+        or <a href="/quote/" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: `${location}_quote` })}>get a free quote</a>.
+      </p>
+    )}
+  </aside>
+)}
+
+<style>
+  .guide-inline-cta { margin: 0 0 1.4rem; padding: 0.7rem 1rem; border-left: 3px solid var(--teal); background: var(--teal-soft); border-radius: 0 8px 8px 0; font-size: 0.92rem; }
+  .guide-inline-cta a, .guide-cta-block a { color: var(--teal); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+  .guide-cta-block { margin: 2.5rem 0 1rem; padding: 1.3rem 1.5rem; border: 1px solid var(--teal); background: var(--teal-soft); border-radius: 12px; }
+  .guide-cta-block p { margin: 0; line-height: 1.65; font-size: 0.97rem; }
+</style>
