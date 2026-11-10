@@ -73,6 +73,8 @@ export const CITY_CONTEXT = {
           `Oro Valley incorporated in 1974 specifically so residents could set their own rules rather than be annexed by Tucson. Rancho Vistoso, its largest master-planned area, covers over 7,600 acres, and Sun City Oro Valley (formerly Sun City Vistoso) is a Del Webb 55+ community of roughly 2,500 single-level homes built 1987–1995 — the kind of low-slung roofline where a raised array creates an especially easy nesting gap. <a href="/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/">Signs pigeons are already using the space under your panels</a>.`,
         permitNote:
           `Oro Valley is incorporated, so permits and inspections go through the Town of Oro Valley rather than the county.`,
+        removalLocal:
+          "In Sun City Oro Valley, where single-level rooflines make a raised array an easy nesting gap, we clear the space first and then seal it.",
         faqs: [
           {
             q: "Does Rancho Vistoso or Sun City Oro Valley require HOA approval for bird mesh?",
@@ -81,6 +83,10 @@ export const CITY_CONTEXT = {
           {
             q: "What does unpermitted bird mesh actually risk in an HOA community like Sun City Oro Valley?",
             a: `Mostly a fine-and-remove letter rather than anything structural — but it's an avoidable hassle. <a href="/guides/hoa-solar-panel-rules-arizona/installing-bird-mesh-without-hoa-approval-risk/">What actually happens if you skip HOA approval</a>.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Oro Valley?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -116,6 +122,8 @@ export const CITY_CONTEXT = {
           `Marana incorporated in 1977 and has grown fast since. Dove Mountain, in the Tortolita Mountain foothills, and Gladden Farms, with over 850 acres of parks and trails, are its two largest master-planned communities, both with active HOAs. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">How ground-mounted arrays compare to roof-mounted ones for nesting risk</a> — relevant here given how many newer Marana installs use taller racking.`,
         permitNote:
           `Marana is incorporated, so permits and inspections go through the Town of Marana rather than the county.`,
+        removalLocal:
+          "Many newer Dove Mountain and Gladden Farms installs use taller racking, so we check the full gap under the array before sealing it.",
         faqs: [
           {
             q: "Do Dove Mountain and Gladden Farms have different HOA rules for solar equipment?",
@@ -124,6 +132,10 @@ export const CITY_CONTEXT = {
           {
             q: "Are newer Dove Mountain and Gladden Farms homes more prone to nesting under panels?",
             a: `Often, yes — taller racking on newer installs creates a bigger, more sheltered gap than older flush-mount setups. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why pigeons choose the space under a panel in the first place</a>.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Marana?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -159,6 +171,8 @@ export const CITY_CONTEXT = {
           `Sahuarita incorporated in 1994 and is one of the youngest towns in southern Arizona. Rancho Sahuarita, its original master-planned community, now has around 18,000 residents, and Quail Creek, a Robson-built 55+ community within town limits, adds a second HOA-governed pocket with its own architectural rules. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why the gap under a raised array is exactly what pigeons look for</a>.`,
         permitNote:
           `Sahuarita is incorporated, so permits and inspections go through the Town of Sahuarita rather than the county.`,
+        removalLocal:
+          "That applies in Rancho Sahuarita and Quail Creek alike, where the gap under a raised array is exactly what pigeons look for.",
         faqs: [
           {
             q: "Is Quail Creek's HOA process different from Rancho Sahuarita's?",
@@ -167,6 +181,10 @@ export const CITY_CONTEXT = {
           {
             q: "Does Madera Highlands have the same nesting issues as Rancho Sahuarita?",
             a: `Generally yes — panel height and roof pitch matter more than which subdivision you're in, which is why we inspect every roof individually rather than quoting off the community name alone.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Sahuarita?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -245,6 +263,8 @@ export const CITY_CONTEXT = {
           `Vail residents have voted down incorporation twice, most recently in 2023, so it stays unincorporated Pima County land even as it's grown fast. Rocking K Ranch, preserving 30% of its native desert in the master plan, and two separate Del Webb 55+ communities (Rancho del Lago and the newer Rocking K location) are driving most of that growth — and the preserved desert acreage right up against the built areas means more birds in the immediate area than a fully built-out suburb. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why pigeons choose the space under a panel in the first place</a>.`,
         permitNote:
           `Vail is unincorporated, so permits and inspections go through Pima County rather than a local town government.`,
+        removalLocal:
+          "Rocking K Ranch and the Del Webb communities sit right up against preserved desert, where more birds are nearby, so clearing nests and sealing the gap matters.",
         faqs: [
           {
             q: "Do I need HOA approval for bird mesh in Vail?",
@@ -253,6 +273,10 @@ export const CITY_CONTEXT = {
           {
             q: "Does Vail have its own building department for permits?",
             a: `No — Vail residents have voted against incorporating twice, so Pima County handles permitting rather than a town government. Individual HOAs like Rocking K still run their own architectural review separately.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Vail?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -288,6 +312,8 @@ export const CITY_CONTEXT = {
           `The Foothills is unincorporated Pima County, but its three best-known guard-gated communities each run their own tight architectural review: La Paloma (856 homes across ten sub-associations, centered on its country club), Ventana Canyon (custom and semi-custom homes against dramatic canyon scenery), and Skyline Country Club. Custom homes here often mean larger, more varied roof geometry — and more places for a nest to tuck in unnoticed. <a href="/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/">Signs pigeons are already using the space under your panels</a>.`,
         permitNote:
           `Catalina Foothills is unincorporated, so permits and inspections go through Pima County rather than a local town government.`,
+        removalLocal:
+          "Larger, more varied roofs in communities like La Paloma and Ventana Canyon leave more places for a nest to tuck in unnoticed, so we check the whole array.",
         faqs: [
           {
             q: "Do guard-gated Foothills communities need advance notice for a crew visit?",
@@ -296,6 +322,10 @@ export const CITY_CONTEXT = {
           {
             q: "Do La Paloma, Ventana Canyon, or Skyline require HOA sign-off before mesh goes up?",
             a: `All three run tight architectural review, more so than a standard subdivision — we build the submittal into the timeline up front. <a href="/guides/hoa-solar-panel-rules-arizona/hoa-approval-spec-sheet/">What that submittal typically needs to include</a>.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Catalina Foothills?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -374,6 +404,8 @@ export const CITY_CONTEXT = {
           `Casas Adobes has stayed unincorporated since developer Sam Nanini began building its original subdivisions in the mid-1950s. Lots here often run over an acre — larger than almost anywhere else in the Tucson area — which usually means bigger roofs and larger panel arrays than a standard suburban lot, and more perimeter for nesting material to collect along. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">Why array size changes the nesting picture</a>.`,
         permitNote:
           `Casas Adobes is unincorporated, so permits and inspections go through Pima County rather than a local town government.`,
+        removalLocal:
+          "On the larger Casas Adobes lots, bigger arrays mean more perimeter where nesting material can collect, so we clear and seal the whole array.",
         faqs: [
           {
             q: "Do larger Casas Adobes lots mean a bigger panel array to service?",
@@ -382,6 +414,10 @@ export const CITY_CONTEXT = {
           {
             q: "Does an older, mid-century Casas Adobes home need a different mesh install?",
             a: `It can — homes built since the Nanini-era subdivisions of the 1950s span a wide range of roof ages and mounting hardware, which is why we inspect in person before quoting. <a href="/guides/pigeons-and-solar-panels/ground-mounted-vs-roof-mounted-pigeon-risk/">How roof age affects mesh fit</a>.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Casas Adobes?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -460,6 +496,8 @@ export const CITY_CONTEXT = {
           `Tanque Verde is horse country — large lots, custom homes, and a working ranching history going back to Tanque Verde Ranch's founding in 1868, on the east side of town near Saguaro National Park's Rincon Mountain District. Barns, stables, and other outbuildings common on these larger properties give pigeons more nearby roosting options, which often means a bigger, more established flock finds its way to the solar array too. <a href="/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/">How to tell if pigeons are already established under your panels</a>.`,
         permitNote:
           `Tanque Verde is unincorporated, so permits and inspections go through Pima County rather than a local town government.`,
+        removalLocal:
+          "Barns and stables on larger Tanque Verde properties give pigeons more nearby roosting options, so a bigger flock may already be established under the array, which is why nest removal comes first.",
         faqs: [
           {
             q: "Do larger Tanque Verde properties need more mesh than a standard house?",
@@ -468,6 +506,10 @@ export const CITY_CONTEXT = {
           {
             q: "Do nearby barns or stables make pigeon problems worse under solar panels?",
             a: `Often, yes — outbuildings give pigeons a nearby home base, which tends to mean a more established, harder-to-discourage flock finds the array too. <a href="/guides/pigeons-and-solar-panels/why-pigeons-nest-under-solar-panels/">What draws pigeons to the space under a panel in the first place</a>.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in Tanque Verde?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },
@@ -589,6 +631,8 @@ export const CITY_CONTEXT = {
           `SaddleBrooke is a 55+ age-restricted community in the Santa Catalina Mountain foothills near Oracle, developed by Robson Communities, with SaddleBrooke Ranch as a newer, separate age-restricted Robson community nearby. The single-level roof style common to both communities creates a shorter, more uniform gap under the array than a mixed-height subdivision — consistent enough that most installs here follow a predictable pattern. <a href="/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/">What that typical nesting pattern looks like</a>.`,
         permitNote:
           `SaddleBrooke is unincorporated, so permits and inspections go through Pinal County (with architectural review handled separately by the SaddleBrooke Community Association) rather than a local town government.`,
+        removalLocal:
+          "The single-level roof style in SaddleBrooke and SaddleBrooke Ranch makes for a shorter, more uniform gap under the array, so most jobs there follow a predictable pattern.",
         faqs: [
           {
             q: "Is SaddleBrooke's HOA architectural review stricter than other 55+ communities?",
@@ -597,6 +641,10 @@ export const CITY_CONTEXT = {
           {
             q: "Does SaddleBrooke Ranch have the same HOA process as the original SaddleBrooke community?",
             a: `They're separate associations with their own architectural review, though both are Robson-developed and generally straightforward for bird mesh once the paperwork is submitted.`,
+          },
+          {
+            q: "Do you remove pigeons or just install mesh in SaddleBrooke?",
+            a: "We remove existing nests and droppings, then seal the gap with mesh so pigeons cannot return.",
           },
         ],
       },

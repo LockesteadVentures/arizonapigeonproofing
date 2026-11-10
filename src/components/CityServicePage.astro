@@ -100,6 +100,17 @@ const breadcrumbSchema = {
         </p>
       )}
       <p class="jurisdiction-note">{pageContent.permitNote}</p>
+      {pageContent.removalLocal && (
+        <>
+          <h2>Pigeon removal and nest cleanup for solar homes in {city.name}</h2>
+          <p>
+            If pigeons have already moved in under your array in {city.name}, the first job is removing the nests and
+            droppings, then sealing the gap so they cannot return. We handle both in one visit: nest removal and
+            sanitizing first, then rail-mounted stainless <a href="/pigeon-proofing-solar-panels/">bird mesh</a>. That
+            is what pigeon removal means for a solar home. {pageContent.removalLocal}
+          </p>
+        </>
+      )}
     </div>
   </section>
 
@@ -186,6 +197,7 @@ const breadcrumbSchema = {
 
   .communities-note { font-size: 0.92rem; }
   .communities-note strong { font-weight: 700; }
+  .wrap.narrow p a { text-decoration: underline; text-underline-offset: 2px; color: var(--teal); font-weight: 600; }
   .jurisdiction-note { font-size: 0.85rem; color: var(--text-dim); font-style: italic; }
 
   .process-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1.5rem; }
