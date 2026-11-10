@@ -4,6 +4,7 @@ import LocalStatsBlock from "../../components/LocalStatsBlock.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import FaqSection from "../../components/FaqSection.astro";
 import PigeonPhoto from "../../components/PigeonPhoto.astro";
+import PriceBlock from "../../components/PriceBlock.astro";
 import { liveCitiesByRegion, REGIONS } from "../../data/locations.js";
 import { SERVICE_CONTENT } from "../../data/serviceContent.js";
 
@@ -91,8 +92,8 @@ const stats = [
   <section class="hub-hero">
     <div class="wrap">
       <span class="eyebrow">Service</span>
-      <h1>Pigeon Proofing for Solar Panels</h1>
-      <p class="lede">Stainless mesh, fitted to your array, installed by a local Tucson crew. Pick your city below for local details and a free quote.</p>
+      <h1>Solar Panel Pigeon Proofing in the Tucson Metro</h1>
+      <p class="lede">Solar panel pigeon proofing means sealing the gap between your panels and roof with stainless bird mesh after removing existing nests and droppings. The mesh clips to the panel rails, not the roof, so it does not affect your roofing or panel warranty.</p>
       <div class="cta-row">
         <a href="/quote/" class="btn amber" data-gtm-event="cta_click" data-gtm-params='{"cta_location":"service_hub","service":"pigeon-proofing-solar-panels"}'>Get a Free Quote</a>
       </div>
@@ -124,6 +125,7 @@ const stats = [
       <div class="section-head">
         <span class="eyebrow">The process</span>
         <h2>How it's done</h2>
+        <p>You may see this called solar panel bird mesh, bird netting, or a critter guard. It is the same fix: a barrier along the panel edge that keeps birds out.</p>
       </div>
       <div class="process-list">
         {methodology.map((step, i) => (
@@ -141,18 +143,47 @@ const stats = [
 
   <section>
     <div class="wrap narrow">
-      <LocalStatsBlock heading="Solar in Tucson, by the numbers" stats={stats} />
+      <PriceBlock service="proofing" heading="What solar panel bird proofing costs" />
+      <div class="section-head compare-head">
+        <span class="eyebrow">Your options</span>
+        <h2>Bird mesh vs spikes vs sonic deterrents vs decoys</h2>
+      </div>
+      <p class="compare-copy">
+        Mesh is the only method on this list that physically blocks the space under your array. The other three try
+        to discourage birds instead, and that is where they fall short.
+      </p>
+      <p class="compare-copy">
+        Spikes and sonic deterrents can push pigeons to a neighboring roof instead of solving the problem, and the
+        gap under your panels stays open. Decoys tend to stop working once pigeons get used to them. Mesh does not
+        depend on pigeons being scared of anything. It closes the gap, so there is nowhere to nest.
+      </p>
+      <p class="compare-copy">
+        Because the mesh clips to the panel rails, it does not touch your roof or affect your warranty.
+        <a href="/guides/pigeons-and-solar-panels/bird-mesh-vs-spikes-vs-sonic-vs-decoys/">See the full comparison of all four methods</a>.
+      </p>
     </div>
   </section>
 
   <section class="alt">
+    <div class="wrap narrow">
+      <LocalStatsBlock heading="Solar in Tucson, by the numbers" stats={stats} />
+    </div>
+  </section>
+
+  <section>
     <div class="wrap">
       <Testimonials ctaLocation="pigeon_hub_testimonials" />
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap narrow">
+      <p class="metro-links">
+        Start with <a href="/pigeon-proofing-solar-panels/tucson/">solar panel pigeon proofing in Tucson</a>, or go
+        straight to your suburb: <a href="/pigeon-proofing-solar-panels/oro-valley/">bird mesh installation in Oro Valley</a>,
+        <a href="/pigeon-proofing-solar-panels/marana/">pigeon proofing for Marana solar homes</a>, or
+        <a href="/pigeon-proofing-solar-panels/sahuarita/">solar panel bird proofing in Sahuarita</a>.
+      </p>
       <div class="region-block">
         <h2>{REGIONS.tucson.name}</h2>
         <p class="pill-group-label">Primary service areas</p>
@@ -179,7 +210,7 @@ const stats = [
     </div>
   </section>
 
-  <section class="alt">
+  <section>
     <div class="wrap narrow">
       <FaqSection id="faq" heading="Frequently asked" items={faqs} />
     </div>
@@ -238,6 +269,10 @@ const stats = [
   .soon-note { color: var(--text-dim); font-style: italic; }
   .pill-group-label { font-family: ui-monospace, monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin: 0 0 0.6rem; }
   .pill-group-label:not(:first-child) { margin-top: 1.2rem; }
+  .metro-links, .compare-copy { line-height: 1.7; }
+  .metro-links { margin: 0 0 2rem; font-size: 0.95rem; }
+  .metro-links a, .compare-copy a, .section-head p a { font-weight: 700; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+  .compare-head { margin-top: 2.5rem; }
   .guide-link { font-size: 0.92rem; color: var(--text-dim); }
   .guide-link a { font-weight: 700; color: var(--teal); }
 
