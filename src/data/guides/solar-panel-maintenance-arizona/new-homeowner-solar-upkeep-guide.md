@@ -1,6 +1,6 @@
 ---
 title: "New to Solar? What Arizona Homeowners Should Know About Upkeep"
-description: "Considering solar in Arizona? Learn what upkeep to expect after installation — heat, dust, pollen, monsoon, and pigeons — before you sign a contract."
+description: "Considering solar in Arizona? Learn what upkeep to expect after installation (heat, dust, pollen, monsoon, and pigeons) before you sign a contract."
 publishDate: 2026-08-20
 draft: false
 ---

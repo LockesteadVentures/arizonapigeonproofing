@@ -18,9 +18,11 @@ interface Props {
   // previously hardcoded to "Tucson" even on Oro Valley/Vail/etc pages, wasting
   // the local-relevance signal those pages should carry.
   areaServed?: { name: string } | { name: string }[];
+  // Keeps a page out of the index (still crawlable/followable). Used for terms and privacy.
+  noindex?: boolean;
 }
 
-const { title, description, pageData = {}, areaServed } = Astro.props;
+const { title, description, pageData = {}, areaServed, noindex = false } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const defaultAreaServed = liveCitiesByRegion("tucson").map((c) => ({
@@ -59,6 +61,7 @@ const localBusinessSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />

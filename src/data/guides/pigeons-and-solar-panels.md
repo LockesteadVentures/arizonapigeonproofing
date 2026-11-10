@@ -1,6 +1,6 @@
 ---
 title: "Pigeons and Solar Panels: The Complete Arizona Guide"
-description: "Pigeons and solar panels are a bad match in Arizona — nesting, droppings, and wiring damage are common. Here's why it happens, what it costs, and how to stop it."
+description: "Pigeons and solar panels are a bad match in Arizona. Nesting, droppings, and wiring damage are common. Here's why, what it costs, and how to stop it."
 publishDate: 2026-08-21
 draft: false
 ---

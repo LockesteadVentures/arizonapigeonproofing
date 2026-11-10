@@ -16,8 +16,8 @@ const cities = liveCitiesByRegion(regionKey);
 ---
 
 <BaseLayout
-  title={`${region.name} | Arizona Pigeon Proofing`}
-  description={`Solar panel pigeon proofing and cleaning across ${region.name}, Arizona.`}
+  title={regionKey === "tucson" ? "Solar Panel Services in the Tucson Metro | 15 Cities" : `${region.name} | Arizona Pigeon Proofing`}
+  description={regionKey === "tucson" ? "Find your city: solar panel pigeon proofing and cleaning across Tucson, Oro Valley, Marana, Sahuarita and more. Free quote in 24-48 hours." : `Solar panel pigeon proofing and cleaning across ${region.name}, Arizona.`}
   pageData={{ content_group: "location_region_hub", metro: regionKey }}
 >
   <section class="hub-hero">

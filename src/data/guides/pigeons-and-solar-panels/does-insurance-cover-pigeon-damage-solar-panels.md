@@ -1,6 +1,6 @@
 ---
 title: "Does Home Insurance Cover Pigeon Damage to Solar Panels?"
-description: "Does insurance cover pigeon damage to solar panels? Usually not — most policies treat bird and pest damage as gradual wear. Here's how to check yours."
+description: "Does insurance cover pigeon damage to solar panels? Usually not. Most policies treat bird and pest damage as gradual wear. Here's how to check yours."
 publishDate: 2026-08-21
 draft: false
 ---

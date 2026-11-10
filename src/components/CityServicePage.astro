@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { REGIONS, SERVICES } from "../data/locations.js";
 import { CITY_CONTEXT } from "../data/cityContext.js";
 import PigeonPhoto from "./PigeonPhoto.astro";
+import { SERVICE_SEO } from "../lib/seo.js";
 
 interface Props {
   city: { slug: string; name: string; region: string; tier: number };
@@ -15,6 +16,7 @@ interface Props {
 
 const { city, region, service, otherService, content, nearby } = Astro.props;
 const cityContext = CITY_CONTEXT[city.slug];
+const seo = SERVICE_SEO[service.slug];
 const pageContent = cityContext.content[service.slug];
 
 // Prefills the quote form's metro/city/service fields for whoever clicks through
@@ -51,15 +53,15 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`${service.name} in ${city.name}, AZ`}
-  description={`${service.name} for homeowners in ${city.name}, Arizona. Free quotes, local crews, 24–48 hour turnaround.`}
+  title={seo.title(city.name)}
+  description={seo.meta(city.name)}
   pageData={{ content_group: "city_service_page", metro: city.region, service: service.slug, city: city.slug }}
   areaServed={{ name: city.name }}
 >
   <section class="page-hero">
     <div class="wrap">
       <span class="eyebrow">{region.name} &middot; {city.name}, AZ</span>
-      <h1>{service.name} in {city.name}</h1>
+      <h1>{seo.h1(city.name)}</h1>
       <p class="lede">{pageContent.intro}</p>
       <div class="cta-row">
         <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_hero","metro":"${city.region}","service":"${service.slug}"}`}>Get a Free Quote</a>
@@ -100,7 +102,7 @@ const breadcrumbSchema = {
 
   <section>
     <div class="wrap narrow">
-      <h2>Frequently asked — {city.name}</h2>
+      <h2>Frequently asked in {city.name}</h2>
       <div class="faq-list">
         {pageContent.faqs.map((f: any) => (
           <details class="faq-item">

@@ -1,6 +1,6 @@
 ---
 title: "The Complete Solar Panel Maintenance Checklist for Arizona Homes"
-description: "The full solar panel maintenance checklist for Arizona homes — cleaning timing, monitoring checks, pigeon inspection, and storm damage. Save or print it."
+description: "The full solar panel maintenance checklist for Arizona homes: cleaning timing, monitoring checks, pigeon inspection, and storm damage. Save or print it."
 publishDate: 2026-08-20
 draft: false
 ---

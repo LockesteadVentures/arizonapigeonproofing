@@ -1,6 +1,6 @@
 ---
 title: "Does Cleaning Solar Panels Void the Manufacturer Warranty?"
-description: "Cleaning solar panels doesn't void your warranty by itself — the wrong method can. See what manufacturers actually flag and how to clean safely."
+description: "Cleaning solar panels doesn't void your warranty by itself, but the wrong method can. See what manufacturers actually flag and how to clean safely."
 publishDate: 2026-08-20
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "What a Professional Solar Inspection Actually Includes"
-description: "What to expect from a solar panel inspection — soiling checks, pigeon activity, mesh condition, storm damage, and where electrical checks fit in."
+description: "What to expect from a solar panel inspection: soiling checks, pigeon activity, mesh condition, storm damage, and where electrical checks fit in."
 publishDate: 2026-08-21
 draft: false
 ---

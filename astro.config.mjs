@@ -26,7 +26,8 @@ export default defineConfig({
   // function. We only need that for the two API routes, which opt in per-file
   // via `export const prerender = false`. Everything else stays static/fast.
   adapter: vercel(),
-  integrations: [sitemap()],
+  // terms and privacy are noindex (low-value pages), so they stay out of the sitemap too.
+  integrations: [sitemap({ filter: (page) => !/\/(terms|privacy)\/$/.test(page) })],
   // Per-page CSS is only a couple KB (BaseLayout + page styles) but was
   // shipping as separate <link> files, each a render-blocking round trip
   // before first paint. Inlining folds it straight into the HTML response --

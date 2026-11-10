@@ -1,6 +1,6 @@
 ---
 title: "HOA Board Guide: Evaluating Solar Bird-Proofing Requests"
-description: "A guide for HOA architectural review committees on evaluating solar bird-mesh requests efficiently and consistently, with what a complete submission should include."
+description: "A guide for HOA architectural review committees on evaluating solar bird-mesh requests consistently, with what a complete submission should include."
 publishDate: 2026-08-21
 draft: false
 ---

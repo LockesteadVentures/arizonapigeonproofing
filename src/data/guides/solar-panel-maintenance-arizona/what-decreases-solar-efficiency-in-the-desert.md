@@ -1,6 +1,6 @@
 ---
 title: "What Actually Decreases Solar Panel Efficiency in the Desert"
-description: "Why is my solar production dropping in Arizona? Heat, dust, pigeons, monsoon grime, aging cells, and inverter faults all cut output — here's how to tell which."
+description: "Why is my solar production dropping in Arizona? Heat, dust, pigeons, monsoon grime, aging cells, and inverter faults cut output. Here's how to tell which."
 publishDate: 2026-08-20
 draft: false
 ---

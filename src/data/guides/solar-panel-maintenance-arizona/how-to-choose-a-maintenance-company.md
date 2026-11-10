@@ -1,6 +1,6 @@
 ---
 title: "How to Choose a Solar Panel Maintenance Company in Arizona"
-description: "Learn how to choose a solar panel maintenance company in Arizona — what to ask about cleaning methods, bird-proofing, pricing, and reviews before you hire."
+description: "Learn how to choose a solar panel maintenance company in Arizona: what to ask about cleaning methods, bird-proofing, pricing, and reviews before you hire."
 publishDate: 2026-08-20
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "HOA Rules for Solar Panels in Arizona: What's Allowed"
-description: "HOA solar panel rules in Arizona explained — what your association can and can't restrict, how approval works, and where bird mesh fits in. See the full guide."
+description: "HOA solar panel rules in Arizona explained: what your association can and can't restrict, how approval works, and where bird mesh fits in."
 publishDate: 2026-08-21
 draft: false
 ---

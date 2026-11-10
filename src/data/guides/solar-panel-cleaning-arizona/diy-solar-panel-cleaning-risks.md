@@ -1,6 +1,6 @@
 ---
 title: "DIY Solar Panel Cleaning: What Can Go Wrong"
-description: "DIY solar panel cleaning risks include falls, scratched glass, thermal shock, and voided warranties. Here's what's safe to do yourself in Arizona, and what isn't."
+description: "DIY solar panel cleaning risks include falls, scratched glass, thermal shock, and voided warranties. Here's what's safe to do yourself in Arizona."
 publishDate: 2026-08-20
 draft: false
 ---

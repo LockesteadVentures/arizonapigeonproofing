@@ -1,6 +1,6 @@
 ---
 title: "Solar Panel Maintenance for Rental and Airbnb Properties"
-description: "Solar panel maintenance for rental property in Arizona shouldn't depend on a tenant noticing a problem. Here's how landlords and Airbnb hosts schedule it hands-off."
+description: "Solar panel maintenance for rental property in Arizona shouldn't depend on a tenant noticing a problem. Here's how landlords schedule it hands-off."
 publishDate: 2026-08-21
 draft: false
 ---

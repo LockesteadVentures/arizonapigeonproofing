@@ -1,6 +1,6 @@
 ---
 title: "Do Pigeon Droppings Reduce Solar Panel Efficiency?"
-description: "Yes — pigeon droppings block sunlight and can cause hot spots on solar panels. Learn how much pigeon droppings solar panel output loss really costs you."
+description: "Yes. Pigeon droppings block sunlight and can cause hot spots on solar panels. Learn how much pigeon droppings solar panel output loss really costs you."
 publishDate: 2026-08-20
 draft: false
 ---
