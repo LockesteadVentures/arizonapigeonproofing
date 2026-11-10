@@ -44,9 +44,7 @@ const resolvedAreaServed = areaServed
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  // Fixed @id (not per-page) so the Review/AggregateRating block emitted separately
-  // by Testimonials.astro merges into this same entity instead of reading as a
-  // second, distinct business with the same name.
+  // Fixed @id so every page refers to the same business entity.
   "@id": `${Astro.site}#business`,
   name: "Arizona Pigeon Proofing",
   url: Astro.site?.toString(),

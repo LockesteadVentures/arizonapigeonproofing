@@ -3,14 +3,10 @@
 // company name or owners by name (site plan decision -- lead-gen brand stays anonymized).
 // Reused across the homepage and both service hub pages rather than duplicated per-page.
 //
-// Review/AggregateRating schema below is attached to the SAME LocalBusiness @id that
-// BaseLayout emits (Astro.site + "#business"), by explicit instruction. Flagging once,
-// in code, since it's worth knowing later: these reviews were originally left for Desert
-// Solar Cleaning and Bird Proofing LLC (the actual fulfilling vendor), not for
-// "Arizona Pigeon Proofing" by name. reviewCount is set to 3 (only what's actually shown
-// here), not the vendor's real total of 30 on Google -- using 30 here would be a
-// numerically checkable mismatch against nothing, since no public "Arizona Pigeon
-// Proofing" listing has that count anywhere.
+// No Review / AggregateRating schema on purpose (SEO plan, Task 9): Google treats reviews
+// placed on the reviewed business's own site as self-serving, so the markup is not eligible
+// for stars and only adds risk. The testimonials stay visible as plain content. Attribution
+// ("Google review of <crew name>") is still open: it needs the crew name from the owner.
 interface Props {
   heading?: string;
   eyebrow?: string;
@@ -35,24 +31,6 @@ const reviews = [
     author: "Mary S.",
   },
 ];
-
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": `${Astro.site}#business`,
-  review: reviews.map((r) => ({
-    "@type": "Review",
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    author: { "@type": "Person", name: r.author },
-    reviewBody: r.quote,
-  })),
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    bestRating: "5",
-    reviewCount: reviews.length,
-  },
-};
 ---
 
 <div class="section-head">
@@ -78,8 +56,6 @@ const reviewSchema = {
     Get a Free Quote
   </a>
 </div>
-
-<script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 
 <style>
   .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
