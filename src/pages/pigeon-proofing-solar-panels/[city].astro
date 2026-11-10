@@ -1,5 +1,6 @@
 ---
 import CityServicePage from "../../components/CityServicePage.astro";
+import TucsonPigeonPage from "../../components/TucsonPigeonPage.astro";
 import { LIVE_CITIES, REGIONS, SERVICES, nearbyCities } from "../../data/locations.js";
 import { SERVICE_CONTENT } from "../../data/serviceContent.js";
 
@@ -18,11 +19,15 @@ const region = REGIONS[city.region];
 const nearby = nearbyCities(city.slug);
 ---
 
-<CityServicePage
-  city={city}
-  region={region}
-  service={service}
-  otherService={otherService}
-  content={content}
-  nearby={nearby}
-/>
+{city.slug === "tucson" ? (
+  <TucsonPigeonPage />
+) : (
+  <CityServicePage
+    city={city}
+    region={region}
+    service={service}
+    otherService={otherService}
+    content={content}
+    nearby={nearby}
+  />
+)}

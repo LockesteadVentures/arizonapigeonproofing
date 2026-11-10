@@ -1,0 +1,267 @@
+---
+// Flagship page for "solar panel pigeon proofing Tucson" (SEO plan, Task 4). It owns the
+// Tucson pigeon keyword, so it gets a hand-built structure instead of the generic city
+// template. Reuses the Tucson entry in cityContext.js, the pillar's shared signs and
+// methodology (serviceContent.js), the shared PigeonPhoto and PriceBlock components.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PigeonPhoto from "./PigeonPhoto.astro";
+import PriceBlock from "./PriceBlock.astro";
+import { CITY_CONTEXT } from "../data/cityContext.js";
+import { SERVICE_CONTENT } from "../data/serviceContent.js";
+import { SERVICE_SEO, TUCSON_PIGEON_META } from "../lib/seo.js";
+import { getCity } from "../data/locations.js";
+
+const SERVICE = "pigeon-proofing-solar-panels";
+const city = getCity("tucson")!;
+const seo = SERVICE_SEO[SERVICE];
+const ctx = CITY_CONTEXT.tucson.content[SERVICE];
+const { signs, methodology } = SERVICE_CONTENT[SERVICE].hub;
+
+const quoteUrl = `/quote/?metro=tucson&address=${encodeURIComponent("Tucson")}&service=${encodeURIComponent("Pigeon proofing")}`;
+
+// "Droppings" is one bullet on the pillar; here it is split so the patio/driveway case
+// the plan asks for reads as its own sign.
+const tucsonSigns = signs.flatMap((s: string) =>
+  s.startsWith("Droppings collecting")
+    ? ["Droppings on the roof below the panels.", "Droppings on the patio or driveway below the array."]
+    : [s]
+);
+
+const faqs = [
+  ...ctx.faqs,
+  {
+    q: "How long does solar panel pigeon proofing take in Tucson?",
+    a: "Most jobs, including removing an existing nest, finish in one visit, usually the same day.",
+  },
+  {
+    q: "Will bird mesh void my solar panel warranty?",
+    a: `No. The mesh mounts to the panel rails, not the roof or the panels themselves. <a href="/guides/pigeons-and-solar-panels/does-bird-mesh-void-solar-warranty/">See how this holds up across major panel manufacturers' warranty language</a>.`,
+  },
+];
+
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, "");
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f: any) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: stripTags(f.a) },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: new URL("/", Astro.site) },
+    { "@type": "ListItem", position: 2, name: "Pigeon Proofing for Solar Panels", item: new URL(`/${SERVICE}/`, Astro.site) },
+    { "@type": "ListItem", position: 3, name: "Tucson", item: new URL(`/${SERVICE}/tucson/`, Astro.site) },
+  ],
+};
+
+const nearby = [
+  { slug: "oro-valley", name: "Oro Valley" },
+  { slug: "marana", name: "Marana" },
+  { slug: "sahuarita", name: "Sahuarita" },
+  { slug: "catalina-foothills", name: "Catalina Foothills" },
+  { slug: "casas-adobes", name: "Casas Adobes" },
+  { slug: "tanque-verde", name: "Tanque Verde" },
+];
+---
+
+<BaseLayout
+  title={seo.title("Tucson")}
+  description={TUCSON_PIGEON_META}
+  pageData={{ content_group: "city_service_page", metro: city.region, service: SERVICE, city: city.slug }}
+  areaServed={{ name: "Tucson" }}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Tucson Metro &middot; Tucson, AZ</span>
+      <h1>{seo.h1("Tucson")}</h1>
+      <p class="lede">
+        Solar panel pigeon proofing in Tucson means removing existing nests and droppings, then sealing the gap under
+        your panels with stainless bird mesh. A local crew fits the mesh to the panel rails, so it does not touch your
+        roof or affect your warranty.
+      </p>
+      <div class="cta-row">
+        <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_hero","metro":"tucson","service":"${SERVICE}"}`}>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>Signs pigeons are living under your Tucson solar panels</h2>
+      <ul class="signs-list">
+        {tucsonSigns.map((s: string) => <li>{s}</li>)}
+      </ul>
+      <p class="guide-link-inline">
+        Not sure what you are seeing? <a href="/guides/pigeons-and-solar-panels/signs-of-pigeons-under-solar-panels/">Read the full list of signs</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap narrow">
+      <h2>Why Tucson arrays attract pigeons</h2>
+      <p set:html={ctx.whyItMatters} />
+      <p>Rooftop solar is common here: about 40,000 TEP residential customers had it as of 2022, up from roughly 21,000 in 2018, according to Arizona Daily Star reporting. More arrays means more raised, sheltered gaps for pigeons to find.</p>
+      <p>Tucson's heat is part of the draw. The shaded, sheltered gap between a raised array and the roof is exactly the kind of spot pigeons look for.</p>
+      <PigeonPhoto />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>How we proof a Tucson solar array</h2>
+      <p>
+        Every job is done by a licensed, insured local crew, and it starts with an inspection of the full array, not
+        just the spot you noticed. Nest removal is included, not billed as a separate surprise. Most jobs finish in
+        one visit, and you get before and after photos either way.
+      </p>
+      <div class="process-list">
+        {methodology.map((step: any, i: number) => (
+          <div class="process-step">
+            <div class="n">{String(i + 1).padStart(2, "0")}</div>
+            <div>
+              <h3>{step.title}</h3>
+              <p>
+                {step.body}
+                {i === 1 && (
+                  <>
+                    {" "}<a href="/guides/pigeons-and-solar-panels/pigeon-dropping-health-risks/">See what dried droppings can carry</a>.
+                  </>
+                )}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="jurisdiction-note">{ctx.permitNote}</p>
+      <p>
+        Living in an HOA? Bird mesh typically still goes through your community's standard architectural review, and most
+        HOAs approve it quickly since it is barely visible from the street.
+        <a href="/guides/hoa-solar-panel-rules-arizona/bird-mesh-architectural-review/">See what that review asks for</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap narrow">
+      <PriceBlock service="proofing" heading="What solar panel bird proofing costs in Tucson" city="Tucson" />
+      <h2>Timing: clear nests before monsoon season</h2>
+      <p>
+        Arizona's official monsoon season runs June 15 to September 30. It is worth clearing nests and sealing the gap
+        before it starts, not after, because droppings and nesting debris build up the longer pigeons stay under the
+        array. Pigeons are an issue in Tucson year-round, so there is no bad month to call.
+        <a href="/guides/pigeons-and-solar-panels/best-time-of-year-to-bird-proof-arizona/">See the best time of year to bird proof in Arizona</a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>Frequently asked: Tucson</h2>
+      <div class="faq-list">
+        {faqs.map((f: any) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p set:html={f.a} />
+          </details>
+        ))}
+      </div>
+      <p class="faq-pointer">
+        General questions about cost, warranty coverage, and typical turnaround are answered in full on our
+        <a href="/pigeon-proofing-solar-panels/#faq">solar panel pigeon proofing overview page</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap narrow">
+      <div class="cross-links">
+        <div>
+          <h2>Also serving nearby</h2>
+          <div class="pill-row">
+            {nearby.map((n) => (
+              <a class="pill" href={`/${SERVICE}/${n.slug}/`}>{n.name}</a>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2>Need cleaning too?</h2>
+          <p>Dusty panels as well? Bundling cleaning with proofing saves a second trip out to your home.</p>
+          <a class="pill teal" href="/solar-panel-cleaning/tucson/">Solar panel cleaning in Tucson</a>
+        </div>
+      </div>
+      <p class="pillar-link">New to this? Read <a href="/pigeon-proofing-solar-panels/">how solar panel pigeon proofing works</a> across the Tucson Metro.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Ready for a free Tucson quote?</h2>
+          <p>Tell us what you're seeing and a local crew gets back to you within 24-48 hours.</p>
+        </div>
+        <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={`{"cta_location":"city_page_footer_cta","metro":"tucson","service":"${SERVICE}"}`}>Get a Free Tucson Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</BaseLayout>
+
+<style>
+  .page-hero { background: linear-gradient(160deg, #0d1620 0%, #132430 55%, #173247 100%); color: #f2f5f1; }
+  .page-hero .wrap { padding: 3.5rem 1.5rem 4rem; }
+  .page-hero .eyebrow { color: #7fd1d6; }
+  .page-hero h1 { font-size: 2.3rem; line-height: 1.1; margin: 0.6rem 0 0.9rem; color: #fbfbf7; max-width: 22ch; }
+  .page-hero .lede { font-size: 1.05rem; color: #c9d4d0; max-width: 56ch; margin: 0 0 1.6rem; }
+  .page-hero .cta-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+  .wrap.narrow { max-width: 760px; }
+  section.alt { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .wrap.narrow h2 { margin-bottom: 0.8rem; }
+
+  .signs-list { list-style: none; padding: 0; margin: 1.2rem 0 0; display: flex; flex-direction: column; gap: 0.7rem; }
+  .signs-list li { padding: 0.8rem 1.1rem; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); font-size: 0.92rem; }
+  .guide-link-inline { margin-top: 1.2rem; font-size: 0.92rem; color: var(--text-dim); }
+  .guide-link-inline a, .pillar-link a, .faq-pointer a { font-weight: 700; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+  .wrap.narrow p a { text-underline-offset: 2px; }
+
+  .jurisdiction-note { font-size: 0.85rem; color: var(--text-dim); font-style: italic; margin-top: 1.6rem; }
+
+  .process-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1.5rem; }
+  .process-step { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; }
+  .process-step .n { font-family: ui-monospace, monospace; font-weight: 700; color: var(--teal); }
+  .process-step h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .process-step p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
+  .process-step p a { font-weight: 700; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.4rem; }
+  .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; }
+  .faq-item summary { font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+  .faq-item p { margin: 0.7rem 0 0; color: var(--text-dim); font-size: 0.92rem; }
+  .faq-pointer, .pillar-link { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-dim); }
+
+  .cross-links { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .cross-links h2 { font-size: 1.15rem; }
+  .cross-links p { font-size: 0.92rem; color: var(--text-dim); margin: 0 0 0.8rem; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .pill { display: inline-block; padding: 0.4rem 0.9rem; border-radius: 99px; border: 1px solid var(--border); background: var(--surface); font-size: 0.85rem; }
+  .pill:hover { border-color: var(--teal); color: var(--teal); }
+  .pill.teal { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); font-weight: 600; }
+
+  .cta-band { background: linear-gradient(135deg, #173247, #1f6d78); color: #f2f5f1; border-radius: 18px; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+  .cta-band h2 { color: #fbfbf7; font-size: 1.5rem; max-width: 30ch; }
+  .cta-band p { color: #cbe0dd; margin: 0.5rem 0 0; }
+
+  @media (max-width: 700px) {
+    .cross-links { grid-template-columns: 1fr; }
+  }
+</style>
