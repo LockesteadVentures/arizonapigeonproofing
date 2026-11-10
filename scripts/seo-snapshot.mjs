@@ -31,7 +31,7 @@ export function snapshot(path, distDir = "dist/client") {
   return { path, title, titleLength: title.length, meta, metaLength: meta.length, h1, words, internalLinks: links.length };
 }
 
-if (process.argv[1].endsWith("seo-snapshot.mjs")) {
+if ((process.argv[1] || "").endsWith("seo-snapshot.mjs")) {
   const out = process.argv[2];
   const data = PRIORITY_URLS.map((p) => snapshot(p));
   const json = JSON.stringify({ generated: new Date().toISOString(), pages: data }, null, 2);

@@ -4,6 +4,7 @@ import { REGIONS, SERVICES } from "../data/locations.js";
 import { CITY_CONTEXT } from "../data/cityContext.js";
 import PigeonPhoto from "./PigeonPhoto.astro";
 import { SERVICE_SEO } from "../lib/seo.js";
+import { LIVE_CITIES } from "../data/locations.js";
 
 interface Props {
   city: { slug: string; name: string; region: string; tier: number };
@@ -17,6 +18,25 @@ interface Props {
 const { city, region, service, otherService, content, nearby } = Astro.props;
 const cityContext = CITY_CONTEXT[city.slug];
 const seo = SERVICE_SEO[service.slug];
+
+// One contextual link up to this service's pillar page, with anchor text rotated by
+// city so the same keyword anchor is not repeated across all 15 pages (Task 2).
+const PILLAR_ANCHORS: Record<string, string[]> = {
+  "pigeon-proofing-solar-panels": [
+    "how solar panel pigeon proofing works",
+    "our full solar panel pigeon proofing overview",
+    "what a complete bird mesh install involves",
+    "the step-by-step proofing process",
+  ],
+  "solar-panel-cleaning": [
+    "how solar panel cleaning works",
+    "our full solar panel cleaning overview",
+    "what a deionized water wash involves",
+    "the step-by-step cleaning process",
+  ],
+};
+const cityIndex = Math.max(0, LIVE_CITIES.findIndex((c) => c.slug === city.slug));
+const pillarAnchor = PILLAR_ANCHORS[service.slug][cityIndex % PILLAR_ANCHORS[service.slug].length];
 const pageContent = cityContext.content[service.slug];
 
 // Prefills the quote form's metro/city/service fields for whoever clicks through
@@ -97,6 +117,7 @@ const breadcrumbSchema = {
           </div>
         ))}
       </div>
+      <p class="pillar-link">Want the full picture before you request a quote? Read <a href={`/${service.slug}/`}>{pillarAnchor}</a> across the Tucson Metro.</p>
     </div>
   </section>
 
@@ -173,6 +194,8 @@ const breadcrumbSchema = {
   .process-step h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
   .process-step p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
 
+  .pillar-link { margin-top: 1.6rem; font-size: 0.92rem; color: var(--text-dim); }
+  .pillar-link a { font-weight: 700; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
   .faq-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.4rem; }
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; }
   .faq-item summary { font-weight: 700; cursor: pointer; font-size: 0.95rem; }

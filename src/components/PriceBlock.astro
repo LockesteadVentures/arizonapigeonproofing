@@ -1,0 +1,67 @@
+---
+// Shared price block for the pillar pages, city pages and cost guides (SEO plan, Task 7).
+//
+// GATE: renders nothing in production while any range or the bundle note still
+// contains "[[CLIENT:" (see src/data/pricing.js). In dev it renders with the
+// placeholders visible so the layout can be checked. The build check fails the build
+// if placeholder text ever reaches rendered HTML.
+import { PRICING, PRICE_FACTORS } from "../data/pricing.js";
+
+interface Props {
+  service: "proofing" | "cleaning";
+  heading: string;
+  city?: string;
+  ranges?: { label: string; range: string }[];
+  factors?: string[];
+  bundleNote?: string;
+}
+
+const { service, heading, city } = Astro.props;
+const ranges = Astro.props.ranges ?? PRICING[service].ranges;
+const factors = Astro.props.factors ?? PRICE_FACTORS[service];
+const bundleNote = Astro.props.bundleNote ?? PRICING[service].bundleNote;
+
+const hasPlaceholder = JSON.stringify([ranges, bundleNote]).includes("[[CLIENT:");
+const visible = !(hasPlaceholder && import.meta.env.PROD);
+
+const serviceOption = service === "proofing" ? "Pigeon proofing" : "Solar panel cleaning";
+const quoteUrl =
+  `/quote/?metro=tucson` +
+  (city ? `&address=${encodeURIComponent(city)}` : "") +
+  `&service=${encodeURIComponent(serviceOption)}`;
+---
+
+{visible && (
+  <div class="price-block">
+    <h2>{heading}</h2>
+    <table>
+      <tbody>
+        {ranges.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            <td>{r.range}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <h3>What affects the price</h3>
+    <ul>
+      {factors.map((f) => <li>{f}</li>)}
+    </ul>
+    <p class="bundle">{bundleNote}</p>
+    <p class="quote-line">Every quote is based on your specific array. Free quotes come back in 24-48 hours.</p>
+    <a href={quoteUrl} class="btn amber" data-gtm-event="cta_click" data-gtm-params={JSON.stringify({ cta_location: "price_block", service })}>Get a Free Quote</a>
+  </div>
+)}
+
+<style>
+  .price-block { margin: 2rem 0; }
+  .price-block table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.4rem; font-size: 0.95rem; }
+  .price-block th, .price-block td { padding: 0.7rem 0.9rem; border: 1px solid var(--border); text-align: left; background: var(--surface); }
+  .price-block th { font-weight: 600; }
+  .price-block td { font-weight: 700; white-space: nowrap; }
+  .price-block h3 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+  .price-block ul { margin: 0 0 1rem; padding-left: 1.2rem; color: var(--text-dim); font-size: 0.92rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  .price-block .bundle { color: var(--text-dim); font-size: 0.92rem; margin: 0 0 0.6rem; }
+  .price-block .quote-line { font-weight: 600; font-size: 0.92rem; margin: 0 0 1.1rem; }
+</style>
